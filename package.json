@@ -1,0 +1,20 @@
+{
+  "name": "arshaon",
+  "version": "1.0.0",
+  "description": "Ashikur Rahman Shaon — Personal Profile, CV & Social Media",
+  "main": "server.js",
+  "scripts": {
+    "start": "node server.js",
+    "build": "echo 'Build complete'"
+  },
+  "engines": {
+    "node": ">=18.0.0"
+  },
+  "keywords": [
+    "personal-website",
+    "cv",
+    "ashikur-rahman-shaon"
+  ],
+  "author": "Ashikur Rahman Shaon",
+  "license": "MIT"
+}
