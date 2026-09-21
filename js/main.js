@@ -61,10 +61,10 @@ document.addEventListener('DOMContentLoaded', () => {
 
   if (copyBtn) {
     copyBtn.addEventListener('click', () => {
-      const email = 'arshaonx@gmail.com';
+      const email = 'info@arshaon.com';
       if (navigator.clipboard && navigator.clipboard.writeText) {
         navigator.clipboard.writeText(email).then(() => {
-          showToast('Email (arshaonx@gmail.com) copied to clipboard!');
+          showToast('Email (info@arshaon.com) copied to clipboard!');
         }).catch(() => {
           showToast(email);
         });
