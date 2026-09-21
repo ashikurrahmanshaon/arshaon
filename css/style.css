@@ -1,8 +1,7 @@
 /* ==========================================================================
-   Ashikur Rahman Shaon — Modern Executive CV Design System
+   Ashikur Rahman Shaon — Executive Digital Marketing CV Design System
    ========================================================================== */
 :root {
-  /* Light Theme (Default for Clean CV) */
   --bg-page: #f1f5f9;
   --bg-paper: #ffffff;
   --bg-subtle: #f8fafc;
@@ -111,7 +110,7 @@ a:hover {
 }
 
 .top-bar-inner {
-  max-width: 900px;
+  max-width: 920px;
   margin: 0 auto;
   padding: 10px 24px;
   display: flex;
@@ -205,9 +204,9 @@ a:hover {
 /* Main CV Sheet Container */
 .cv-wrapper {
   flex: 1;
-  max-width: 900px;
+  max-width: 920px;
   width: 100%;
-  margin: 32px auto 60px;
+  margin: 28px auto 60px;
   padding: 0 20px;
 }
 
@@ -235,8 +234,8 @@ a:hover {
 }
 
 .cv-avatar {
-  width: 110px;
-  height: 110px;
+  width: 112px;
+  height: 112px;
   border-radius: 50%;
   border: 3px solid var(--accent);
   object-fit: cover;
@@ -255,8 +254,8 @@ a:hover {
 }
 
 .status-dot {
-  width: 12px;
-  height: 12px;
+  width: 13px;
+  height: 13px;
   background-color: var(--success);
   border-radius: 50%;
 }
@@ -277,15 +276,17 @@ a:hover {
 
 .cv-headline {
   font-size: 1.18rem;
-  font-weight: 600;
+  font-weight: 700;
   color: var(--accent);
-  margin-bottom: 8px;
+  margin-bottom: 4px;
+  letter-spacing: 0.2px;
 }
 
-.cv-summary-short {
+.cv-subheadline {
   font-size: 0.95rem;
+  font-weight: 600;
   color: var(--text-muted);
-  line-height: 1.5;
+  margin-bottom: 8px;
 }
 
 /* Contact Strip */
@@ -293,7 +294,7 @@ a:hover {
   display: flex;
   flex-wrap: wrap;
   gap: 10px;
-  margin-top: 18px;
+  margin-top: 14px;
 }
 
 .contact-item {
@@ -336,7 +337,7 @@ a:hover {
   align-items: center;
   gap: 10px;
   font-family: var(--font-head);
-  font-size: 1.25rem;
+  font-size: 1.22rem;
   font-weight: 700;
   text-transform: uppercase;
   letter-spacing: 0.8px;
@@ -359,9 +360,45 @@ a:hover {
 }
 
 .section-paragraph {
-  font-size: 0.98rem;
+  font-size: 0.96rem;
   color: var(--text-sub);
   line-height: 1.75;
+  margin-bottom: 12px;
+}
+
+.section-paragraph:last-child {
+  margin-bottom: 0;
+}
+
+/* Core Competencies Tag Cloud */
+.competencies-grid {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+}
+
+.comp-pill {
+  font-size: 0.84rem;
+  font-weight: 600;
+  background-color: var(--bg-subtle);
+  color: var(--text-main);
+  border: 1px solid var(--border);
+  padding: 6px 13px;
+  border-radius: var(--radius-md);
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  transition: border-color 0.15s ease;
+}
+
+.comp-pill:hover {
+  border-color: var(--accent);
+}
+
+.comp-pill::before {
+  content: "•";
+  color: var(--accent);
+  font-weight: bold;
 }
 
 /* Skills Clean Table / Rows */
@@ -413,7 +450,7 @@ a:hover {
   border-radius: var(--radius-sm);
 }
 
-/* Experience & Education Entries */
+/* Experience & Domains Entries */
 .timeline-list {
   display: flex;
   flex-direction: column;
@@ -424,7 +461,7 @@ a:hover {
   background-color: var(--bg-subtle);
   border: 1px solid var(--border);
   border-radius: var(--radius-md);
-  padding: 20px 24px;
+  padding: 22px 24px;
   position: relative;
 }
 
@@ -433,24 +470,24 @@ a:hover {
   justify-content: space-between;
   align-items: flex-start;
   gap: 16px;
-  margin-bottom: 10px;
+  margin-bottom: 12px;
 }
 
 .entry-role {
-  font-size: 1.1rem;
+  font-size: 1.15rem;
   font-weight: 700;
   color: var(--text-main);
 }
 
 .entry-org {
-  font-size: 0.92rem;
+  font-size: 0.94rem;
   font-weight: 600;
   color: var(--accent);
   margin-top: 2px;
 }
 
 .entry-period {
-  font-size: 0.82rem;
+  font-size: 0.84rem;
   font-weight: 600;
   color: var(--text-muted);
   background-color: var(--bg-badge);
@@ -468,7 +505,7 @@ a:hover {
 }
 
 .entry-points li {
-  margin-bottom: 6px;
+  margin-bottom: 7px;
 }
 
 .entry-points li:last-child {
@@ -486,24 +523,24 @@ a:hover {
   background-color: var(--bg-subtle);
   border: 1px solid var(--border);
   border-radius: var(--radius-md);
-  padding: 20px;
+  padding: 22px;
   display: flex;
   flex-direction: column;
   justify-content: space-between;
 }
 
 .project-top {
-  margin-bottom: 10px;
+  margin-bottom: 12px;
 }
 
 .project-name {
-  font-size: 1.05rem;
+  font-size: 1.08rem;
   font-weight: 700;
   color: var(--text-main);
-  margin-bottom: 6px;
+  margin-bottom: 4px;
 }
 
-.project-tech {
+.project-tag {
   font-size: 0.78rem;
   font-weight: 600;
   color: var(--accent);
@@ -513,10 +550,67 @@ a:hover {
   border-radius: var(--radius-sm);
 }
 
-.project-info {
-  font-size: 0.92rem;
+.project-points {
+  padding-left: 18px;
+  font-size: 0.9rem;
+  color: var(--text-sub);
+  line-height: 1.65;
+}
+
+.project-points li {
+  margin-bottom: 6px;
+}
+
+.project-points li:last-child {
+  margin-bottom: 0;
+}
+
+/* Domains Grid (Social Media, Paid Ads, E-commerce) */
+.domains-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 16px;
+}
+
+.domain-card {
+  background-color: var(--bg-subtle);
+  border: 1px solid var(--border);
+  border-radius: var(--radius-md);
+  padding: 20px;
+}
+
+.domain-title {
+  font-size: 1rem;
+  font-weight: 700;
+  color: var(--text-main);
+  margin-bottom: 4px;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.domain-subtitle {
+  font-size: 0.8rem;
+  font-weight: 600;
+  color: var(--accent);
+  margin-bottom: 12px;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+}
+
+.domain-list {
+  padding-left: 18px;
+  font-size: 0.88rem;
   color: var(--text-sub);
   line-height: 1.6;
+}
+
+.domain-list li {
+  margin-bottom: 5px;
+}
+
+.domain-list li:last-child {
+  margin-bottom: 0;
 }
 
 /* Details Grid */
@@ -552,6 +646,32 @@ a:hover {
 
 .detail-val.status-open {
   color: var(--success);
+}
+
+/* Professional Strengths Checklist */
+.strengths-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 10px;
+}
+
+.strength-item {
+  display: flex;
+  align-items: center;
+  gap: 9px;
+  font-size: 0.92rem;
+  color: var(--text-sub);
+  background-color: var(--bg-subtle);
+  border: 1px solid var(--border);
+  padding: 10px 14px;
+  border-radius: var(--radius-md);
+}
+
+.strength-item svg {
+  width: 16px;
+  height: 16px;
+  color: var(--accent);
+  flex-shrink: 0;
 }
 
 /* Footer inside CV */
@@ -604,8 +724,8 @@ a:hover {
   body {
     background: #ffffff !important;
     color: #000000 !important;
-    font-size: 11pt !important;
-    line-height: 1.4 !important;
+    font-size: 10pt !important;
+    line-height: 1.35 !important;
   }
 
   .cv-wrapper {
@@ -623,7 +743,7 @@ a:hover {
 
   .cv-name {
     color: #000000 !important;
-    font-size: 2rem !important;
+    font-size: 1.8rem !important;
   }
 
   .cv-headline {
@@ -634,29 +754,23 @@ a:hover {
     background: #f8fafc !important;
     border-color: #cbd5e1 !important;
     color: #0f172a !important;
-    padding: 2px 8px !important;
-    font-size: 8.5pt !important;
+    padding: 2px 7px !important;
+    font-size: 8pt !important;
   }
 
   .section-title {
     color: #000000 !important;
-    border-bottom: 2px solid #94a3b8 !important;
-    font-size: 11pt !important;
-    margin-top: 14pt !important;
-    margin-bottom: 6pt !important;
+    border-bottom: 1.5px solid #94a3b8 !important;
+    font-size: 10.5pt !important;
+    margin-top: 12pt !important;
+    margin-bottom: 5pt !important;
   }
 
-  .skill-row, .cv-entry, .project-box, .details-grid {
+  .cv-entry, .skill-row, .project-box, .domain-card, .details-grid, .comp-pill, .strength-item {
     background: transparent !important;
     border: 1px solid #cbd5e1 !important;
     break-inside: avoid;
-    padding: 8pt 10pt !important;
-  }
-
-  .skill-badge {
-    background: #f1f5f9 !important;
-    border-color: #cbd5e1 !important;
-    color: #0f172a !important;
+    padding: 6pt 8pt !important;
   }
 
   .cv-footer {
@@ -689,9 +803,13 @@ a:hover {
     font-size: 1.05rem;
   }
 
-  .skill-row {
+  .skills-wrapper .skill-row {
     grid-template-columns: 1fr;
     gap: 8px;
+  }
+
+  .domains-grid {
+    grid-template-columns: 1fr;
   }
 
   .projects-container {
@@ -699,6 +817,10 @@ a:hover {
   }
 
   .details-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .strengths-grid {
     grid-template-columns: 1fr;
   }
 

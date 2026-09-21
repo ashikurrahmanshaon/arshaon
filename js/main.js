@@ -1,9 +1,9 @@
 /**
- * Ashikur Rahman Shaon — Executive CV Logic
+ * Ashikur Rahman Shaon — Digital Marketing CV JavaScript Logic
  */
 
 document.addEventListener('DOMContentLoaded', () => {
-  // --- 1. Theme Management (Light by default for CV) ---
+  // --- 1. Theme Management (Light by default for Clean CV) ---
   const themeToggleBtn = document.getElementById('theme-toggle');
   const moonIcon = document.getElementById('theme-moon');
   const sunIcon = document.getElementById('theme-sun');
@@ -61,10 +61,10 @@ document.addEventListener('DOMContentLoaded', () => {
 
   if (copyBtn) {
     copyBtn.addEventListener('click', () => {
-      const email = 'ashikurrahmanshaon@gmail.com';
+      const email = 'arshaonx@gmail.com';
       if (navigator.clipboard && navigator.clipboard.writeText) {
         navigator.clipboard.writeText(email).then(() => {
-          showToast('Email address copied to clipboard!');
+          showToast('Email (arshaonx@gmail.com) copied to clipboard!');
         }).catch(() => {
           showToast(email);
         });

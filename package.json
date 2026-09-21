@@ -1,7 +1,7 @@
 {
   "name": "arshaon",
   "version": "1.0.0",
-  "description": "Ashikur Rahman Shaon — Personal Profile, CV & Social Media",
+  "description": "Ashikur Rahman Shaon — Digital Marketing & Social Media Specialist CV",
   "main": "server.js",
   "scripts": {
     "start": "node server.js",

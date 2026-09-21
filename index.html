@@ -3,14 +3,14 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Ashikur Rahman Shaon — Curriculum Vitae (CV)</title>
-  <meta name="description" content="Official Curriculum Vitae of Ashikur Rahman Shaon. Android & Software Developer based in Dhaka, Bangladesh.">
+  <title>Ashikur Rahman Shaon — Digital Marketing &amp; Social Media Specialist</title>
+  <meta name="description" content="Curriculum Vitae of Ashikur Rahman Shaon. Digital Marketing & Social Media Specialist with 7+ years of experience in Performance Marketing, Meta Ads, E-commerce Growth, and Brand Strategy.">
   <meta name="author" content="Ashikur Rahman Shaon">
 
   <!-- Open Graph -->
   <meta property="og:type" content="website">
-  <meta property="og:title" content="Ashikur Rahman Shaon — Curriculum Vitae">
-  <meta property="og:description" content="Android & Software Developer based in Dhaka, Bangladesh. Education, experience, skills, and contact details.">
+  <meta property="og:title" content="Ashikur Rahman Shaon — Digital Marketing &amp; Social Media Specialist">
+  <meta property="og:description" content="Digital Marketing & Social Media Specialist | E-commerce Specialist | Performance Marketing | Meta Ads">
   <meta property="og:image" content="assets/avatar.svg">
 
   <!-- Favicon -->
@@ -21,16 +21,15 @@
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Outfit:wght@500;600;700;800&display=swap" rel="stylesheet">
 
-  <!-- External Stylesheet (with cache buster) -->
-  <link rel="stylesheet" href="css/style.css?v=3.2">
+  <!-- Stylesheet link (cache-busted) -->
+  <link rel="stylesheet" href="css/style.css?v=4.0">
 
-  <!-- Inline Stylesheet: Guarantees 0% caching issues and instant pristine rendering -->
+  <!-- Inline Stylesheet for 100% reliable, zero-cache-glitch pristine rendering -->
   <style>
     /* ==========================================================================
-       Ashikur Rahman Shaon — Modern Executive CV Design System
+       Ashikur Rahman Shaon — Executive Digital Marketing CV
        ========================================================================== */
     :root {
-      /* Light Theme (Default for Clean CV) */
       --bg-page: #f1f5f9;
       --bg-paper: #ffffff;
       --bg-subtle: #f8fafc;
@@ -139,7 +138,7 @@
     }
 
     .top-bar-inner {
-      max-width: 900px;
+      max-width: 920px;
       margin: 0 auto;
       padding: 10px 24px;
       display: flex;
@@ -233,9 +232,9 @@
     /* Main CV Sheet Container */
     .cv-wrapper {
       flex: 1;
-      max-width: 900px;
+      max-width: 920px;
       width: 100%;
-      margin: 32px auto 60px;
+      margin: 28px auto 60px;
       padding: 0 20px;
     }
 
@@ -263,8 +262,8 @@
     }
 
     .cv-avatar {
-      width: 110px;
-      height: 110px;
+      width: 112px;
+      height: 112px;
       border-radius: 50%;
       border: 3px solid var(--accent);
       object-fit: cover;
@@ -283,8 +282,8 @@
     }
 
     .status-dot {
-      width: 12px;
-      height: 12px;
+      width: 13px;
+      height: 13px;
       background-color: var(--success);
       border-radius: 50%;
     }
@@ -305,15 +304,17 @@
 
     .cv-headline {
       font-size: 1.18rem;
-      font-weight: 600;
+      font-weight: 700;
       color: var(--accent);
-      margin-bottom: 8px;
+      margin-bottom: 4px;
+      letter-spacing: 0.2px;
     }
 
-    .cv-summary-short {
+    .cv-subheadline {
       font-size: 0.95rem;
+      font-weight: 600;
       color: var(--text-muted);
-      line-height: 1.5;
+      margin-bottom: 8px;
     }
 
     /* Contact Strip */
@@ -321,7 +322,7 @@
       display: flex;
       flex-wrap: wrap;
       gap: 10px;
-      margin-top: 18px;
+      margin-top: 14px;
     }
 
     .contact-item {
@@ -364,7 +365,7 @@
       align-items: center;
       gap: 10px;
       font-family: var(--font-head);
-      font-size: 1.25rem;
+      font-size: 1.22rem;
       font-weight: 700;
       text-transform: uppercase;
       letter-spacing: 0.8px;
@@ -387,9 +388,45 @@
     }
 
     .section-paragraph {
-      font-size: 0.98rem;
+      font-size: 0.96rem;
       color: var(--text-sub);
       line-height: 1.75;
+      margin-bottom: 12px;
+    }
+
+    .section-paragraph:last-child {
+      margin-bottom: 0;
+    }
+
+    /* Core Competencies Tag Cloud */
+    .competencies-grid {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 8px;
+    }
+
+    .comp-pill {
+      font-size: 0.84rem;
+      font-weight: 600;
+      background-color: var(--bg-subtle);
+      color: var(--text-main);
+      border: 1px solid var(--border);
+      padding: 6px 13px;
+      border-radius: var(--radius-md);
+      display: inline-flex;
+      align-items: center;
+      gap: 6px;
+      transition: border-color 0.15s ease;
+    }
+
+    .comp-pill:hover {
+      border-color: var(--accent);
+    }
+
+    .comp-pill::before {
+      content: "•";
+      color: var(--accent);
+      font-weight: bold;
     }
 
     /* Skills Clean Table / Rows */
@@ -441,7 +478,7 @@
       border-radius: var(--radius-sm);
     }
 
-    /* Experience & Education Entries */
+    /* Experience & Domains Entries */
     .timeline-list {
       display: flex;
       flex-direction: column;
@@ -452,7 +489,7 @@
       background-color: var(--bg-subtle);
       border: 1px solid var(--border);
       border-radius: var(--radius-md);
-      padding: 20px 24px;
+      padding: 22px 24px;
       position: relative;
     }
 
@@ -461,24 +498,24 @@
       justify-content: space-between;
       align-items: flex-start;
       gap: 16px;
-      margin-bottom: 10px;
+      margin-bottom: 12px;
     }
 
     .entry-role {
-      font-size: 1.1rem;
+      font-size: 1.15rem;
       font-weight: 700;
       color: var(--text-main);
     }
 
     .entry-org {
-      font-size: 0.92rem;
+      font-size: 0.94rem;
       font-weight: 600;
       color: var(--accent);
       margin-top: 2px;
     }
 
     .entry-period {
-      font-size: 0.82rem;
+      font-size: 0.84rem;
       font-weight: 600;
       color: var(--text-muted);
       background-color: var(--bg-badge);
@@ -496,7 +533,7 @@
     }
 
     .entry-points li {
-      margin-bottom: 6px;
+      margin-bottom: 7px;
     }
 
     .entry-points li:last-child {
@@ -514,24 +551,24 @@
       background-color: var(--bg-subtle);
       border: 1px solid var(--border);
       border-radius: var(--radius-md);
-      padding: 20px;
+      padding: 22px;
       display: flex;
       flex-direction: column;
       justify-content: space-between;
     }
 
     .project-top {
-      margin-bottom: 10px;
+      margin-bottom: 12px;
     }
 
     .project-name {
-      font-size: 1.05rem;
+      font-size: 1.08rem;
       font-weight: 700;
       color: var(--text-main);
-      margin-bottom: 6px;
+      margin-bottom: 4px;
     }
 
-    .project-tech {
+    .project-tag {
       font-size: 0.78rem;
       font-weight: 600;
       color: var(--accent);
@@ -541,10 +578,67 @@
       border-radius: var(--radius-sm);
     }
 
-    .project-info {
-      font-size: 0.92rem;
+    .project-points {
+      padding-left: 18px;
+      font-size: 0.9rem;
+      color: var(--text-sub);
+      line-height: 1.65;
+    }
+
+    .project-points li {
+      margin-bottom: 6px;
+    }
+
+    .project-points li:last-child {
+      margin-bottom: 0;
+    }
+
+    /* Domains Grid (Social Media, Paid Ads, E-commerce) */
+    .domains-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 16px;
+    }
+
+    .domain-card {
+      background-color: var(--bg-subtle);
+      border: 1px solid var(--border);
+      border-radius: var(--radius-md);
+      padding: 20px;
+    }
+
+    .domain-title {
+      font-size: 1rem;
+      font-weight: 700;
+      color: var(--text-main);
+      margin-bottom: 4px;
+      display: flex;
+      align-items: center;
+      gap: 8px;
+    }
+
+    .domain-subtitle {
+      font-size: 0.8rem;
+      font-weight: 600;
+      color: var(--accent);
+      margin-bottom: 12px;
+      text-transform: uppercase;
+      letter-spacing: 0.5px;
+    }
+
+    .domain-list {
+      padding-left: 18px;
+      font-size: 0.88rem;
       color: var(--text-sub);
       line-height: 1.6;
+    }
+
+    .domain-list li {
+      margin-bottom: 5px;
+    }
+
+    .domain-list li:last-child {
+      margin-bottom: 0;
     }
 
     /* Details Grid */
@@ -580,6 +674,32 @@
 
     .detail-val.status-open {
       color: var(--success);
+    }
+
+    /* Professional Strengths Checklist */
+    .strengths-grid {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 10px;
+    }
+
+    .strength-item {
+      display: flex;
+      align-items: center;
+      gap: 9px;
+      font-size: 0.92rem;
+      color: var(--text-sub);
+      background-color: var(--bg-subtle);
+      border: 1px solid var(--border);
+      padding: 10px 14px;
+      border-radius: var(--radius-md);
+    }
+
+    .strength-item svg {
+      width: 16px;
+      height: 16px;
+      color: var(--accent);
+      flex-shrink: 0;
     }
 
     /* Footer inside CV */
@@ -632,8 +752,8 @@
       body {
         background: #ffffff !important;
         color: #000000 !important;
-        font-size: 11pt !important;
-        line-height: 1.4 !important;
+        font-size: 10pt !important;
+        line-height: 1.35 !important;
       }
 
       .cv-wrapper {
@@ -651,7 +771,7 @@
 
       .cv-name {
         color: #000000 !important;
-        font-size: 2rem !important;
+        font-size: 1.8rem !important;
       }
 
       .cv-headline {
@@ -662,29 +782,23 @@
         background: #f8fafc !important;
         border-color: #cbd5e1 !important;
         color: #0f172a !important;
-        padding: 2px 8px !important;
-        font-size: 8.5pt !important;
+        padding: 2px 7px !important;
+        font-size: 8pt !important;
       }
 
       .section-title {
         color: #000000 !important;
-        border-bottom: 2px solid #94a3b8 !important;
-        font-size: 11pt !important;
-        margin-top: 14pt !important;
-        margin-bottom: 6pt !important;
+        border-bottom: 1.5px solid #94a3b8 !important;
+        font-size: 10.5pt !important;
+        margin-top: 12pt !important;
+        margin-bottom: 5pt !important;
       }
 
-      .skill-row, .cv-entry, .project-box, .details-grid {
+      .cv-entry, .skill-row, .project-box, .domain-card, .details-grid, .comp-pill, .strength-item {
         background: transparent !important;
         border: 1px solid #cbd5e1 !important;
         break-inside: avoid;
-        padding: 8pt 10pt !important;
-      }
-
-      .skill-badge {
-        background: #f1f5f9 !important;
-        border-color: #cbd5e1 !important;
-        color: #0f172a !important;
+        padding: 6pt 8pt !important;
       }
 
       .cv-footer {
@@ -717,9 +831,13 @@
         font-size: 1.05rem;
       }
 
-      .skill-row {
+      .skills-wrapper .skill-row {
         grid-template-columns: 1fr;
         gap: 8px;
+      }
+
+      .domains-grid {
+        grid-template-columns: 1fr;
       }
 
       .projects-container {
@@ -727,6 +845,10 @@
       }
 
       .details-grid {
+        grid-template-columns: 1fr;
+      }
+
+      .strengths-grid {
         grid-template-columns: 1fr;
       }
 
@@ -761,6 +883,14 @@
           </svg>
           <span>Print / PDF</span>
         </button>
+
+        <!-- WhatsApp Quick Chat -->
+        <a href="https://wa.me/8801787081119" target="_blank" rel="noopener noreferrer" class="btn" title="Chat on WhatsApp">
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor">
+            <path d="M12.04 2c-5.46 0-9.91 4.45-9.91 9.91 0 1.75.46 3.45 1.32 4.95L2.05 22l5.25-1.38c1.45.79 3.08 1.21 4.74 1.21 5.46 0 9.91-4.45 9.91-9.91 0-2.65-1.03-5.14-2.9-7.01A9.816 9.816 0 0 0 12.04 2m.01 1.67c2.2 0 4.26.86 5.82 2.42a8.225 8.225 0 0 1 2.41 5.83c0 4.54-3.7 8.24-8.24 8.24-1.48 0-2.93-.4-4.2-1.15l-.3-.18-3.12.82.83-3.04-.2-.31a8.19 8.19 0 0 1-1.26-4.36c0-4.54 3.7-8.24 8.24-8.24m4.52 11.64c-.25-.13-1.47-.72-1.7-.81-.23-.08-.39-.13-.56.13-.17.25-.64.81-.79.97-.14.17-.29.19-.54.06-.25-.13-1.05-.39-2-1.23-.74-.66-1.24-1.47-1.38-1.72-.14-.25-.02-.38.11-.51.11-.11.25-.29.37-.44.13-.14.17-.25.25-.42.08-.17.04-.31-.02-.44-.06-.13-.56-1.35-.77-1.85-.2-.48-.41-.42-.56-.43h-.48c-.17 0-.44.06-.67.31-.23.25-.88.86-.88 2.09 0 1.23.9 2.42 1.02 2.59.13.17 1.76 2.69 4.27 3.77 2.51 1.09 2.51.72 2.97.68.46-.04 1.47-.6 1.68-1.18.21-.59.21-1.09.15-1.19-.07-.09-.23-.15-.48-.28"/>
+          </svg>
+          <span>WhatsApp</span>
+        </a>
 
         <!-- Copy Email Button -->
         <button class="btn" id="copy-email-btn" title="Copy Email Address">
@@ -806,27 +936,39 @@
         </div>
 
         <div class="cv-hero-text">
-          <h1 class="cv-name">Ashikur Rahman Shaon</h1>
-          <div class="cv-headline">Android &amp; Software Developer</div>
-          <p class="cv-summary-short">
-            Dedicated software engineer passionate about crafting clean, reliable native Android applications, robust mobile architectures, and high-performance digital tools.
-          </p>
+          <h1 class="cv-name">ASHIKUR RAHMAN SHAON</h1>
+          <div class="cv-headline">DIGITAL MARKETING &amp; SOCIAL MEDIA SPECIALIST</div>
+          <div class="cv-subheadline">E-commerce Specialist | Performance Marketing | Paid Advertising</div>
 
           <!-- Contact Strip -->
           <div class="contact-strip">
-            <a href="mailto:ashikurrahmanshaon@gmail.com" class="contact-item">
+            <a href="tel:+8801787081119" class="contact-item">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                <path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"></path>
+              </svg>
+              <span>+880 1787-081119</span>
+            </a>
+
+            <a href="https://wa.me/8801787081119" target="_blank" rel="noopener noreferrer" class="contact-item">
+              <svg viewBox="0 0 24 24" fill="currentColor">
+                <path d="M12.04 2c-5.46 0-9.91 4.45-9.91 9.91 0 1.75.46 3.45 1.32 4.95L2.05 22l5.25-1.38c1.45.79 3.08 1.21 4.74 1.21 5.46 0 9.91-4.45 9.91-9.91 0-2.65-1.03-5.14-2.9-7.01A9.816 9.816 0 0 0 12.04 2m.01 1.67c2.2 0 4.26.86 5.82 2.42a8.225 8.225 0 0 1 2.41 5.83c0 4.54-3.7 8.24-8.24 8.24-1.48 0-2.93-.4-4.2-1.15l-.3-.18-3.12.82.83-3.04-.2-.31a8.19 8.19 0 0 1-1.26-4.36c0-4.54 3.7-8.24 8.24-8.24m4.52 11.64c-.25-.13-1.47-.72-1.7-.81-.23-.08-.39-.13-.56.13-.17.25-.64.81-.79.97-.14.17-.29.19-.54.06-.25-.13-1.05-.39-2-1.23-.74-.66-1.24-1.47-1.38-1.72-.14-.25-.02-.38.11-.51.11-.11.25-.29.37-.44.13-.14.17-.25.25-.42.08-.17.04-.31-.02-.44-.06-.13-.56-1.35-.77-1.85-.2-.48-.41-.42-.56-.43h-.48c-.17 0-.44.06-.67.31-.23.25-.88.86-.88 2.09 0 1.23.9 2.42 1.02 2.59.13.17 1.76 2.69 4.27 3.77 2.51 1.09 2.51.72 2.97.68.46-.04 1.47-.6 1.68-1.18.21-.59.21-1.09.15-1.19-.07-.09-.23-.15-.48-.28"/>
+              </svg>
+              <span>WhatsApp Chat</span>
+            </a>
+
+            <a href="mailto:arshaonx@gmail.com" class="contact-item">
               <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
                 <path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"></path>
                 <polyline points="22,6 12,13 2,6"></polyline>
               </svg>
-              <span>ashikurrahmanshaon@gmail.com</span>
+              <span>arshaonx@gmail.com</span>
             </a>
 
-            <a href="https://wa.me/8801700000000" target="_blank" rel="noopener noreferrer" class="contact-item">
-              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-                <path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"></path>
+            <a href="https://linkedin.com/in/ashikurrahmanshaon" target="_blank" rel="noopener noreferrer" class="contact-item">
+              <svg viewBox="0 0 24 24" fill="currentColor">
+                <path d="M19 0h-14c-2.761 0-5 2.239-5 5v14c0 2.761 2.239 5 5 5h14c2.762 0 5-2.239 5-5v-14c0-2.761-2.238-5-5-5zm-11 19h-3v-11h3v11zm-1.5-12.268c-.966 0-1.75-.79-1.75-1.764s.784-1.764 1.75-1.764 1.75.79 1.75 1.764-.783 1.764-1.75 1.764zm13.5 12.268h-3v-5.604c0-3.368-4-3.113-4 0v5.604h-3v-11h3v1.765c1.396-2.586 7-2.777 7 2.476v6.759z"/>
               </svg>
-              <span>WhatsApp / Phone</span>
+              <span>LinkedIn Profile</span>
             </a>
 
             <div class="contact-item">
@@ -834,251 +976,451 @@
                 <path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"></path>
                 <circle cx="12" cy="10" r="3"></circle>
               </svg>
-              <span>Dhaka, Bangladesh</span>
+              <span>Bangladesh</span>
             </div>
-
-            <a href="https://github.com/ashikurrahmanshaon" target="_blank" rel="noopener noreferrer" class="contact-item">
-              <svg viewBox="0 0 24 24" fill="currentColor">
-                <path d="M12 0C5.37 0 0 5.37 0 12c0 5.31 3.435 9.795 8.205 11.385.6.105.825-.255.825-.57 0-.285-.015-1.23-.015-2.235-3.015.555-3.795-.735-4.035-1.41-.135-.345-.72-1.41-1.23-1.695-.42-.225-1.02-.78-.015-.795.945-.015 1.62.87 1.845 1.23 1.08 1.815 2.805 1.305 3.495.99.105-.78.42-1.305.765-1.605-2.67-.3-5.46-1.335-5.46-5.925 0-1.305.465-2.385 1.23-3.225-.12-.3-.54-1.53.12-3.18 0 0 1.005-.315 3.3 1.23.96-.27 1.98-.405 3-.405s2.04.135 3 .405c2.295-1.56 3.3-1.23 3.3-1.23.66 1.65.24 2.88.12 3.18.765.84 1.23 1.905 1.23 3.225 0 4.605-2.805 5.625-5.475 5.925.435.375.81 1.095.81 2.22 0 1.605-.015 2.895-.015 3.3 0 .315.225.69.825.57A12.02 12.02 0 0 0 24 12c0-6.63-5.37-12-12-12z"/>
-              </svg>
-              <span>GitHub Profile</span>
-            </a>
-
-            <a href="https://linkedin.com/in/ashikurrahmanshaon" target="_blank" rel="noopener noreferrer" class="contact-item">
-              <svg viewBox="0 0 24 24" fill="currentColor">
-                <path d="M19 0h-14c-2.761 0-5 2.239-5 5v14c0 2.761 2.239 5 5 5h14c2.762 0 5-2.239 5-5v-14c0-2.761-2.238-5-5-5zm-11 19h-3v-11h3v11zm-1.5-12.268c-.966 0-1.75-.79-1.75-1.764s.784-1.764 1.75-1.764 1.75.79 1.75 1.764-.783 1.764-1.75 1.764zm13.5 12.268h-3v-5.604c0-3.368-4-3.113-4 0v5.604h-3v-11h3v1.765c1.396-2.586 7-2.777 7 2.476v6.759z"/>
-              </svg>
-              <span>LinkedIn</span>
-            </a>
-
-            <a href="http://www.arshaon.com" target="_blank" rel="noopener noreferrer" class="contact-item">
-              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-                <circle cx="12" cy="12" r="10"></circle>
-                <line x1="2" y1="12" x2="22" y2="12"></line>
-                <path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"></path>
-              </svg>
-              <span>arshaon.com</span>
-            </a>
           </div>
         </div>
       </header>
 
-      <!-- Section: Profile Summary -->
+      <!-- Section: Professional Summary -->
       <section class="cv-section">
         <h2 class="section-title">
           <span class="section-icon">
             <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"></circle><line x1="12" y1="16" x2="12" y2="12"></line><line x1="12" y1="8" x2="12.01" y2="8"></line></svg>
           </span>
-          Profile Summary
+          Professional Summary
         </h2>
         <p class="section-paragraph">
-          Energetic and detail-oriented <strong>Android Apps Developer</strong> with strong foundational expertise in native mobile app architecture, intuitive UI implementation, and clean code practices. Experienced in developing responsive, scalable apps with Kotlin and Java, managing local database persistence, integrating REST APIs, and following Google Material Design principles. Highly adaptable, proactive team player with strong analytical problem-solving abilities.
+          Results-driven <strong>Digital Marketing &amp; Social Media Specialist</strong> with <strong>7+ years of experience</strong> in social media management, paid advertising, e-commerce marketing, content strategy, audience growth, and online brand development.
+        </p>
+        <p class="section-paragraph">
+          Experienced in developing and executing digital marketing strategies across Facebook, Instagram, TikTok, Google, and other digital platforms. Highly skilled in Meta Ads Manager, audience targeting, retargeting, campaign optimization, content planning, competitor research, conversion tracking, and performance analysis.
+        </p>
+        <p class="section-paragraph">
+          Proven track record working with e-commerce businesses, online brands, and digital products, with a deep understanding of customer acquisition, marketing funnels, product research, and brand scaling. Highly adaptable and self-motivated professional with exceptional communication, creative problem-solving, and analytical capabilities.
         </p>
       </section>
 
-      <!-- Section: Technical Skills -->
+      <!-- Section: Core Competencies -->
       <section class="cv-section">
         <h2 class="section-title">
           <span class="section-icon">
             <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polygon points="12 2 2 7 12 12 22 7 12 2"></polygon><polyline points="2 17 12 22 22 17"></polyline><polyline points="2 12 12 17 22 12"></polyline></svg>
           </span>
-          Technical &amp; Core Competencies
+          Core Competencies
         </h2>
-
-        <div class="skills-wrapper">
-          <div class="skill-row">
-            <div class="skill-row-title">
-              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="5" y="2" width="14" height="20" rx="2" ry="2"></rect><line x1="12" y1="18" x2="12.01" y2="18"></line></svg>
-              <span>Mobile Engineering</span>
-            </div>
-            <div class="skill-badge-list">
-              <span class="skill-badge">Android SDK</span>
-              <span class="skill-badge">Kotlin</span>
-              <span class="skill-badge">Java</span>
-              <span class="skill-badge">XML Layouts</span>
-              <span class="skill-badge">Jetpack Components</span>
-              <span class="skill-badge">Material Design</span>
-              <span class="skill-badge">MVVM Architecture</span>
-            </div>
-          </div>
-
-          <div class="skill-row">
-            <div class="skill-row-title">
-              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"></circle><line x1="2" y1="12" x2="22" y2="12"></line><path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"></path></svg>
-              <span>Web &amp; Backend</span>
-            </div>
-            <div class="skill-badge-list">
-              <span class="skill-badge">HTML5</span>
-              <span class="skill-badge">CSS3</span>
-              <span class="skill-badge">JavaScript (ES6+)</span>
-              <span class="skill-badge">Node.js</span>
-              <span class="skill-badge">RESTful APIs</span>
-              <span class="skill-badge">JSON Parsing</span>
-            </div>
-          </div>
-
-          <div class="skill-row">
-            <div class="skill-row-title">
-              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M14.7 6.3a1 1 0 0 0 0 1.4l1.6 1.6a1 1 0 0 0 1.4 0l3.77-3.77a6 6 0 0 1-7.94 7.94l-6.91 6.91a2.12 2.12 0 0 1-3-3l6.91-6.91a6 6 0 0 1 7.94-7.94l-3.76 3.76z"></path></svg>
-              <span>Tools &amp; Environments</span>
-            </div>
-            <div class="skill-badge-list">
-              <span class="skill-badge">Android Studio</span>
-              <span class="skill-badge">Git &amp; GitHub</span>
-              <span class="skill-badge">VS Code</span>
-              <span class="skill-badge">Gradle Build System</span>
-              <span class="skill-badge">Postman</span>
-            </div>
-          </div>
-
-          <div class="skill-row">
-            <div class="skill-row-title">
-              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"></path><circle cx="9" cy="7" r="4"></circle><path d="M23 21v-2a4 4 0 0 0-3-3.87"></path><path d="M16 3.13a4 4 0 0 1 0 7.75"></path></svg>
-              <span>Professional &amp; Soft</span>
-            </div>
-            <div class="skill-badge-list">
-              <span class="skill-badge">Analytical Problem Solving</span>
-              <span class="skill-badge">Team Collaboration</span>
-              <span class="skill-badge">Project Coordination</span>
-              <span class="skill-badge">Agile Mindset</span>
-              <span class="skill-badge">Attention to Detail</span>
-            </div>
-          </div>
+        <div class="competencies-grid">
+          <span class="comp-pill">Digital Marketing Strategy</span>
+          <span class="comp-pill">Social Media Marketing</span>
+          <span class="comp-pill">Performance Marketing</span>
+          <span class="comp-pill">Facebook Marketing</span>
+          <span class="comp-pill">Instagram Marketing</span>
+          <span class="comp-pill">TikTok Marketing</span>
+          <span class="comp-pill">Meta Ads Manager</span>
+          <span class="comp-pill">Paid Advertising</span>
+          <span class="comp-pill">E-commerce Marketing</span>
+          <span class="comp-pill">Audience Research</span>
+          <span class="comp-pill">Customer Acquisition</span>
+          <span class="comp-pill">Retargeting Campaigns</span>
+          <span class="comp-pill">Lead Generation</span>
+          <span class="comp-pill">Conversion Optimization</span>
+          <span class="comp-pill">Content Strategy</span>
+          <span class="comp-pill">Brand Development</span>
+          <span class="comp-pill">Competitor Research</span>
+          <span class="comp-pill">Product Research</span>
+          <span class="comp-pill">Marketing Analytics</span>
+          <span class="comp-pill">Campaign Management</span>
+          <span class="comp-pill">Social Media Growth</span>
+          <span class="comp-pill">Conversion Tracking</span>
+          <span class="comp-pill">Marketing Funnel Strategy</span>
+          <span class="comp-pill">SEO Fundamentals</span>
+          <span class="comp-pill">Google Analytics 4 (GA4)</span>
         </div>
       </section>
 
-      <!-- Section: Work Experience -->
+      <!-- Section: Professional Experience -->
       <section class="cv-section">
         <h2 class="section-title">
           <span class="section-icon">
             <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="7" width="20" height="14" rx="2" ry="2"></rect><path d="M16 21V5a2 2 0 0 0-2-2h-4a2 2 0 0 0-2 2v16"></path></svg>
           </span>
-          Professional Experience &amp; Roles
+          Professional Experience
         </h2>
 
         <div class="timeline-list">
-          <!-- Item 1 -->
           <div class="cv-entry">
             <div class="entry-head">
               <div>
-                <h3 class="entry-role">Android App Developer</h3>
-                <div class="entry-org">Independent &amp; Freelance Mobile Projects</div>
+                <h3 class="entry-role">Digital Marketing &amp; Social Media Specialist</h3>
+                <div class="entry-org">Freelance / Independent Consultant • Bangladesh</div>
               </div>
-              <span class="entry-period">2023 — Present</span>
+              <span class="entry-period">2019 — Present</span>
             </div>
             <ul class="entry-points">
-              <li>Architected and built native Android applications utilizing Kotlin and Java, adhering strictly to Google Material Design standards.</li>
-              <li>Implemented offline data persistence using SQLite and Room Database, optimizing query performance for smooth UI rendering.</li>
-              <li>Integrated RESTful API endpoints using asynchronous background threads, handling error cases and complex JSON payloads reliably.</li>
-              <li>Tested applications across varied screen densities and hardware configurations to ensure responsive performance and zero battery drain.</li>
-            </ul>
-          </div>
-
-          <!-- Item 2 -->
-          <div class="cv-entry">
-            <div class="entry-head">
-              <div>
-                <h3 class="entry-role">Project &amp; Operations Coordinator</h3>
-                <div class="entry-org">Creative &amp; Community Initiatives</div>
-              </div>
-              <span class="entry-period">2022 — 2024</span>
-            </div>
-            <ul class="entry-points">
-              <li>Led project coordination, workflow tracking, and team scheduling across multi-disciplinary community and digital initiatives.</li>
-              <li>Organized communications and client relations, ensuring transparent status reporting and on-time milestone deliverables.</li>
-              <li>Standardized operational procedures and documentation, improving overall execution speed and teamwork consistency.</li>
+              <li>Develop and execute comprehensive digital marketing strategies for online businesses, brands, and e-commerce projects.</li>
+              <li>Manage and optimize social media presence across Facebook, Instagram, TikTok, and other digital platforms.</li>
+              <li>Plan, launch, monitor, and optimize high-ROI paid advertising campaigns aligned with business objectives.</li>
+              <li>Conduct rigorous audience research and competitor analysis to identify profitable customer segments and expansion opportunities.</li>
+              <li>Develop dynamic content strategies designed to increase organic reach, engagement, traffic, qualified leads, and sales conversions.</li>
+              <li>Architect precision retargeting strategies for website visitors, video viewers, social media audiences, and abandoned checkouts.</li>
+              <li>Monitor real-time advertising performance and optimize campaigns through data-driven A/B testing and budget reallocation.</li>
+              <li>Implement and verify Meta Pixel, Google Analytics 4 (GA4), custom event conversion tracking, and digital analytics.</li>
+              <li>Formulate high-converting promotional strategies for e-commerce stores, trending products, and online brand launches.</li>
+              <li>Perform in-depth market research, product demand analysis, competitor pricing audits, and customer behavior profiling.</li>
+              <li>Prepare detailed campaign performance reports providing actionable, growth-focused business recommendations.</li>
+              <li>Collaborate closely with clients to understand core commercial objectives and translate them into measurable marketing campaigns.</li>
             </ul>
           </div>
         </div>
       </section>
 
-      <!-- Section: Featured Projects -->
+      <!-- Section: Specialized Domains -->
+      <section class="cv-section">
+        <h2 class="section-title">
+          <span class="section-icon">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 12h-4l-3 9L9 3l-3 9H2"></path></svg>
+          </span>
+          Specialized Domains of Expertise
+        </h2>
+
+        <div class="domains-grid">
+          <!-- Domain 1 -->
+          <div class="domain-card">
+            <div class="domain-title">
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="18" cy="5" r="3"></circle><circle cx="6" cy="12" r="3"></circle><circle cx="18" cy="19" r="3"></circle><line x1="8.59" y1="13.51" x2="15.42" y2="17.49"></line><line x1="15.41" y1="6.51" x2="8.59" y2="10.49"></line></svg>
+              <span>Social Media</span>
+            </div>
+            <div class="domain-subtitle">Facebook • Instagram • TikTok</div>
+            <ul class="domain-list">
+              <li>Platform-specific content strategies</li>
+              <li>Social media calendars &amp; promo campaigns</li>
+              <li>Trend research &amp; opportunity analysis</li>
+              <li>Profile optimization &amp; brand positioning</li>
+              <li>Organic audience growth &amp; engagement</li>
+              <li>Short-form video &amp; Reels strategy</li>
+              <li>Community engagement &amp; communication</li>
+              <li>Competitor content pattern analysis</li>
+            </ul>
+          </div>
+
+          <!-- Domain 2 -->
+          <div class="domain-card">
+            <div class="domain-title">
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="2" y="3" width="20" height="14" rx="2" ry="2"></rect><line x1="8" y1="21" x2="16" y2="21"></line><line x1="12" y1="17" x2="12" y2="21"></line></svg>
+              <span>Paid Advertising</span>
+            </div>
+            <div class="domain-subtitle">Meta Ads &amp; Performance</div>
+            <ul class="domain-list">
+              <li>Meta Ads Manager &amp; Campaign Architecture</li>
+              <li>Precision Audience Targeting</li>
+              <li>Custom &amp; Lookalike Audiences</li>
+              <li>High-Impact Retargeting Funnels</li>
+              <li>Traffic, Engagement &amp; Lead Generation</li>
+              <li>Conversion Campaigns &amp; Purchase Scaling</li>
+              <li>Creative &amp; Audience A/B Testing</li>
+              <li>Meta Pixel &amp; CAPI Conversion Tracking</li>
+            </ul>
+          </div>
+
+          <!-- Domain 3 -->
+          <div class="domain-card">
+            <div class="domain-title">
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="9" cy="21" r="1"></circle><circle cx="20" cy="21" r="1"></circle><path d="M1 1h4l2.68 13.39a2 2 0 0 0 2 1.61h9.72a2 2 0 0 0 2-1.61L23 6H6"></path></svg>
+              <span>E-commerce Growth</span>
+            </div>
+            <div class="domain-subtitle">Store Strategy &amp; Scaling</div>
+            <ul class="domain-list">
+              <li>Product research &amp; market analysis</li>
+              <li>Competitor pricing &amp; demand audits</li>
+              <li>Product listing &amp; copywriting optimization</li>
+              <li>Customer acquisition &amp; ROAS optimization</li>
+              <li>Brand positioning &amp; online store strategy</li>
+              <li>Dropshipping &amp; marketplace models</li>
+              <li>Customer journey &amp; checkout conversion</li>
+              <li>End-to-end promotional campaigns</li>
+            </ul>
+          </div>
+        </div>
+      </section>
+
+      <!-- Section: Selected Project Experience -->
       <section class="cv-section">
         <h2 class="section-title">
           <span class="section-icon">
             <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 19a2 2 0 0 1-2 2H4a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h5l2 3h9a2 2 0 0 1 2 2z"></path></svg>
           </span>
-          Featured Projects
+          Selected Project Experience
         </h2>
 
         <div class="projects-container">
+          <!-- Project 1 -->
           <div class="project-box">
             <div class="project-top">
-              <h3 class="project-name">Android Productivity &amp; Utility Suite</h3>
-              <span class="project-tech">Android • Kotlin • Room DB</span>
+              <h3 class="project-name">Invoice-Gen.net</h3>
+              <span class="project-tag">Founder / Product &amp; Marketing</span>
             </div>
-            <p class="project-info">
-              A collection of focused Android utility apps engineered for swift performance, intuitive navigation, local offline storage, and responsive UI across various screen form factors.
-            </p>
+            <ul class="project-points">
+              <li>Developed the initial concept and business growth strategy for an online invoice generation platform.</li>
+              <li>Planned core product features including automated invoice creation, PDF generation, recurring invoices, and client catalogs.</li>
+              <li>Led product positioning, branding identity, user experience (UX), and digital customer acquisition funnel.</li>
+              <li>Planned content marketing and SEO strategies to maximize organic search visibility and user sign-ups.</li>
+            </ul>
           </div>
 
+          <!-- Project 2 -->
           <div class="project-box">
             <div class="project-top">
-              <h3 class="project-name">Personal Portfolio &amp; Digital Hub</h3>
-              <span class="project-tech">Web • JavaScript • Semantic HTML</span>
+              <h3 class="project-name">Keytify Shop</h3>
+              <span class="project-tag">E-commerce Brand &amp; Marketing</span>
             </div>
-            <p class="project-info">
-              High-performance, accessible digital resume and portfolio optimized for instantaneous loading, print export, dark/light theme switching, and seamless mobile responsiveness.
-            </p>
+            <ul class="project-points">
+              <li>Executed comprehensive e-commerce product research, identifying high-demand trending opportunities.</li>
+              <li>Crafted persuasive, benefit-driven product descriptions and dynamic promotional creatives.</li>
+              <li>Architected multi-channel social media marketing campaigns and brand positioning strategies.</li>
+              <li>Developed and scaled paid advertising funnels across Meta to maximize customer acquisition and store revenue.</li>
+            </ul>
           </div>
         </div>
       </section>
 
-      <!-- Section: Education -->
+      <!-- Section: Digital Marketing Tools & Platforms -->
       <section class="cv-section">
         <h2 class="section-title">
           <span class="section-icon">
-            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 10v6M2 10l10-5 10 5-10 5z"></path><path d="M6 12v5c3 3 9 3 12 0v-5"></path></svg>
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M14.7 6.3a1 1 0 0 0 0 1.4l1.6 1.6a1 1 0 0 0 1.4 0l3.77-3.77a6 6 0 0 1-7.94 7.94l-6.91 6.91a2.12 2.12 0 0 1-3-3l6.91-6.91a6 6 0 0 1 7.94-7.94l-3.76 3.76z"></path></svg>
           </span>
-          Education
+          Tools &amp; Platforms
         </h2>
 
-        <div class="cv-entry">
-          <div class="entry-head">
-            <div>
-              <h3 class="entry-role">Bachelor of Science (B.Sc.)</h3>
-              <div class="entry-org">University Graduate</div>
+        <div class="skills-wrapper">
+          <div class="skill-row">
+            <div class="skill-row-title">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"></circle><path d="M8 14s1.5 2 4 2 4-2 4-2"></path><line x1="9" y1="9" x2="9.01" y2="9"></line><line x1="15" y1="9" x2="15.01" y2="9"></line></svg>
+              <span>Advertising &amp; Analytics</span>
             </div>
-            <span class="entry-period">2021 — 2025</span>
+            <div class="skill-badge-list">
+              <span class="skill-badge">Meta Ads Manager</span>
+              <span class="skill-badge">Facebook Business Suite</span>
+              <span class="skill-badge">Google Ads</span>
+              <span class="skill-badge">Google Analytics 4 (GA4)</span>
+              <span class="skill-badge">Google Tag Manager (GTM)</span>
+              <span class="skill-badge">Meta Pixel</span>
+              <span class="skill-badge">Conversion Tracking</span>
+            </div>
           </div>
-          <p class="section-paragraph" style="margin-top: 6px;">
-            Graduated with a solid academic foundation in computational logic, software engineering principles, system analysis, and project collaboration.
-          </p>
+
+          <div class="skill-row">
+            <div class="skill-row-title">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="18" cy="5" r="3"></circle><circle cx="6" cy="12" r="3"></circle><circle cx="18" cy="19" r="3"></circle><line x1="8.59" y1="13.51" x2="15.42" y2="17.49"></line><line x1="15.41" y1="6.51" x2="8.59" y2="10.49"></line></svg>
+              <span>Social Media Platforms</span>
+            </div>
+            <div class="skill-badge-list">
+              <span class="skill-badge">Facebook</span>
+              <span class="skill-badge">Instagram</span>
+              <span class="skill-badge">TikTok</span>
+              <span class="skill-badge">YouTube</span>
+              <span class="skill-badge">LinkedIn</span>
+            </div>
+          </div>
+
+          <div class="skill-row">
+            <div class="skill-row-title">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="3" width="18" height="18" rx="2" ry="2"></rect><circle cx="8.5" cy="8.5" r="1.5"></circle><polyline points="21 15 16 10 5 21"></polyline></svg>
+              <span>Design &amp; Content</span>
+            </div>
+            <div class="skill-badge-list">
+              <span class="skill-badge">Canva</span>
+              <span class="skill-badge">Adobe Photoshop</span>
+              <span class="skill-badge">Adobe Illustrator</span>
+              <span class="skill-badge">Reels &amp; Short-Form Video Strategy</span>
+              <span class="skill-badge">Visual Ad Creatives</span>
+            </div>
+          </div>
+
+          <div class="skill-row">
+            <div class="skill-row-title">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="9" cy="21" r="1"></circle><circle cx="20" cy="21" r="1"></circle><path d="M1 1h4l2.68 13.39a2 2 0 0 0 2 1.61h9.72a2 2 0 0 0 2-1.61L23 6H6"></path></svg>
+              <span>E-commerce &amp; Web</span>
+            </div>
+            <div class="skill-badge-list">
+              <span class="skill-badge">Shopify</span>
+              <span class="skill-badge">WooCommerce</span>
+              <span class="skill-badge">WordPress</span>
+              <span class="skill-badge">Next.js</span>
+              <span class="skill-badge">GitHub</span>
+              <span class="skill-badge">Supabase</span>
+              <span class="skill-badge">Stripe</span>
+            </div>
+          </div>
+
+          <div class="skill-row">
+            <div class="skill-row-title">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="2" y="3" width="20" height="14" rx="2" ry="2"></rect><line x1="8" y1="21" x2="16" y2="21"></line><line x1="12" y1="17" x2="12" y2="21"></line></svg>
+              <span>Productivity &amp; Office</span>
+            </div>
+            <div class="skill-badge-list">
+              <span class="skill-badge">Google Workspace</span>
+              <span class="skill-badge">Google Sheets</span>
+              <span class="skill-badge">Google Docs</span>
+              <span class="skill-badge">Microsoft Office</span>
+            </div>
+          </div>
         </div>
       </section>
 
-      <!-- Section: Languages & Personal Details -->
+      <!-- Section: Key Professional Skills (Marketing, Analytical, Business) -->
+      <section class="cv-section">
+        <h2 class="section-title">
+          <span class="section-icon">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"></path><circle cx="9" cy="7" r="4"></circle><path d="M23 21v-2a4 4 0 0 0-3-3.87"></path><path d="M16 3.13a4 4 0 0 1 0 7.75"></path></svg>
+          </span>
+          Key Professional Skills
+        </h2>
+
+        <div class="domains-grid">
+          <div class="domain-card">
+            <div class="domain-title">Marketing</div>
+            <ul class="domain-list">
+              <li>Digital Marketing</li>
+              <li>Performance Marketing</li>
+              <li>Social Media Marketing</li>
+              <li>Paid Advertising</li>
+              <li>E-commerce Marketing</li>
+              <li>Content Marketing</li>
+              <li>Brand Strategy</li>
+              <li>Customer Acquisition</li>
+            </ul>
+          </div>
+
+          <div class="domain-card">
+            <div class="domain-title">Analytical</div>
+            <ul class="domain-list">
+              <li>Market Research</li>
+              <li>Competitor Analysis</li>
+              <li>Audience Analysis</li>
+              <li>Campaign Performance Analysis</li>
+              <li>Conversion Rate Analysis</li>
+              <li>Data-Driven Optimization</li>
+            </ul>
+          </div>
+
+          <div class="domain-card">
+            <div class="domain-title">Business</div>
+            <ul class="domain-list">
+              <li>Client Communication</li>
+              <li>Project Management</li>
+              <li>Business Development</li>
+              <li>Strategic Planning</li>
+              <li>Creative Problem Solving</li>
+              <li>Customer Relationship Management</li>
+            </ul>
+          </div>
+        </div>
+      </section>
+
+      <!-- Section: Professional Strengths -->
+      <section class="cv-section">
+        <h2 class="section-title">
+          <span class="section-icon">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"></polygon></svg>
+          </span>
+          Professional Strengths
+        </h2>
+
+        <div class="strengths-grid">
+          <div class="strength-item">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="20 6 9 17 4 12"></polyline></svg>
+            <span>Strong communication and interpersonal skills</span>
+          </div>
+          <div class="strength-item">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="20 6 9 17 4 12"></polyline></svg>
+            <span>Creative and analytical approach to marketing</span>
+          </div>
+          <div class="strength-item">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="20 6 9 17 4 12"></polyline></svg>
+            <span>Proven ability to work independently &amp; remotely</span>
+          </div>
+          <div class="strength-item">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="20 6 9 17 4 12"></polyline></svg>
+            <span>Fast learner and highly adaptable to new technologies</span>
+          </div>
+          <div class="strength-item">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="20 6 9 17 4 12"></polyline></svg>
+            <span>Meticulous attention to detail &amp; data accuracy</span>
+          </div>
+          <div class="strength-item">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="20 6 9 17 4 12"></polyline></svg>
+            <span>Business and customer-focused strategic mindset</span>
+          </div>
+          <div class="strength-item">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="20 6 9 17 4 12"></polyline></svg>
+            <span>Ability to manage multiple projects under strict deadlines</span>
+          </div>
+          <div class="strength-item">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="20 6 9 17 4 12"></polyline></svg>
+            <span>Passion for technology, e-commerce, and digital business</span>
+          </div>
+        </div>
+      </section>
+
+      <!-- Section: Certifications & Professional Development -->
+      <section class="cv-section">
+        <h2 class="section-title">
+          <span class="section-icon">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="8" r="7"></circle><polyline points="8.21 13.89 7 23 12 20 17 23 15.79 13.88"></polyline></svg>
+          </span>
+          Certifications &amp; Professional Development
+        </h2>
+
+        <div class="timeline-list">
+          <div class="cv-entry">
+            <ul class="entry-points" style="padding-left: 18px;">
+              <li><strong>Digital Marketing &amp; Strategy</strong> — Professional Certification &amp; Practical Training</li>
+              <li><strong>Meta Advertising &amp; Performance Marketing</strong> — Meta Ads Manager Specialist</li>
+              <li><strong>Google Analytics (GA4) &amp; Measurement</strong> — Web &amp; App Conversion Tracking</li>
+              <li><strong>E-commerce &amp; Online Business Management</strong> — Hands-on Industry Experience (7+ Years)</li>
+              <li><strong>Social Media Marketing &amp; Brand Growth</strong> — Multi-Platform Practical Application</li>
+            </ul>
+          </div>
+        </div>
+      </section>
+
+      <!-- Section: Languages & Additional Info -->
       <section class="cv-section">
         <h2 class="section-title">
           <span class="section-icon">
             <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"></circle><line x1="2" y1="12" x2="22" y2="12"></line><path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"></path></svg>
           </span>
-          Languages &amp; Personal Info
+          Languages &amp; Work Preference
         </h2>
 
         <div class="details-grid">
           <div class="detail-cell">
             <span class="detail-key">Languages:</span>
-            <span class="detail-val">English (Professional Working), Bengali (Native)</span>
+            <span class="detail-val">Bengali (Native), English (Fluent)</span>
           </div>
           <div class="detail-cell">
             <span class="detail-key">Nationality:</span>
             <span class="detail-val">Bangladeshi</span>
           </div>
           <div class="detail-cell">
-            <span class="detail-key">Location:</span>
-            <span class="detail-val">Dhaka, Bangladesh</span>
+            <span class="detail-key">Availability:</span>
+            <span class="detail-val status-open">🟢 Full-time / Remote / Freelance</span>
           </div>
           <div class="detail-cell">
-            <span class="detail-key">Availability:</span>
-            <span class="detail-val status-open">🟢 Open for Full-time &amp; Freelance Roles</span>
+            <span class="detail-key">Work Preferences:</span>
+            <span class="detail-val">Digital Marketing, Social Media, E-commerce, Performance Marketing, Marketing Operations</span>
+          </div>
+          <div class="detail-cell" style="grid-column: 1 / -1;">
+            <span class="detail-key">References:</span>
+            <span class="detail-val">Available upon request</span>
           </div>
         </div>
       </section>
 
       <!-- CV Footer -->
       <footer class="cv-footer">
-        <p>&copy; 2026 Ashikur Rahman Shaon • <a href="mailto:ashikurrahmanshaon@gmail.com">ashikurrahmanshaon@gmail.com</a> • <a href="http://www.arshaon.com">arshaon.com</a></p>
+        <p>&copy; 2026 ASHIKUR RAHMAN SHAON • <a href="mailto:arshaonx@gmail.com">arshaonx@gmail.com</a> • <a href="tel:+8801787081119">+880 1787-081119</a></p>
       </footer>
 
     </article>
@@ -1093,6 +1435,6 @@
   </div>
 
   <!-- JavaScript -->
-  <script src="js/main.js?v=3.2"></script>
+  <script src="js/main.js?v=4.0"></script>
 </body>
 </html>
