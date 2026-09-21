@@ -1,16 +1,16 @@
 <!DOCTYPE html>
-<html lang="en" data-theme="dark">
+<html lang="en" data-theme="light">
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Ashikur Rahman Shaon — Curriculum Vitae</title>
-  <meta name="description" content="Curriculum Vitae of Ashikur Rahman Shaon. Android & Software Developer based in Dhaka, Bangladesh. Education, experience, skills, and contact details.">
+  <title>Ashikur Rahman Shaon — Curriculum Vitae (CV)</title>
+  <meta name="description" content="Official Curriculum Vitae of Ashikur Rahman Shaon. Android & Software Developer based in Dhaka, Bangladesh.">
   <meta name="author" content="Ashikur Rahman Shaon">
 
   <!-- Open Graph -->
   <meta property="og:type" content="website">
   <meta property="og:title" content="Ashikur Rahman Shaon — Curriculum Vitae">
-  <meta property="og:description" content="Curriculum Vitae of Ashikur Rahman Shaon. Android & Software Developer.">
+  <meta property="og:description" content="Android & Software Developer based in Dhaka, Bangladesh. Education, experience, skills, and contact details.">
   <meta property="og:image" content="assets/avatar.svg">
 
   <!-- Favicon -->
@@ -19,24 +19,741 @@
   <!-- Google Fonts: Inter & Outfit -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Outfit:wght@500;600;700&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Outfit:wght@500;600;700;800&display=swap" rel="stylesheet">
 
-  <!-- Stylesheet -->
-  <link rel="stylesheet" href="css/style.css">
+  <!-- External Stylesheet (with cache buster) -->
+  <link rel="stylesheet" href="css/style.css?v=3.2">
+
+  <!-- Inline Stylesheet: Guarantees 0% caching issues and instant pristine rendering -->
+  <style>
+    /* ==========================================================================
+       Ashikur Rahman Shaon — Modern Executive CV Design System
+       ========================================================================== */
+    :root {
+      /* Light Theme (Default for Clean CV) */
+      --bg-page: #f1f5f9;
+      --bg-paper: #ffffff;
+      --bg-subtle: #f8fafc;
+      --bg-badge: #f1f5f9;
+      --bg-badge-hover: #e2e8f0;
+
+      --text-main: #0f172a;
+      --text-sub: #334155;
+      --text-muted: #64748b;
+      --text-link: #2563eb;
+
+      --border: #e2e8f0;
+      --border-subtle: #edf2f7;
+
+      --accent: #2563eb;
+      --accent-hover: #1d4ed8;
+      --accent-soft: #eff6ff;
+      --accent-text: #ffffff;
+
+      --success: #10b981;
+      --success-soft: #ecfdf5;
+
+      --shadow-page: 0 4px 6px -1px rgba(0, 0, 0, 0.05), 0 2px 4px -2px rgba(0, 0, 0, 0.05);
+      --shadow-paper: 0 20px 25px -5px rgba(15, 23, 42, 0.08), 0 8px 10px -6px rgba(15, 23, 42, 0.04);
+
+      --radius-sm: 6px;
+      --radius-md: 10px;
+      --radius-lg: 16px;
+      --radius-full: 9999px;
+
+      --font-body: 'Inter', -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+      --font-head: 'Outfit', 'Inter', -apple-system, sans-serif;
+    }
+
+    [data-theme="dark"] {
+      --bg-page: #090d16;
+      --bg-paper: #111827;
+      --bg-subtle: #162032;
+      --bg-badge: #1f293d;
+      --bg-badge-hover: #2d3b55;
+
+      --text-main: #f8fafc;
+      --text-sub: #cbd5e1;
+      --text-muted: #94a3b8;
+      --text-link: #38bdf8;
+
+      --border: #1f293d;
+      --border-subtle: #182335;
+
+      --accent: #38bdf8;
+      --accent-hover: #0284c7;
+      --accent-soft: rgba(56, 189, 248, 0.12);
+      --accent-text: #090d16;
+
+      --success: #34d399;
+      --success-soft: rgba(52, 211, 153, 0.12);
+
+      --shadow-page: 0 4px 6px -1px rgba(0, 0, 0, 0.3);
+      --shadow-paper: 0 20px 30px -5px rgba(0, 0, 0, 0.6), 0 10px 15px -5px rgba(0, 0, 0, 0.4);
+    }
+
+    /* Reset */
+    *, *::before, *::after {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    html {
+      font-size: 16px;
+      scroll-behavior: smooth;
+      -webkit-text-size-adjust: 100%;
+    }
+
+    body {
+      font-family: var(--font-body);
+      background-color: var(--bg-page);
+      color: var(--text-main);
+      line-height: 1.6;
+      transition: background-color 0.2s ease, color 0.2s ease;
+      min-height: 100vh;
+      display: flex;
+      flex-direction: column;
+    }
+
+    a {
+      color: var(--text-link);
+      text-decoration: none;
+      transition: color 0.15s ease;
+    }
+
+    a:hover {
+      text-decoration: underline;
+    }
+
+    /* Top Control Bar */
+    .top-bar {
+      position: sticky;
+      top: 0;
+      z-index: 100;
+      background-color: var(--bg-paper);
+      border-bottom: 1px solid var(--border);
+      backdrop-filter: blur(12px);
+      box-shadow: var(--shadow-page);
+      transition: background-color 0.2s ease, border-color 0.2s ease;
+    }
+
+    .top-bar-inner {
+      max-width: 900px;
+      margin: 0 auto;
+      padding: 10px 24px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+    }
+
+    .brand-group {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+    }
+
+    .brand-logo {
+      width: 32px;
+      height: 32px;
+      border-radius: var(--radius-sm);
+    }
+
+    .brand-title {
+      font-family: var(--font-head);
+      font-size: 1.1rem;
+      font-weight: 700;
+      color: var(--text-main);
+      display: flex;
+      align-items: center;
+      gap: 8px;
+    }
+
+    .brand-tag {
+      font-size: 0.72rem;
+      font-weight: 700;
+      text-transform: uppercase;
+      background-color: var(--accent-soft);
+      color: var(--accent);
+      padding: 2px 8px;
+      border-radius: var(--radius-sm);
+      border: 1px solid var(--accent);
+      letter-spacing: 0.5px;
+    }
+
+    .btn-group {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+    }
+
+    .btn {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      gap: 8px;
+      font-family: var(--font-body);
+      font-size: 0.88rem;
+      font-weight: 600;
+      padding: 8px 16px;
+      border-radius: var(--radius-full);
+      border: 1px solid var(--border);
+      background-color: var(--bg-badge);
+      color: var(--text-main);
+      cursor: pointer;
+      transition: all 0.2s ease;
+      text-decoration: none;
+    }
+
+    .btn:hover {
+      background-color: var(--bg-badge-hover);
+      text-decoration: none;
+      transform: translateY(-1px);
+    }
+
+    .btn-primary {
+      background-color: var(--accent);
+      color: var(--accent-text);
+      border-color: var(--accent);
+    }
+
+    .btn-primary:hover {
+      background-color: var(--accent-hover);
+      border-color: var(--accent-hover);
+      color: var(--accent-text);
+    }
+
+    .btn-icon-only {
+      width: 38px;
+      height: 38px;
+      padding: 0;
+      border-radius: 50%;
+    }
+
+    /* Main CV Sheet Container */
+    .cv-wrapper {
+      flex: 1;
+      max-width: 900px;
+      width: 100%;
+      margin: 32px auto 60px;
+      padding: 0 20px;
+    }
+
+    .cv-sheet {
+      background-color: var(--bg-paper);
+      border: 1px solid var(--border);
+      border-radius: var(--radius-lg);
+      box-shadow: var(--shadow-paper);
+      padding: 48px 56px;
+      transition: background-color 0.2s ease, border-color 0.2s ease;
+    }
+
+    /* CV Header */
+    .cv-header {
+      display: flex;
+      align-items: center;
+      gap: 32px;
+      padding-bottom: 28px;
+      border-bottom: 2px solid var(--border);
+    }
+
+    .cv-avatar-box {
+      position: relative;
+      flex-shrink: 0;
+    }
+
+    .cv-avatar {
+      width: 110px;
+      height: 110px;
+      border-radius: 50%;
+      border: 3px solid var(--accent);
+      object-fit: cover;
+      background-color: var(--bg-subtle);
+      box-shadow: var(--shadow-page);
+    }
+
+    .status-dot-wrap {
+      position: absolute;
+      bottom: 4px;
+      right: 4px;
+      background-color: var(--bg-paper);
+      border-radius: 50%;
+      padding: 3px;
+      display: flex;
+    }
+
+    .status-dot {
+      width: 12px;
+      height: 12px;
+      background-color: var(--success);
+      border-radius: 50%;
+    }
+
+    .cv-hero-text {
+      flex: 1;
+    }
+
+    .cv-name {
+      font-family: var(--font-head);
+      font-size: 2.25rem;
+      font-weight: 800;
+      color: var(--text-main);
+      line-height: 1.15;
+      letter-spacing: -0.5px;
+      margin-bottom: 4px;
+    }
+
+    .cv-headline {
+      font-size: 1.18rem;
+      font-weight: 600;
+      color: var(--accent);
+      margin-bottom: 8px;
+    }
+
+    .cv-summary-short {
+      font-size: 0.95rem;
+      color: var(--text-muted);
+      line-height: 1.5;
+    }
+
+    /* Contact Strip */
+    .contact-strip {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 10px;
+      margin-top: 18px;
+    }
+
+    .contact-item {
+      display: inline-flex;
+      align-items: center;
+      gap: 7px;
+      font-size: 0.85rem;
+      font-weight: 500;
+      color: var(--text-sub);
+      background-color: var(--bg-badge);
+      border: 1px solid var(--border);
+      padding: 6px 14px;
+      border-radius: var(--radius-full);
+      transition: all 0.15s ease;
+      text-decoration: none;
+    }
+
+    .contact-item svg {
+      width: 15px;
+      height: 15px;
+      color: var(--accent);
+      flex-shrink: 0;
+    }
+
+    .contact-item:hover {
+      background-color: var(--bg-badge-hover);
+      color: var(--text-main);
+      border-color: var(--text-muted);
+      text-decoration: none;
+      transform: translateY(-1px);
+    }
+
+    /* Section Styling */
+    .cv-section {
+      margin-top: 36px;
+    }
+
+    .section-title {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      font-family: var(--font-head);
+      font-size: 1.25rem;
+      font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: 0.8px;
+      color: var(--text-main);
+      padding-bottom: 8px;
+      border-bottom: 2px solid var(--border);
+      margin-bottom: 18px;
+    }
+
+    .section-icon {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      color: var(--accent);
+    }
+
+    .section-icon svg {
+      width: 20px;
+      height: 20px;
+    }
+
+    .section-paragraph {
+      font-size: 0.98rem;
+      color: var(--text-sub);
+      line-height: 1.75;
+    }
+
+    /* Skills Clean Table / Rows */
+    .skills-wrapper {
+      display: flex;
+      flex-direction: column;
+      gap: 14px;
+    }
+
+    .skill-row {
+      display: grid;
+      grid-template-columns: 210px 1fr;
+      align-items: center;
+      gap: 16px;
+      background-color: var(--bg-subtle);
+      border: 1px solid var(--border);
+      border-radius: var(--radius-md);
+      padding: 12px 18px;
+    }
+
+    .skill-row-title {
+      font-size: 0.88rem;
+      font-weight: 700;
+      color: var(--text-main);
+      display: flex;
+      align-items: center;
+      gap: 8px;
+    }
+
+    .skill-row-title svg {
+      width: 16px;
+      height: 16px;
+      color: var(--accent);
+    }
+
+    .skill-badge-list {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 8px;
+    }
+
+    .skill-badge {
+      font-size: 0.82rem;
+      font-weight: 600;
+      background-color: var(--bg-badge);
+      color: var(--text-sub);
+      border: 1px solid var(--border);
+      padding: 4px 10px;
+      border-radius: var(--radius-sm);
+    }
+
+    /* Experience & Education Entries */
+    .timeline-list {
+      display: flex;
+      flex-direction: column;
+      gap: 20px;
+    }
+
+    .cv-entry {
+      background-color: var(--bg-subtle);
+      border: 1px solid var(--border);
+      border-radius: var(--radius-md);
+      padding: 20px 24px;
+      position: relative;
+    }
+
+    .entry-head {
+      display: flex;
+      justify-content: space-between;
+      align-items: flex-start;
+      gap: 16px;
+      margin-bottom: 10px;
+    }
+
+    .entry-role {
+      font-size: 1.1rem;
+      font-weight: 700;
+      color: var(--text-main);
+    }
+
+    .entry-org {
+      font-size: 0.92rem;
+      font-weight: 600;
+      color: var(--accent);
+      margin-top: 2px;
+    }
+
+    .entry-period {
+      font-size: 0.82rem;
+      font-weight: 600;
+      color: var(--text-muted);
+      background-color: var(--bg-badge);
+      border: 1px solid var(--border);
+      padding: 4px 12px;
+      border-radius: var(--radius-full);
+      white-space: nowrap;
+    }
+
+    .entry-points {
+      padding-left: 20px;
+      font-size: 0.94rem;
+      color: var(--text-sub);
+      line-height: 1.7;
+    }
+
+    .entry-points li {
+      margin-bottom: 6px;
+    }
+
+    .entry-points li:last-child {
+      margin-bottom: 0;
+    }
+
+    /* Projects Grid */
+    .projects-container {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 16px;
+    }
+
+    .project-box {
+      background-color: var(--bg-subtle);
+      border: 1px solid var(--border);
+      border-radius: var(--radius-md);
+      padding: 20px;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+    }
+
+    .project-top {
+      margin-bottom: 10px;
+    }
+
+    .project-name {
+      font-size: 1.05rem;
+      font-weight: 700;
+      color: var(--text-main);
+      margin-bottom: 6px;
+    }
+
+    .project-tech {
+      font-size: 0.78rem;
+      font-weight: 600;
+      color: var(--accent);
+      background-color: var(--accent-soft);
+      display: inline-block;
+      padding: 2px 8px;
+      border-radius: var(--radius-sm);
+    }
+
+    .project-info {
+      font-size: 0.92rem;
+      color: var(--text-sub);
+      line-height: 1.6;
+    }
+
+    /* Details Grid */
+    .details-grid {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 14px;
+      background-color: var(--bg-subtle);
+      border: 1px solid var(--border);
+      border-radius: var(--radius-md);
+      padding: 18px 22px;
+    }
+
+    .detail-cell {
+      display: flex;
+      flex-direction: column;
+      gap: 3px;
+    }
+
+    .detail-key {
+      font-size: 0.78rem;
+      font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: 0.5px;
+      color: var(--text-muted);
+    }
+
+    .detail-val {
+      font-size: 0.95rem;
+      font-weight: 600;
+      color: var(--text-main);
+    }
+
+    .detail-val.status-open {
+      color: var(--success);
+    }
+
+    /* Footer inside CV */
+    .cv-footer {
+      text-align: center;
+      margin-top: 40px;
+      padding-top: 24px;
+      border-top: 1px solid var(--border);
+      font-size: 0.88rem;
+      color: var(--text-muted);
+    }
+
+    .cv-footer a {
+      color: var(--text-sub);
+      font-weight: 500;
+    }
+
+    /* Toast Notification for Copy */
+    .toast {
+      position: fixed;
+      bottom: 24px;
+      right: 24px;
+      background-color: #0f172a;
+      color: #ffffff;
+      padding: 10px 18px;
+      border-radius: var(--radius-full);
+      font-size: 0.88rem;
+      font-weight: 500;
+      box-shadow: 0 10px 20px rgba(0,0,0,0.2);
+      transform: translateY(80px);
+      opacity: 0;
+      transition: all 0.3s cubic-bezier(0.16, 1, 0.3, 1);
+      z-index: 1000;
+      display: flex;
+      align-items: center;
+      gap: 8px;
+    }
+
+    .toast.show {
+      transform: translateY(0);
+      opacity: 1;
+    }
+
+    /* Print Styles (@media print) */
+    @media print {
+      .top-bar, .toast {
+        display: none !important;
+      }
+
+      body {
+        background: #ffffff !important;
+        color: #000000 !important;
+        font-size: 11pt !important;
+        line-height: 1.4 !important;
+      }
+
+      .cv-wrapper {
+        max-width: 100% !important;
+        margin: 0 !important;
+        padding: 0 !important;
+      }
+
+      .cv-sheet {
+        border: none !important;
+        box-shadow: none !important;
+        padding: 0 !important;
+        background: transparent !important;
+      }
+
+      .cv-name {
+        color: #000000 !important;
+        font-size: 2rem !important;
+      }
+
+      .cv-headline {
+        color: #1d4ed8 !important;
+      }
+
+      .contact-item {
+        background: #f8fafc !important;
+        border-color: #cbd5e1 !important;
+        color: #0f172a !important;
+        padding: 2px 8px !important;
+        font-size: 8.5pt !important;
+      }
+
+      .section-title {
+        color: #000000 !important;
+        border-bottom: 2px solid #94a3b8 !important;
+        font-size: 11pt !important;
+        margin-top: 14pt !important;
+        margin-bottom: 6pt !important;
+      }
+
+      .skill-row, .cv-entry, .project-box, .details-grid {
+        background: transparent !important;
+        border: 1px solid #cbd5e1 !important;
+        break-inside: avoid;
+        padding: 8pt 10pt !important;
+      }
+
+      .skill-badge {
+        background: #f1f5f9 !important;
+        border-color: #cbd5e1 !important;
+        color: #0f172a !important;
+      }
+
+      .cv-footer {
+        display: none !important;
+      }
+    }
+
+    /* Responsive */
+    @media (max-width: 768px) {
+      .cv-sheet {
+        padding: 28px 20px;
+      }
+
+      .cv-header {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 18px;
+      }
+
+      .cv-avatar {
+        width: 86px;
+        height: 86px;
+      }
+
+      .cv-name {
+        font-size: 1.8rem;
+      }
+
+      .cv-headline {
+        font-size: 1.05rem;
+      }
+
+      .skill-row {
+        grid-template-columns: 1fr;
+        gap: 8px;
+      }
+
+      .projects-container {
+        grid-template-columns: 1fr;
+      }
+
+      .details-grid {
+        grid-template-columns: 1fr;
+      }
+
+      .entry-head {
+        flex-direction: column;
+        gap: 6px;
+      }
+
+      .entry-period {
+        align-self: flex-start;
+      }
+    }
+  </style>
 </head>
 <body>
 
-  <!-- Top Action Bar (Print, Download, Theme Toggle) -->
+  <!-- Top Action Bar -->
   <header class="top-bar">
-    <div class="top-bar-container">
-      <div class="top-bar-brand">
-        <img src="assets/favicon.svg" alt="AR" class="top-bar-logo">
-        <span class="top-bar-name">Ashikur Rahman Shaon <span class="cv-badge">CV</span></span>
+    <div class="top-bar-inner">
+      <div class="brand-group">
+        <img src="assets/favicon.svg" alt="Logo" class="brand-logo">
+        <span class="brand-title">Ashikur Rahman Shaon <span class="brand-tag">CV</span></span>
       </div>
 
-      <div class="top-bar-actions">
+      <div class="btn-group">
         <!-- Print / PDF Button -->
-        <button class="action-btn action-btn-primary" id="print-btn" title="Print or Save as PDF">
+        <button class="btn btn-primary" id="print-cv-btn" title="Print or Save as PDF">
           <svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
             <polyline points="6 9 6 2 18 2 18 9"></polyline>
             <path d="M6 18H4a2 2 0 0 1-2-2v-5a2 2 0 0 1 2-2h16a2 2 0 0 1 2 2v5a2 2 0 0 1-2 2h-2"></path>
@@ -45,8 +762,17 @@
           <span>Print / PDF</span>
         </button>
 
-        <!-- Theme Toggle -->
-        <button class="action-btn action-btn-icon" id="theme-toggle" title="Switch Theme" aria-label="Toggle theme">
+        <!-- Copy Email Button -->
+        <button class="btn" id="copy-email-btn" title="Copy Email Address">
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+            <rect x="9" y="9" width="13" height="13" rx="2" ry="2"></rect>
+            <path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"></path>
+          </svg>
+          <span>Copy Email</span>
+        </button>
+
+        <!-- Dark / Light Theme Toggle -->
+        <button class="btn btn-icon-only" id="theme-toggle" title="Switch Light/Dark Mode" aria-label="Toggle Theme">
           <svg id="theme-moon" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
             <path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"></path>
           </svg>
@@ -66,76 +792,78 @@
     </div>
   </header>
 
-  <!-- Main CV Paper Container -->
-  <main class="cv-page">
-    <article class="cv-card" id="cv-content">
-      
-      <!-- Header / Profile Information -->
+  <!-- CV Sheet Content -->
+  <main class="cv-wrapper">
+    <article class="cv-sheet" id="cv-content">
+
+      <!-- Header Section -->
       <header class="cv-header">
-        <div class="cv-header-main">
-          <div class="cv-avatar-wrap">
-            <img src="assets/avatar.svg" alt="Ashikur Rahman Shaon" class="cv-avatar">
-          </div>
-          <div class="cv-title-box">
-            <h1 class="cv-name">Ashikur Rahman Shaon</h1>
-            <p class="cv-role">Android &amp; Software Developer</p>
-            <p class="cv-tagline">Motivated developer dedicated to building clean, user-friendly mobile applications and reliable software solutions.</p>
+        <div class="cv-avatar-box">
+          <img src="assets/avatar.svg" alt="Ashikur Rahman Shaon" class="cv-avatar">
+          <div class="status-dot-wrap" title="Available for Opportunities">
+            <span class="status-dot"></span>
           </div>
         </div>
 
-        <!-- Contact & Profile Links -->
-        <div class="cv-contacts">
-          <a href="mailto:ashikurrahmanshaon@gmail.com" class="contact-pill">
-            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-              <path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"></path>
-              <polyline points="22,6 12,13 2,6"></polyline>
-            </svg>
-            <span>ashikurrahmanshaon@gmail.com</span>
-          </a>
+        <div class="cv-hero-text">
+          <h1 class="cv-name">Ashikur Rahman Shaon</h1>
+          <div class="cv-headline">Android &amp; Software Developer</div>
+          <p class="cv-summary-short">
+            Dedicated software engineer passionate about crafting clean, reliable native Android applications, robust mobile architectures, and high-performance digital tools.
+          </p>
 
-          <a href="https://wa.me/8801700000000" target="_blank" rel="noopener noreferrer" class="contact-pill">
-            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-              <path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"></path>
-            </svg>
-            <span>WhatsApp / Phone</span>
-          </a>
+          <!-- Contact Strip -->
+          <div class="contact-strip">
+            <a href="mailto:ashikurrahmanshaon@gmail.com" class="contact-item">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                <path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"></path>
+                <polyline points="22,6 12,13 2,6"></polyline>
+              </svg>
+              <span>ashikurrahmanshaon@gmail.com</span>
+            </a>
 
-          <div class="contact-pill">
-            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-              <path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"></path>
-              <circle cx="12" cy="10" r="3"></circle>
-            </svg>
-            <span>Dhaka, Bangladesh</span>
+            <a href="https://wa.me/8801700000000" target="_blank" rel="noopener noreferrer" class="contact-item">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                <path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"></path>
+              </svg>
+              <span>WhatsApp / Phone</span>
+            </a>
+
+            <div class="contact-item">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                <path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"></path>
+                <circle cx="12" cy="10" r="3"></circle>
+              </svg>
+              <span>Dhaka, Bangladesh</span>
+            </div>
+
+            <a href="https://github.com/ashikurrahmanshaon" target="_blank" rel="noopener noreferrer" class="contact-item">
+              <svg viewBox="0 0 24 24" fill="currentColor">
+                <path d="M12 0C5.37 0 0 5.37 0 12c0 5.31 3.435 9.795 8.205 11.385.6.105.825-.255.825-.57 0-.285-.015-1.23-.015-2.235-3.015.555-3.795-.735-4.035-1.41-.135-.345-.72-1.41-1.23-1.695-.42-.225-1.02-.78-.015-.795.945-.015 1.62.87 1.845 1.23 1.08 1.815 2.805 1.305 3.495.99.105-.78.42-1.305.765-1.605-2.67-.3-5.46-1.335-5.46-5.925 0-1.305.465-2.385 1.23-3.225-.12-.3-.54-1.53.12-3.18 0 0 1.005-.315 3.3 1.23.96-.27 1.98-.405 3-.405s2.04.135 3 .405c2.295-1.56 3.3-1.23 3.3-1.23.66 1.65.24 2.88.12 3.18.765.84 1.23 1.905 1.23 3.225 0 4.605-2.805 5.625-5.475 5.925.435.375.81 1.095.81 2.22 0 1.605-.015 2.895-.015 3.3 0 .315.225.69.825.57A12.02 12.02 0 0 0 24 12c0-6.63-5.37-12-12-12z"/>
+              </svg>
+              <span>GitHub Profile</span>
+            </a>
+
+            <a href="https://linkedin.com/in/ashikurrahmanshaon" target="_blank" rel="noopener noreferrer" class="contact-item">
+              <svg viewBox="0 0 24 24" fill="currentColor">
+                <path d="M19 0h-14c-2.761 0-5 2.239-5 5v14c0 2.761 2.239 5 5 5h14c2.762 0 5-2.239 5-5v-14c0-2.761-2.238-5-5-5zm-11 19h-3v-11h3v11zm-1.5-12.268c-.966 0-1.75-.79-1.75-1.764s.784-1.764 1.75-1.764 1.75.79 1.75 1.764-.783 1.764-1.75 1.764zm13.5 12.268h-3v-5.604c0-3.368-4-3.113-4 0v5.604h-3v-11h3v1.765c1.396-2.586 7-2.777 7 2.476v6.759z"/>
+              </svg>
+              <span>LinkedIn</span>
+            </a>
+
+            <a href="http://www.arshaon.com" target="_blank" rel="noopener noreferrer" class="contact-item">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                <circle cx="12" cy="12" r="10"></circle>
+                <line x1="2" y1="12" x2="22" y2="12"></line>
+                <path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"></path>
+              </svg>
+              <span>arshaon.com</span>
+            </a>
           </div>
-
-          <a href="https://github.com/ashikurrahmanshaon" target="_blank" rel="noopener noreferrer" class="contact-pill">
-            <svg viewBox="0 0 24 24" fill="currentColor">
-              <path d="M12 0C5.37 0 0 5.37 0 12c0 5.31 3.435 9.795 8.205 11.385.6.105.825-.255.825-.57 0-.285-.015-1.23-.015-2.235-3.015.555-3.795-.735-4.035-1.41-.135-.345-.72-1.41-1.23-1.695-.42-.225-1.02-.78-.015-.795.945-.015 1.62.87 1.845 1.23 1.08 1.815 2.805 1.305 3.495.99.105-.78.42-1.305.765-1.605-2.67-.3-5.46-1.335-5.46-5.925 0-1.305.465-2.385 1.23-3.225-.12-.3-.54-1.53.12-3.18 0 0 1.005-.315 3.3 1.23.96-.27 1.98-.405 3-.405s2.04.135 3 .405c2.295-1.56 3.3-1.23 3.3-1.23.66 1.65.24 2.88.12 3.18.765.84 1.23 1.905 1.23 3.225 0 4.605-2.805 5.625-5.475 5.925.435.375.81 1.095.81 2.22 0 1.605-.015 2.895-.015 3.3 0 .315.225.69.825.57A12.02 12.02 0 0 0 24 12c0-6.63-5.37-12-12-12z"/>
-            </svg>
-            <span>github.com/ashikurrahmanshaon</span>
-          </a>
-
-          <a href="https://linkedin.com/in/ashikurrahmanshaon" target="_blank" rel="noopener noreferrer" class="contact-pill">
-            <svg viewBox="0 0 24 24" fill="currentColor">
-              <path d="M19 0h-14c-2.761 0-5 2.239-5 5v14c0 2.761 2.239 5 5 5h14c2.762 0 5-2.239 5-5v-14c0-2.761-2.238-5-5-5zm-11 19h-3v-11h3v11zm-1.5-12.268c-.966 0-1.75-.79-1.75-1.764s.784-1.764 1.75-1.764 1.75.79 1.75 1.764-.783 1.764-1.75 1.764zm13.5 12.268h-3v-5.604c0-3.368-4-3.113-4 0v5.604h-3v-11h3v1.765c1.396-2.586 7-2.777 7 2.476v6.759z"/>
-            </svg>
-            <span>LinkedIn Profile</span>
-          </a>
-
-          <a href="http://www.arshaon.com" target="_blank" rel="noopener noreferrer" class="contact-pill">
-            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-              <circle cx="12" cy="12" r="10"></circle>
-              <line x1="2" y1="12" x2="22" y2="12"></line>
-              <path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"></path>
-            </svg>
-            <span>arshaon.com</span>
-          </a>
         </div>
       </header>
 
-      <hr class="cv-divider">
-
-      <!-- Professional Summary -->
+      <!-- Section: Profile Summary -->
       <section class="cv-section">
         <h2 class="section-title">
           <span class="section-icon">
@@ -143,98 +871,128 @@
           </span>
           Profile Summary
         </h2>
-        <p class="section-body">
-          Dedicated, detail-oriented <strong>Android Apps Developer</strong> with solid experience in building responsive, efficient, and user-centric mobile applications. Strong background in modern software engineering principles, clean architecture, and intuitive UI design. A proactive problem solver, passionate about continuous technical growth, open source collaboration, and delivering polished digital experiences.
+        <p class="section-paragraph">
+          Energetic and detail-oriented <strong>Android Apps Developer</strong> with strong foundational expertise in native mobile app architecture, intuitive UI implementation, and clean code practices. Experienced in developing responsive, scalable apps with Kotlin and Java, managing local database persistence, integrating REST APIs, and following Google Material Design principles. Highly adaptable, proactive team player with strong analytical problem-solving abilities.
         </p>
       </section>
 
-      <!-- Technical & Core Skills -->
+      <!-- Section: Technical Skills -->
       <section class="cv-section">
         <h2 class="section-title">
           <span class="section-icon">
             <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polygon points="12 2 2 7 12 12 22 7 12 2"></polygon><polyline points="2 17 12 22 22 17"></polyline><polyline points="2 12 12 17 22 12"></polyline></svg>
           </span>
-          Technical &amp; Professional Skills
+          Technical &amp; Core Competencies
         </h2>
 
-        <div class="skills-grid">
-          <div class="skill-category">
-            <h3 class="skill-cat-title">Mobile &amp; Programming</h3>
-            <div class="skill-tags">
-              <span class="skill-tag">Android SDK</span>
-              <span class="skill-tag">Kotlin</span>
-              <span class="skill-tag">Java</span>
-              <span class="skill-tag">XML Layouts</span>
-              <span class="skill-tag">Jetpack Components</span>
-              <span class="skill-tag">Material Design</span>
+        <div class="skills-wrapper">
+          <div class="skill-row">
+            <div class="skill-row-title">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="5" y="2" width="14" height="20" rx="2" ry="2"></rect><line x1="12" y1="18" x2="12.01" y2="18"></line></svg>
+              <span>Mobile Engineering</span>
+            </div>
+            <div class="skill-badge-list">
+              <span class="skill-badge">Android SDK</span>
+              <span class="skill-badge">Kotlin</span>
+              <span class="skill-badge">Java</span>
+              <span class="skill-badge">XML Layouts</span>
+              <span class="skill-badge">Jetpack Components</span>
+              <span class="skill-badge">Material Design</span>
+              <span class="skill-badge">MVVM Architecture</span>
             </div>
           </div>
 
-          <div class="skill-category">
-            <h3 class="skill-cat-title">Web &amp; Tools</h3>
-            <div class="skill-tags">
-              <span class="skill-tag">HTML5 / CSS3 / JavaScript</span>
-              <span class="skill-tag">Node.js</span>
-              <span class="skill-tag">REST APIs</span>
-              <span class="skill-tag">Git &amp; GitHub</span>
-              <span class="skill-tag">Android Studio</span>
-              <span class="skill-tag">VS Code</span>
+          <div class="skill-row">
+            <div class="skill-row-title">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"></circle><line x1="2" y1="12" x2="22" y2="12"></line><path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"></path></svg>
+              <span>Web &amp; Backend</span>
+            </div>
+            <div class="skill-badge-list">
+              <span class="skill-badge">HTML5</span>
+              <span class="skill-badge">CSS3</span>
+              <span class="skill-badge">JavaScript (ES6+)</span>
+              <span class="skill-badge">Node.js</span>
+              <span class="skill-badge">RESTful APIs</span>
+              <span class="skill-badge">JSON Parsing</span>
             </div>
           </div>
 
-          <div class="skill-category">
-            <h3 class="skill-cat-title">Professional &amp; Soft Skills</h3>
-            <div class="skill-tags">
-              <span class="skill-tag">Project Management</span>
-              <span class="skill-tag">Analytical Problem Solving</span>
-              <span class="skill-tag">Agile / Scrum</span>
-              <span class="skill-tag">Team Collaboration</span>
-              <span class="skill-tag">Attention to Detail</span>
+          <div class="skill-row">
+            <div class="skill-row-title">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M14.7 6.3a1 1 0 0 0 0 1.4l1.6 1.6a1 1 0 0 0 1.4 0l3.77-3.77a6 6 0 0 1-7.94 7.94l-6.91 6.91a2.12 2.12 0 0 1-3-3l6.91-6.91a6 6 0 0 1 7.94-7.94l-3.76 3.76z"></path></svg>
+              <span>Tools &amp; Environments</span>
+            </div>
+            <div class="skill-badge-list">
+              <span class="skill-badge">Android Studio</span>
+              <span class="skill-badge">Git &amp; GitHub</span>
+              <span class="skill-badge">VS Code</span>
+              <span class="skill-badge">Gradle Build System</span>
+              <span class="skill-badge">Postman</span>
+            </div>
+          </div>
+
+          <div class="skill-row">
+            <div class="skill-row-title">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"></path><circle cx="9" cy="7" r="4"></circle><path d="M23 21v-2a4 4 0 0 0-3-3.87"></path><path d="M16 3.13a4 4 0 0 1 0 7.75"></path></svg>
+              <span>Professional &amp; Soft</span>
+            </div>
+            <div class="skill-badge-list">
+              <span class="skill-badge">Analytical Problem Solving</span>
+              <span class="skill-badge">Team Collaboration</span>
+              <span class="skill-badge">Project Coordination</span>
+              <span class="skill-badge">Agile Mindset</span>
+              <span class="skill-badge">Attention to Detail</span>
             </div>
           </div>
         </div>
       </section>
 
-      <!-- Work Experience -->
+      <!-- Section: Work Experience -->
       <section class="cv-section">
         <h2 class="section-title">
           <span class="section-icon">
             <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="7" width="20" height="14" rx="2" ry="2"></rect><path d="M16 21V5a2 2 0 0 0-2-2h-4a2 2 0 0 0-2 2v16"></path></svg>
           </span>
-          Experience &amp; Leadership
+          Professional Experience &amp; Roles
         </h2>
 
-        <div class="cv-entry">
-          <div class="entry-header">
-            <div class="entry-title-group">
-              <h3 class="entry-title">Android App Developer &amp; Creator</h3>
-              <span class="entry-org">Independent Projects &amp; Freelance</span>
+        <div class="timeline-list">
+          <!-- Item 1 -->
+          <div class="cv-entry">
+            <div class="entry-head">
+              <div>
+                <h3 class="entry-role">Android App Developer</h3>
+                <div class="entry-org">Independent &amp; Freelance Mobile Projects</div>
+              </div>
+              <span class="entry-period">2023 — Present</span>
             </div>
-            <span class="entry-badge">2023 — Present</span>
+            <ul class="entry-points">
+              <li>Architected and built native Android applications utilizing Kotlin and Java, adhering strictly to Google Material Design standards.</li>
+              <li>Implemented offline data persistence using SQLite and Room Database, optimizing query performance for smooth UI rendering.</li>
+              <li>Integrated RESTful API endpoints using asynchronous background threads, handling error cases and complex JSON payloads reliably.</li>
+              <li>Tested applications across varied screen densities and hardware configurations to ensure responsive performance and zero battery drain.</li>
+            </ul>
           </div>
-          <ul class="entry-bullets">
-            <li>Designed, developed, and deployed native Android applications following clean architectural patterns and Google Material Design guidelines.</li>
-            <li>Integrated asynchronous background processing, local SQLite/Room database storage, and RESTful API communications.</li>
-            <li>Conducted thorough debugging, memory optimization, and UI responsiveness testing across various Android versions and device screen sizes.</li>
-          </ul>
-        </div>
 
-        <div class="cv-entry">
-          <div class="entry-header">
-            <div class="entry-title-group">
-              <h3 class="entry-title">Project &amp; Operations Coordinator</h3>
-              <span class="entry-org">Creative &amp; Community Initiatives</span>
+          <!-- Item 2 -->
+          <div class="cv-entry">
+            <div class="entry-head">
+              <div>
+                <h3 class="entry-role">Project &amp; Operations Coordinator</h3>
+                <div class="entry-org">Creative &amp; Community Initiatives</div>
+              </div>
+              <span class="entry-period">2022 — 2024</span>
             </div>
-            <span class="entry-badge">2022 — 2024</span>
+            <ul class="entry-points">
+              <li>Led project coordination, workflow tracking, and team scheduling across multi-disciplinary community and digital initiatives.</li>
+              <li>Organized communications and client relations, ensuring transparent status reporting and on-time milestone deliverables.</li>
+              <li>Standardized operational procedures and documentation, improving overall execution speed and teamwork consistency.</li>
+            </ul>
           </div>
-          <ul class="entry-bullets">
-            <li>Managed scheduling, task distribution, and communication channels for collaborative projects, ensuring milestone deadlines were consistently achieved.</li>
-            <li>Maintained documentation, conducted stakeholder reviews, and optimized workflow processes for improved operational efficiency.</li>
-          </ul>
         </div>
       </section>
 
-      <!-- Key Projects -->
+      <!-- Section: Featured Projects -->
       <section class="cv-section">
         <h2 class="section-title">
           <span class="section-icon">
@@ -243,30 +1001,30 @@
           Featured Projects
         </h2>
 
-        <div class="projects-grid">
-          <div class="project-item">
-            <div class="project-header">
-              <h3 class="project-title">Android Utility &amp; Service Apps</h3>
-              <span class="project-tag">Android • Kotlin / Java</span>
+        <div class="projects-container">
+          <div class="project-box">
+            <div class="project-top">
+              <h3 class="project-name">Android Productivity &amp; Utility Suite</h3>
+              <span class="project-tech">Android • Kotlin • Room DB</span>
             </div>
-            <p class="project-desc">
-              A collection of mobile applications focused on productivity, local file management, and clean user experience with smooth animations and minimal battery overhead.
+            <p class="project-info">
+              A collection of focused Android utility apps engineered for swift performance, intuitive navigation, local offline storage, and responsive UI across various screen form factors.
             </p>
           </div>
 
-          <div class="project-item">
-            <div class="project-header">
-              <h3 class="project-title">Personal Portfolio &amp; Digital Hub</h3>
-              <span class="project-tag">Web • JavaScript • HTML/CSS</span>
+          <div class="project-box">
+            <div class="project-top">
+              <h3 class="project-name">Personal Portfolio &amp; Digital Hub</h3>
+              <span class="project-tech">Web • JavaScript • Semantic HTML</span>
             </div>
-            <p class="project-desc">
-              Lightweight, accessible personal website and digital curriculum vitae featuring fast load times, print optimization, and cross-platform compatibility.
+            <p class="project-info">
+              High-performance, accessible digital resume and portfolio optimized for instantaneous loading, print export, dark/light theme switching, and seamless mobile responsiveness.
             </p>
           </div>
         </div>
       </section>
 
-      <!-- Education -->
+      <!-- Section: Education -->
       <section class="cv-section">
         <h2 class="section-title">
           <span class="section-icon">
@@ -276,49 +1034,49 @@
         </h2>
 
         <div class="cv-entry">
-          <div class="entry-header">
-            <div class="entry-title-group">
-              <h3 class="entry-title">Bachelor of Science (B.Sc.)</h3>
-              <span class="entry-org">University Graduate</span>
+          <div class="entry-head">
+            <div>
+              <h3 class="entry-role">Bachelor of Science (B.Sc.)</h3>
+              <div class="entry-org">University Graduate</div>
             </div>
-            <span class="entry-badge">2021 — 2025</span>
+            <span class="entry-period">2021 — 2025</span>
           </div>
-          <p class="entry-desc">
-            Acquired strong foundational grounding in computer science fundamentals, software engineering, logical reasoning, and collaborative project execution.
+          <p class="section-paragraph" style="margin-top: 6px;">
+            Graduated with a solid academic foundation in computational logic, software engineering principles, system analysis, and project collaboration.
           </p>
         </div>
       </section>
 
-      <!-- Languages & Personal Info -->
+      <!-- Section: Languages & Personal Details -->
       <section class="cv-section">
         <h2 class="section-title">
           <span class="section-icon">
             <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"></circle><line x1="2" y1="12" x2="22" y2="12"></line><path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"></path></svg>
           </span>
-          Languages &amp; Details
+          Languages &amp; Personal Info
         </h2>
 
-        <div class="details-row">
-          <div class="detail-item">
-            <span class="detail-label">Languages:</span>
-            <span class="detail-value">English (Professional Working), Bengali (Native)</span>
+        <div class="details-grid">
+          <div class="detail-cell">
+            <span class="detail-key">Languages:</span>
+            <span class="detail-val">English (Professional Working), Bengali (Native)</span>
           </div>
-          <div class="detail-item">
-            <span class="detail-label">Nationality:</span>
-            <span class="detail-value">Bangladeshi</span>
+          <div class="detail-cell">
+            <span class="detail-key">Nationality:</span>
+            <span class="detail-val">Bangladeshi</span>
           </div>
-          <div class="detail-item">
-            <span class="detail-label">Location:</span>
-            <span class="detail-value">Dhaka, Bangladesh</span>
+          <div class="detail-cell">
+            <span class="detail-key">Location:</span>
+            <span class="detail-val">Dhaka, Bangladesh</span>
           </div>
-          <div class="detail-item">
-            <span class="detail-label">Availability:</span>
-            <span class="detail-value status-available">🟢 Available for Opportunities &amp; Freelance</span>
+          <div class="detail-cell">
+            <span class="detail-key">Availability:</span>
+            <span class="detail-val status-open">🟢 Open for Full-time &amp; Freelance Roles</span>
           </div>
         </div>
       </section>
 
-      <!-- Footer inside CV -->
+      <!-- CV Footer -->
       <footer class="cv-footer">
         <p>&copy; 2026 Ashikur Rahman Shaon • <a href="mailto:ashikurrahmanshaon@gmail.com">ashikurrahmanshaon@gmail.com</a> • <a href="http://www.arshaon.com">arshaon.com</a></p>
       </footer>
@@ -326,6 +1084,15 @@
     </article>
   </main>
 
-  <script src="js/main.js"></script>
+  <!-- Toast Element -->
+  <div class="toast" id="toast">
+    <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#34d399" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+      <polyline points="20 6 9 17 4 12"></polyline>
+    </svg>
+    <span id="toast-text">Copied to clipboard!</span>
+  </div>
+
+  <!-- JavaScript -->
+  <script src="js/main.js?v=3.2"></script>
 </body>
 </html>
