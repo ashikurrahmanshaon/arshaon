@@ -1,266 +1,847 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" data-theme="dark">
 <head>
   <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, viewport-fit=cover">
-  <title>Ashikur Rahman Shaon | Biodata</title>
-  
-  <!-- Sleek SVG Favicon -->
-  <link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>🏢</text></svg>">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=5.0">
+  <title>Ashikur Rahman Shaon — Personal Profile, CV &amp; Socials</title>
+  <meta name="description" content="Official personal website and interactive CV of Ashikur Rahman Shaon (ARSHAON). Bio, credentials, social media links, and direct contact.">
+  <meta name="keywords" content="Ashikur Rahman Shaon, ARSHAON, Personal Website, CV, Resume, Bio, Social Media, Contact">
+  <meta name="author" content="Ashikur Rahman Shaon">
 
-  <!-- Preconnect & Preload Critical Assets -->
-  <link rel="preload" href="profile.jpg" as="image" fetchpriority="high">
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+  <!-- Open Graph / Meta -->
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="Ashikur Rahman Shaon — Personal Profile &amp; CV">
+  <meta property="og:description" content="Discover Ashikur Rahman Shaon's background, interactive CV, social media profiles, and contact details.">
+  <meta property="og:image" content="assets/avatar.svg">
+
+  <!-- Favicon -->
+  <link rel="icon" type="image/svg+xml" href="assets/favicon.svg">
   
-  <link rel="stylesheet" href="style.css">
+  <!-- Stylesheet -->
+  <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
 
-  <!-- App Container -->
-  <main class="app-container">
-    
-    <!-- HEADER -->
-    <header class="app-header widget">
-      <div class="user-profile">
-        <div class="avatar-ring">
-          <div class="avatar">
-            <img src="profile.jpg" alt="Ashikur Rahman Shaon" class="profile-photo" fetchpriority="high">
-          </div>
-          <div class="status-dot"></div>
+  <!-- Ambient Radiant Lights -->
+  <div class="bg-glow-grid" aria-hidden="true"></div>
+  <div class="bg-ambient-orb bg-orb-1" aria-hidden="true"></div>
+  <div class="bg-ambient-orb bg-orb-2" aria-hidden="true"></div>
+  <div class="bg-ambient-orb bg-orb-3" aria-hidden="true"></div>
+
+  <!-- =========================================================================
+       Navigation Header
+       ========================================================================= -->
+  <header class="navbar" id="navbar">
+    <div class="container nav-container">
+      <a href="#hero" class="brand-logo" id="brand-logo" aria-label="Ashikur Rahman Shaon">
+        <div class="brand-logo-icon-wrap">
+          <img src="assets/favicon.svg" alt="AR Monogram" class="brand-logo-icon">
         </div>
-        
-        <div class="user-info">
-          <h1>Ashikur Rahman Shaon</h1>
-          <p class="role">Serial Entrepreneur</p>
-          <div class="location">
-            <svg viewBox="0 0 24 24" width="12" height="12" stroke="currentColor" stroke-width="2" fill="none"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"></path><circle cx="12" cy="10" r="3"></circle></svg>
-            Bangladesh — Building for the world
-          </div>
+        <div class="brand-text-block">
+          <span class="brand-title">Ashikur Rahman <span class="gradient-text">Shaon</span></span>
         </div>
-      </div>
-      
-      <div class="header-actions">
-        <a href="https://wa.me/8801787081119" target="_blank" class="btn btn-whatsapp pulse-btn">
-          <svg viewBox="0 0 24 24" width="18" height="18" fill="currentColor">
-            <path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347z M12 21.841c-1.65 0-3.267-.442-4.686-1.28l-.336-.2-.3483 1.126 1.155-.341-.219-.348C6.915 19.341 6.5 17.724 6.5 16 6.5 12.962 8.962 10.5 12 10.5 15.038 10.5 17.5 12.962 17.5 16 17.5 19.038 15.038 21.5 12 21.5zm0-20.5C6.477 1.341 2 5.818 2 11.341c0 2.18.705 4.28 2.042 6.002L2.5 22.5l5.284-1.385C9.375 22.25 10.669 22.659 12 22.659 17.523 22.659 22 18.182 22 12.659 22 7.136 17.523 2.659 12 2.659z"/>
+      </a>
+
+      <!-- Desktop Navigation Links -->
+      <nav aria-label="Main Navigation">
+        <ul class="nav-menu" id="nav-menu">
+          <li><a href="#about" class="nav-link">About</a></li>
+          <li><a href="#info" class="nav-link">Info</a></li>
+          <li><a href="#cv" class="nav-link">Curriculum Vitae</a></li>
+          <li><a href="#socials" class="nav-link">Social Media</a></li>
+          <li><a href="#contact" class="nav-link">Contact</a></li>
+        </ul>
+      </nav>
+
+      <!-- Right Action Controls -->
+      <div class="nav-actions">
+        <!-- Theme Switcher -->
+        <button class="theme-toggle-btn" id="theme-toggle" aria-label="Toggle light/dark theme" title="Toggle Theme">
+          <svg id="theme-icon-moon" width="19" height="19" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+            <path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"></path>
           </svg>
-          WhatsApp
-        </a>
-        <a href="mailto:arshaonone@gmail.com" class="btn btn-primary">
-          <svg viewBox="0 0 24 24" width="18" height="18" stroke="currentColor" stroke-width="2" fill="none"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"></path><polyline points="22,6 12,13 2,6"></polyline></svg>
-          Email
-        </a>
+          <svg id="theme-icon-sun" width="19" height="19" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="display: none;">
+            <circle cx="12" cy="12" r="5"></circle>
+            <line x1="12" y1="1" x2="12" y2="3"></line>
+            <line x1="12" y1="21" x2="12" y2="23"></line>
+            <line x1="4.22" y1="4.22" x2="5.64" y2="5.64"></line>
+            <line x1="18.36" y1="18.36" x2="19.78" y2="19.78"></line>
+            <line x1="1" y1="12" x2="3" y2="12"></line>
+            <line x1="21" y1="12" x2="23" y2="12"></line>
+            <line x1="4.22" y1="19.78" x2="5.64" y2="18.36"></line>
+            <line x1="18.36" y1="5.64" x2="19.78" y2="4.22"></line>
+          </svg>
+        </button>
+
+        <!-- CV Button -->
+        <button class="btn btn-primary btn-sm open-cv-btn" id="nav-cv-btn">
+          <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+            <path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"></path>
+            <polyline points="14 2 14 8 20 8"></polyline>
+          </svg>
+          <span>CV / Resume</span>
+        </button>
+
+        <!-- Mobile Hamburger -->
+        <button class="hamburger-btn" id="hamburger-btn" aria-label="Toggle Mobile Navigation" aria-expanded="false">
+          <span class="hamburger-line"></span>
+          <span class="hamburger-line"></span>
+          <span class="hamburger-line"></span>
+        </button>
       </div>
-    </header>
-
-    <!-- BENTO GRID -->
-    <div class="bento-grid">
-      
-      <!-- STATS COLUMN -->
-      <div class="grid-col stats-col">
-        <div class="widget stat-card gradient-hover">
-          <div class="stat-icon icon-glow">🏢</div>
-          <div class="stat-data">
-            <h3>1</h3>
-            <p>Active Company</p>
-          </div>
-        </div>
-        
-        <div class="widget stat-card gradient-hover">
-          <div class="stat-icon icon-glow">🚀</div>
-          <div class="stat-data">
-            <h3>30<span>+</span></h3>
-            <p>Projects Launched</p>
-          </div>
-        </div>
-        
-        <div class="widget stat-card gradient-hover">
-          <div class="stat-icon icon-glow">⭐</div>
-          <div class="stat-data">
-            <h3>100<span>%</span></h3>
-            <p>Client Satisfaction</p>
-          </div>
-        </div>
-      </div>
-
-      <!-- VISUALIZER WIDGET (Radar Chart) -->
-      <div class="widget vis-widget span-2">
-        <div class="widget-header">
-          <h2>Execution Matrix</h2>
-          <span class="badge">Real-time</span>
-        </div>
-        <div class="vis-flex">
-          <div class="vis-container">
-            <canvas id="radarChart"></canvas>
-            <div class="vis-overlay-text">Core<br>Capability</div>
-          </div>
-          <div class="vis-bars">
-            <div class="bar-row">
-              <div class="bar-label"><span>Business Strategy</span> <span class="val">98%</span></div>
-              <div class="bar-track"><div class="bar-fill" style="width: 98%; background: var(--accent);"></div></div>
-            </div>
-            <div class="bar-row">
-              <div class="bar-label"><span>Social Media</span> <span class="val">95%</span></div>
-              <div class="bar-track"><div class="bar-fill" style="width: 95%; background: var(--blue);"></div></div>
-            </div>
-            <div class="bar-row">
-              <div class="bar-label"><span>E-Commerce</span> <span class="val">92%</span></div>
-              <div class="bar-track"><div class="bar-fill" style="width: 92%; background: var(--green);"></div></div>
-            </div>
-            <div class="bar-row">
-              <div class="bar-label"><span>Global Expansion</span> <span class="val">88%</span></div>
-              <div class="bar-track"><div class="bar-fill" style="width: 88%; background: #a855f7;"></div></div>
-            </div>
-          </div>
-        </div>
-      </div>
-
-      <!-- PERSONAL BIODATA WIDGET -->
-      <div class="widget biodata-widget">
-        <div class="widget-header">
-          <h2>System Data</h2>
-        </div>
-        
-        <div class="data-rows">
-          <div class="data-row">
-            <span class="label">ID</span>
-            <span class="value mono">ARS-2026</span>
-          </div>
-          <div class="data-row">
-            <span class="label">Specialty</span>
-            <span class="value emphasis">Digital Empires</span>
-          </div>
-          <div class="data-row">
-            <span class="label">Experience</span>
-            <span class="value">Since 2017</span>
-          </div>
-          <div class="data-row">
-            <span class="label">Email</span>
-            <span class="value">arshaonone@gmail.com</span>
-          </div>
-          <div class="data-row">
-            <span class="label">Phone</span>
-            <span class="value">+880 178 708 1119</span>
-          </div>
-        </div>
-      </div>
-      
-      <!-- STACK WIDGET -->
-      <div class="widget stack-widget span-2">
-        <div class="widget-header">
-          <h2>Core Domains</h2>
-        </div>
-        <div class="stack-tags">
-          <span class="tag hover-float">Social Media Expert</span>
-          <span class="tag hover-float">Global Business</span>
-          <span class="tag hover-float">E-commerce Website</span>
-          <span class="tag hover-float">Digital Commerce</span>
-          <span class="tag hover-float">Digital Media</span>
-          <span class="tag hover-float">Business Scaling</span>
-        </div>
-      </div>
-
-      <!-- VENTURES HORIZONTAL LIST -->
-      <div class="widget ventures-widget span-3">
-        <div class="widget-header">
-          <h2>Active Ventures</h2>
-          <div class="scroll-indicators">
-            <span></span><span></span><span></span>
-          </div>
-        </div>
-        
-        <div class="ventures-scroll">
-          
-          <div class="venture-card zoom-card">
-            <div class="vc-icon floating" style="background: rgba(212,175,55,0.1); color: #D4AF37;">
-              <svg viewBox="0 0 24 24" width="22" height="22" stroke="currentColor" stroke-width="2" fill="none"><path d="M12 2L2 7l10 5 10-5-10-5zM2 17l10 5 10-5M2 12l10 5 10-5"></path></svg>
-            </div>
-            <div class="vc-info">
-              <h3>Social Media Expert</h3>
-              <p class="mono" style="color: #D4AF37;">[ SME ]</p>
-            </div>
-            <div class="vc-metric">
-              <span>Audience Reach</span>
-              <div class="metric-bar"><div class="fill" style="width: 95%;"></div></div>
-            </div>
-          </div>
-          
-          <div class="venture-card zoom-card">
-            <div class="vc-icon floating" style="background: rgba(60,130,246,0.1); color: #3b82f6;">
-              <svg viewBox="0 0 24 24" width="20" height="20" stroke="currentColor" stroke-width="2" fill="none"><circle cx="12" cy="12" r="10"></circle><line x1="2" y1="12" x2="22" y2="12"></line><path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"></path></svg>
-            </div>
-            <div class="vc-info">
-              <h3>Global Business</h3>
-              <p class="mono" style="color: #3b82f6;">[ GB ]</p>
-            </div>
-            <div class="vc-metric">
-              <span>Market Penetration</span>
-              <div class="metric-bar"><div class="fill" style="width: 88%; background: #3b82f6;"></div></div>
-            </div>
-          </div>
-
-          <div class="venture-card zoom-card">
-            <div class="vc-icon floating" style="background: rgba(16,185,129,0.1); color: #10b981;">
-              <svg viewBox="0 0 24 24" width="20" height="20" stroke="currentColor" stroke-width="2" fill="none"><rect x="3" y="3" width="18" height="18" rx="2" ry="2"></rect><line x1="3" y1="9" x2="21" y2="9"></line><line x1="9" y1="21" x2="9" y2="9"></line></svg>
-            </div>
-            <div class="vc-info">
-              <h3>Digital Commerce</h3>
-              <p class="mono" style="color: #10b981;">[ DE ]</p>
-            </div>
-            <div class="vc-metric">
-              <span>Conversion Rate</span>
-              <div class="metric-bar"><div class="fill" style="width: 90%; background: #10b981;"></div></div>
-            </div>
-          </div>
-
-          <div class="venture-card zoom-card">
-            <div class="vc-icon floating" style="background: rgba(168,85,247,0.1); color: #a855f7;">
-              <svg viewBox="0 0 24 24" width="20" height="20" stroke="currentColor" stroke-width="2" fill="none"><polygon points="5 3 19 12 5 21 5 3"></polygon></svg>
-            </div>
-            <div class="vc-info">
-              <h3>Digital Media</h3>
-              <p class="mono" style="color: #a855f7;">[ DM ]</p>
-            </div>
-            <div class="vc-metric">
-              <span>Media Engagement</span>
-              <div class="metric-bar"><div class="fill" style="width: 85%; background: #a855f7;"></div></div>
-            </div>
-          </div>
-
-        </div>
-      </div>
-      
-      <!-- SOCIALS WIDGET -->
-      <div class="widget social-widget span-3">
-        <div class="widget-header">
-          <h2>Network</h2>
-        </div>
-        <div class="social-grid">
-          <a href="https://www.instagram.com/arshaonone/" target="_blank" class="social-btn btn-fx">
-            <div class="sb-icon"><svg viewBox="0 0 24 24" width="20" height="20" fill="currentColor"><path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zM12 0C8.741 0 8.333.014 7.053.072 2.695.272.273 2.69.073 7.052.014 8.333 0 8.741 0 12c0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98C8.333 23.986 8.741 24 12 24c3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98C15.668.014 15.259 0 12 0zm0 5.838a6.162 6.162 0 100 12.324 6.162 6.162 0 000-12.324zM12 16a4 4 0 110-8 4 4 0 010 8zm6.406-11.845a1.44 1.44 0 100 2.881 1.44 1.44 0 000-2.881z"/></svg></div>
-            <span>Instagram</span>
-          </a>
-          <a href="https://x.com/arshaonone" target="_blank" class="social-btn btn-fx">
-            <div class="sb-icon"><svg viewBox="0 0 24 24" width="20" height="20" fill="currentColor"><path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.004 3.936H5.032v-.001"/></svg></div>
-            <span>X (Twitter)</span>
-          </a>
-          <a href="https://www.linkedin.com/in/ashikurrahmanshaon/" target="_blank" class="social-btn btn-fx">
-            <div class="sb-icon"><svg viewBox="0 0 24 24" width="20" height="20" fill="currentColor"><path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.475-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433c-1.144 0-2.063-.926-2.063-2.065 0-1.138.92-2.063 2.063-2.063 1.14 0 2.064.925 2.064 2.063 0 1.139-.925 2.065-2.064 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"/></svg></div>
-            <span>LinkedIn</span>
-          </a>
-        </div>
-      </div>
-
-      <!-- DEVELOPER SIGNATURE -->
-      <div class="footer-widget span-3">
-        <p>Developed & Designed by <span class="emphasis">ASHIKUR RAHMAN SHAON</span> &copy; 2026</p>
-      </div>
-
     </div>
+  </header>
+
+  <!-- Mobile Drawer Navigation -->
+  <div class="mobile-nav-backdrop" id="mobile-nav-backdrop"></div>
+  <aside class="mobile-nav-drawer" id="mobile-nav-drawer">
+    <div class="mobile-drawer-header">
+      <div class="brand-logo">
+        <div class="brand-logo-icon-wrap">
+          <img src="assets/favicon.svg" alt="AR Monogram" class="brand-logo-icon">
+        </div>
+        <div class="brand-text-block">
+          <span class="brand-title">Ashikur Rahman <span class="gradient-text">Shaon</span></span>
+        </div>
+      </div>
+      <button class="drawer-close-btn" id="drawer-close-btn" aria-label="Close navigation menu">
+        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+          <line x1="18" y1="6" x2="6" y2="18"></line>
+          <line x1="6" y1="6" x2="18" y2="18"></line>
+        </svg>
+      </button>
+    </div>
+
+    <ul class="mobile-nav-links">
+      <li>
+        <a href="#hero" class="mobile-nav-link">
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"></path></svg>
+          <span>Home</span>
+        </a>
+      </li>
+      <li>
+        <a href="#about" class="mobile-nav-link">
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="7" r="4"></circle><path d="M5.5 21a8.38 8.38 0 0 1 13 0"></path></svg>
+          <span>About Ashikur</span>
+        </a>
+      </li>
+      <li>
+        <a href="#info" class="mobile-nav-link">
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"></circle><line x1="12" y1="16" x2="12" y2="12"></line><line x1="12" y1="8" x2="12.01" y2="8"></line></svg>
+          <span>Personal Info</span>
+        </a>
+      </li>
+      <li>
+        <a href="#cv" class="mobile-nav-link">
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"></path><polyline points="14 2 14 8 20 8"></polyline></svg>
+          <span>Curriculum Vitae</span>
+        </a>
+      </li>
+      <li>
+        <a href="#socials" class="mobile-nav-link">
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="18" cy="5" r="3"></circle><circle cx="6" cy="12" r="3"></circle><circle cx="18" cy="19" r="3"></circle><line x1="8.59" y1="13.51" x2="15.42" y2="17.49"></line><line x1="15.41" y1="6.51" x2="8.59" y2="10.49"></line></svg>
+          <span>Social Media Accounts</span>
+        </a>
+      </li>
+      <li>
+        <a href="#contact" class="mobile-nav-link">
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"></path><polyline points="22,6 12,13 2,6"></polyline></svg>
+          <span>Get In Touch</span>
+        </a>
+      </li>
+    </ul>
+
+    <div class="mobile-drawer-footer">
+      <button class="btn btn-primary open-cv-btn" id="mobile-cv-btn" style="width: 100%;">
+        <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+          <path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"></path>
+          <polyline points="14 2 14 8 20 8"></polyline>
+        </svg>
+        <span>View CV / Resume</span>
+      </button>
+      <div class="mobile-drawer-email-pill">
+        <span>ashikurrahmanshaon@gmail.com</span>
+      </div>
+    </div>
+  </aside>
+
+  <main>
+    <!-- =========================================================================
+         Hero Section (Simple, Elegant, Personal)
+         ========================================================================= -->
+    <section class="hero-section" id="hero">
+      <div class="container hero-grid">
+        <!-- Hero Text -->
+        <div class="hero-content">
+          <div class="hero-badge-wrap">
+            <span class="status-badge">
+              <span class="pulse-dot"></span>
+              Welcome to my Official Profile
+            </span>
+          </div>
+          
+          <p class="hero-greeting">Hello, I am</p>
+          <h1 class="hero-title">
+            Ashikur Rahman <br class="title-break">
+            <span class="gradient-text">Shaon</span>
+          </h1>
+          
+          <div class="typewriter-wrapper">
+            <span class="typewriter-text" id="typewriter"></span>
+            <span class="typewriter-cursor"></span>
+          </div>
+
+          <p class="hero-bio">
+            Passionate, driven, and forward-thinking. Welcome to my personal space where you can explore my background, view my curriculum vitae, and connect directly with me across all social platforms.
+          </p>
+
+          <div class="hero-cta-group">
+            <button class="btn btn-primary open-cv-btn" id="hero-cv-btn">
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"></path>
+                <polyline points="14 2 14 8 20 8"></polyline>
+                <line x1="12" y1="18" x2="12" y2="12"></line>
+                <line x1="9" y1="15" x2="15" y2="15"></line>
+              </svg>
+              <span>View &amp; Print CV</span>
+            </button>
+            <a href="#socials" class="btn btn-secondary">
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <circle cx="18" cy="5" r="3"></circle>
+                <circle cx="6" cy="12" r="3"></circle>
+                <circle cx="18" cy="19" r="3"></circle>
+                <line x1="8.59" y1="13.51" x2="15.42" y2="17.49"></line>
+                <line x1="15.41" y1="6.51" x2="8.59" y2="10.49"></line>
+              </svg>
+              <span>Social Accounts</span>
+            </a>
+            <a href="#contact" class="btn btn-outline">
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"></path>
+                <polyline points="22,6 12,13 2,6"></polyline>
+              </svg>
+              <span>Get In Touch</span>
+            </a>
+          </div>
+
+          <!-- Quick Social Links Row -->
+          <div class="hero-social-pills">
+            <a href="https://facebook.com" target="_blank" rel="noopener noreferrer" class="social-pill" title="Facebook">
+              <svg viewBox="0 0 24 24"><path d="M24 12.073c0-6.627-5.373-12-12-12s-12 5.373-12 12c0 5.99 4.388 10.954 10.125 11.854v-8.385H7.078v-3.47h3.047V9.43c0-3.007 1.792-4.669 4.533-4.669 1.312 0 2.686.235 2.686.235v2.953H15.83c-1.491 0-1.956.925-1.956 1.874v2.25h3.328l-.532 3.47h-2.796v8.385C19.612 23.027 24 18.062 24 12.073z"/></svg>
+              <span>Facebook</span>
+            </a>
+
+            <a href="https://instagram.com" target="_blank" rel="noopener noreferrer" class="social-pill" title="Instagram">
+              <svg viewBox="0 0 24 24"><path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zm0 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.163 6.162 6.163 6.162-2.759 6.162-6.163c0-3.403-2.759-6.162-6.162-6.162zm0 10.162c-2.209 0-4-1.79-4-4 0-2.209 1.791-4 4-4s4 1.791 4 4c0 2.21-1.791 4-4 4zm6.406-11.845c-.796 0-1.441.645-1.441 1.44s.645 1.44 1.441 1.44c.795 0 1.439-.645 1.439-1.44s-.644-1.44-1.439-1.44z"/></svg>
+              <span>Instagram</span>
+            </a>
+
+            <a href="https://linkedin.com/in/ashikurrahmanshaon" target="_blank" rel="noopener noreferrer" class="social-pill" title="LinkedIn">
+              <svg viewBox="0 0 24 24"><path d="M19 0h-14c-2.761 0-5 2.239-5 5v14c0 2.761 2.239 5 5 5h14c2.762 0 5-2.239 5-5v-14c0-2.761-2.238-5-5-5zm-11 19h-3v-11h3v11zm-1.5-12.268c-.966 0-1.75-.79-1.75-1.764s.784-1.764 1.75-1.764 1.75.79 1.75 1.764-.783 1.764-1.75 1.764zm13.5 12.268h-3v-5.604c0-3.368-4-3.113-4 0v5.604h-3v-11h3v1.765c1.396-2.586 7-2.777 7 2.476v6.759z"/></svg>
+              <span>LinkedIn</span>
+            </a>
+
+            <a href="https://wa.me/8801700000000" target="_blank" rel="noopener noreferrer" class="social-pill" title="WhatsApp">
+              <svg viewBox="0 0 24 24"><path d="M17.472 14.382c-.301-.15-1.782-.879-2.057-.98-.276-.1-.476-.15-.676.15-.2.301-.776.98-.951 1.18-.176.2-.351.226-.652.076-.301-.15-1.27-.468-2.42-1.493-.895-.798-1.5-1.784-1.675-2.084-.175-.301-.019-.464.132-.613.136-.135.301-.351.451-.527.151-.175.201-.301.301-.501.101-.201.051-.376-.025-.526-.075-.15-.676-1.63-.927-2.23-.244-.585-.492-.505-.676-.515l-.576-.01c-.2 0-.526.075-.802.376-.275.3-1.052 1.028-1.052 2.508 0 1.48 1.077 2.909 1.228 3.11.15.2 2.12 3.238 5.136 4.54 3.015 1.302 3.015.868 3.566.818.552-.05 1.781-.727 2.032-1.43.25-.702.25-1.304.175-1.43-.075-.125-.276-.2-.577-.35zM12.04 21.785h-.002c-1.764 0-3.493-.473-5.006-1.368l-.359-.213-3.724.976.993-3.63-.233-.371c-.982-1.564-1.5-3.376-1.5-5.234 0-5.503 4.478-9.98 9.986-9.98 2.668 0 5.176 1.039 7.06 2.924 1.884 1.885 2.922 4.394 2.92 7.064-.002 5.505-4.48 9.982-9.885 9.982z"/></svg>
+              <span>WhatsApp</span>
+            </a>
+
+            <a href="mailto:ashikurrahmanshaon@gmail.com" class="social-pill" title="Email">
+              <svg viewBox="0 0 24 24"><path d="M20 4H4c-1.1 0-1.99.9-1.99 2L2 18c0 1.1.9 2 2 2h16c1.1 0 2-.9 2-2V6c0-1.1-.9-2-2-2zm0 4l-8 5-8-5V6l8 5 8-5v2z"/></svg>
+              <span>Email</span>
+            </a>
+          </div>
+        </div>
+
+        <!-- Hero Visual Avatar -->
+        <div class="hero-visual-card">
+          <div class="avatar-stage">
+            <div class="avatar-backdrop-glow" aria-hidden="true"></div>
+            <div class="avatar-ring-pulse" aria-hidden="true"></div>
+            
+            <div class="avatar-wrapper">
+              <img src="assets/avatar.svg" alt="Ashikur Rahman Shaon Portrait" class="avatar-image">
+            </div>
+
+            <!-- Floating Info Badges -->
+            <div class="floating-chip chip-top-right">
+              <div class="chip-icon-box">🌟</div>
+              <div>
+                <div class="chip-title">Status</div>
+                <div class="chip-val">Active &amp; Open</div>
+              </div>
+            </div>
+
+            <div class="floating-chip chip-bottom-left">
+              <div class="chip-icon-box">📍</div>
+              <div>
+                <div class="chip-title">Location</div>
+                <div class="chip-val">Dhaka, Bangladesh</div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- =========================================================================
+         About Section
+         ========================================================================= -->
+    <section class="section about-section" id="about">
+      <div class="container">
+        <div class="section-header">
+          <span class="section-tag">About Ashikur</span>
+          <h2 class="section-title">A Brief Introduction to <span class="gradient-text">Who I Am</span></h2>
+          <p class="section-subtitle">A glimpse into my background, interests, and what drives me forward every day.</p>
+        </div>
+
+        <div class="about-grid">
+          <div class="about-text">
+            <p class="about-lead">
+              Hello! I am <strong>Ashikur Rahman Shaon</strong> (also known as <strong>ARSHAON</strong>). I am an energetic, enthusiastic individual who values creativity, integrity, and excellence in all endeavors.
+            </p>
+            <p>
+              I believe in continuous learning, open communication, and working on meaningful projects that create positive impact. Whether collaborating with diverse teams, solving challenging problems, or exploring new ideas, I always bring dedication and a positive attitude.
+            </p>
+
+            <div class="about-features">
+              <div class="feature-card">
+                <div class="feature-icon">
+                  <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"></path></svg>
+                </div>
+                <h3 class="feature-title">Passionate &amp; Dedicated</h3>
+                <p class="feature-desc">Driven by curiosity, high standards, and genuine enthusiasm for every endeavor.</p>
+              </div>
+
+              <div class="feature-card">
+                <div class="feature-icon">
+                  <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"></path><circle cx="9" cy="7" r="4"></circle><path d="M23 21v-2a4 4 0 0 0-3-3.87"></path><path d="M16 3.13a4 4 0 0 1 0 7.75"></path></svg>
+                </div>
+                <h3 class="feature-title">Collaborative Spirit</h3>
+                <p class="feature-desc">Exceptional communication skills with a natural ability to connect and build strong networks.</p>
+              </div>
+            </div>
+          </div>
+
+          <!-- Quick Info Pill Card -->
+          <div class="about-info-card" id="info">
+            <div class="card-glow-badge">Overview</div>
+            <h3 style="font-size: 1.35rem; margin-bottom: 22px;">Personal Details</h3>
+            <ul class="info-list">
+              <li class="info-item">
+                <span class="info-label">Full Name</span>
+                <span class="info-value">Ashikur Rahman Shaon</span>
+              </li>
+              <li class="info-item">
+                <span class="info-label">Nickname / Monogram</span>
+                <span class="info-value">Shaon / ARSHAON</span>
+              </li>
+              <li class="info-item">
+                <span class="info-label">Location</span>
+                <span class="info-value">Dhaka, Bangladesh</span>
+              </li>
+              <li class="info-item">
+                <span class="info-label">Email Address</span>
+                <span class="info-value">ashikurrahmanshaon@gmail.com</span>
+              </li>
+              <li class="info-item">
+                <span class="info-label">Education</span>
+                <span class="info-value">B.Sc. Graduate</span>
+              </li>
+              <li class="info-item">
+                <span class="info-label">Availability</span>
+                <span class="info-value status-highlight">🟢 Open for Inquiries &amp; Projects</span>
+              </li>
+              <li class="info-item">
+                <span class="info-label">Languages</span>
+                <span class="info-value">English, Bengali</span>
+              </li>
+            </ul>
+
+            <div style="margin-top: 26px;">
+              <button class="btn btn-primary open-cv-btn" style="width: 100%;">
+                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                  <path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"></path>
+                  <polyline points="14 2 14 8 20 8"></polyline>
+                </svg>
+                <span>Read Curriculum Vitae</span>
+              </button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- =========================================================================
+         Curriculum Vitae (Simple, Human, Clean)
+         ========================================================================= -->
+    <section class="section cv-section" id="cv">
+      <div class="container">
+        <div class="section-header">
+          <span class="section-tag">Curriculum Vitae</span>
+          <h2 class="section-title">Education, Background &amp; <span class="gradient-text">Experience</span></h2>
+          <p class="section-subtitle">A clear, straightforward summary of my professional journey, education, and credentials.</p>
+        </div>
+
+        <div class="cv-top-action">
+          <button class="btn btn-primary open-cv-btn" id="main-cv-view-btn">
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+              <path d="M1 12s4-8 11-8 11 8 11 8-4 8-11 8-11-8-11-8z"></path>
+              <circle cx="12" cy="12" r="3"></circle>
+            </svg>
+            <span>Open Printable CV / PDF</span>
+          </button>
+          <a href="mailto:ashikurrahmanshaon@gmail.com?subject=Hello%20Ashikur%20-%20Inquiry" class="btn btn-secondary">
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+              <path d="M22 2L11 13"></path>
+              <polygon points="22 2 15 22 11 13 2 9 22 2"></polygon>
+            </svg>
+            <span>Send Email</span>
+          </a>
+        </div>
+
+        <div class="cv-timeline-grid">
+          <!-- Column 1: Journey & Activities -->
+          <div class="cv-column">
+            <div class="cv-column-header">
+              <div class="cv-column-icon">
+                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                  <rect x="2" y="7" width="20" height="14" rx="2" ry="2"></rect>
+                  <path d="M16 21V5a2 2 0 0 0-2-2h-4a2 2 0 0 0-2 2v16"></path>
+                </svg>
+              </div>
+              <h3 class="cv-column-title">Experience &amp; Leadership</h3>
+            </div>
+
+            <div class="timeline">
+              <!-- Item 1 -->
+              <div class="timeline-item">
+                <div class="timeline-dot"></div>
+                <div class="timeline-card">
+                  <div class="timeline-meta-row">
+                    <span class="timeline-period">2024 — Present</span>
+                    <span class="timeline-type-tag">Active</span>
+                  </div>
+                  <h4 class="timeline-title">Project &amp; Operations Lead</h4>
+                  <div class="timeline-company">Creative &amp; Community Initiatives</div>
+                  <p class="timeline-desc">
+                    Planning and managing initiatives, team schedules, communications, and coordinating creative activities with a focus on quality and collaboration.
+                  </p>
+                </div>
+              </div>
+
+              <!-- Item 2 -->
+              <div class="timeline-item">
+                <div class="timeline-dot"></div>
+                <div class="timeline-card">
+                  <div class="timeline-meta-row">
+                    <span class="timeline-period">2023 — 2024</span>
+                    <span class="timeline-type-tag">Operations</span>
+                  </div>
+                  <h4 class="timeline-title">Client Relations &amp; Event Coordinator</h4>
+                  <div class="timeline-company">Brand &amp; Event Management</div>
+                  <p class="timeline-desc">
+                    Organized public presentations and events, maintained client communications, and ensured high satisfaction through prompt and friendly engagement.
+                  </p>
+                </div>
+              </div>
+
+              <!-- Item 3 -->
+              <div class="timeline-item">
+                <div class="timeline-dot"></div>
+                <div class="timeline-card">
+                  <div class="timeline-meta-row">
+                    <span class="timeline-period">2022 — 2023</span>
+                    <span class="timeline-type-tag">Engagement</span>
+                  </div>
+                  <h4 class="timeline-title">Independent Project Associate</h4>
+                  <div class="timeline-company">Freelance &amp; Collaborative Work</div>
+                  <p class="timeline-desc">
+                    Provided consultation, organization, and creative assistance for various private and collaborative endeavors with dedication and positive results.
+                  </p>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Column 2: Education & Core Strengths -->
+          <div class="cv-column">
+            <div class="cv-column-header">
+              <div class="cv-column-icon">
+                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                  <path d="M22 10v6M2 10l10-5 10 5-10 5z"></path>
+                  <path d="M6 12v5c3 3 9 3 12 0v-5"></path>
+                </svg>
+              </div>
+              <h3 class="cv-column-title">Education &amp; Core Strengths</h3>
+            </div>
+
+            <div class="timeline">
+              <!-- Edu 1 -->
+              <div class="timeline-item">
+                <div class="timeline-dot"></div>
+                <div class="timeline-card">
+                  <div class="timeline-meta-row">
+                    <span class="timeline-period">2021 — 2025</span>
+                    <span class="timeline-type-tag">Academic</span>
+                  </div>
+                  <h4 class="timeline-title">Bachelor of Science (B.Sc.)</h4>
+                  <div class="timeline-company">University Graduate</div>
+                  <p class="timeline-desc">
+                    Completed comprehensive university education with strong foundations in analytical reasoning, leadership, project coordination, and organizational skills.
+                  </p>
+                </div>
+              </div>
+
+              <!-- Key Strengths -->
+              <div class="timeline-item">
+                <div class="timeline-dot"></div>
+                <div class="timeline-card">
+                  <div class="timeline-meta-row">
+                    <span class="timeline-period">Personal Traits</span>
+                    <span class="timeline-type-tag">Strengths</span>
+                  </div>
+                  <h4 class="timeline-title">Core Strengths &amp; Competencies</h4>
+                  <div class="timeline-company">Personal &amp; Professional Attributes</div>
+                  <p class="timeline-desc">
+                    • Strategic Organization &amp; Task Planning<br>
+                    • Effective Interpersonal &amp; Public Communication<br>
+                    • Creative Problem Solving &amp; Critical Thinking<br>
+                    • Team Leadership &amp; Friendly Collaboration<br>
+                    • High Adaptability &amp; Enthusiastic Attitude
+                  </p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- =========================================================================
+         Social Media Accounts Section (Primary Hub!)
+         ========================================================================= -->
+    <section class="section socials-section" id="socials">
+      <div class="container">
+        <div class="section-header">
+          <span class="section-tag">Find Me Online</span>
+          <h2 class="section-title">Social Media <span class="gradient-text">Accounts</span></h2>
+          <p class="section-subtitle">Connect with me across your favorite platforms. Feel free to follow, message, or say hi!</p>
+        </div>
+
+        <div class="social-bento-grid">
+          <!-- Facebook Card -->
+          <a href="https://facebook.com" target="_blank" rel="noopener noreferrer" class="social-bento-card sbc-facebook">
+            <div class="sbc-icon-box">
+              <svg viewBox="0 0 24 24"><path d="M24 12.073c0-6.627-5.373-12-12-12s-12 5.373-12 12c0 5.99 4.388 10.954 10.125 11.854v-8.385H7.078v-3.47h3.047V9.43c0-3.007 1.792-4.669 4.533-4.669 1.312 0 2.686.235 2.686.235v2.953H15.83c-1.491 0-1.956.925-1.956 1.874v2.25h3.328l-.532 3.47h-2.796v8.385C19.612 23.027 24 18.062 24 12.073z"/></svg>
+            </div>
+            <div class="sbc-content">
+              <span class="sbc-platform">Facebook</span>
+              <h3 class="sbc-name">Ashikur Rahman Shaon</h3>
+              <p class="sbc-tagline">Personal profile &amp; updates</p>
+            </div>
+            <div class="sbc-arrow">&rarr;</div>
+          </a>
+
+          <!-- Instagram Card -->
+          <a href="https://instagram.com" target="_blank" rel="noopener noreferrer" class="social-bento-card sbc-instagram">
+            <div class="sbc-icon-box">
+              <svg viewBox="0 0 24 24"><path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zm0 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.163 6.162 6.163 6.162-2.759 6.162-6.163c0-3.403-2.759-6.162-6.162-6.162zm0 10.162c-2.209 0-4-1.79-4-4 0-2.209 1.791-4 4-4s4 1.791 4 4c0 2.21-1.791 4-4 4zm6.406-11.845c-.796 0-1.441.645-1.441 1.44s.645 1.44 1.441 1.44c.795 0 1.439-.645 1.439-1.44s-.644-1.44-1.439-1.44z"/></svg>
+            </div>
+            <div class="sbc-content">
+              <span class="sbc-platform">Instagram</span>
+              <h3 class="sbc-name">@ashikurrahmanshaon</h3>
+              <p class="sbc-tagline">Photos, stories &amp; moments</p>
+            </div>
+            <div class="sbc-arrow">&rarr;</div>
+          </a>
+
+          <!-- LinkedIn Card -->
+          <a href="https://linkedin.com/in/ashikurrahmanshaon" target="_blank" rel="noopener noreferrer" class="social-bento-card sbc-linkedin">
+            <div class="sbc-icon-box">
+              <svg viewBox="0 0 24 24"><path d="M19 0h-14c-2.761 0-5 2.239-5 5v14c0 2.761 2.239 5 5 5h14c2.762 0 5-2.239 5-5v-14c0-2.761-2.238-5-5-5zm-11 19h-3v-11h3v11zm-1.5-12.268c-.966 0-1.75-.79-1.75-1.764s.784-1.764 1.75-1.764 1.75.79 1.75 1.764-.783 1.764-1.75 1.764zm13.5 12.268h-3v-5.604c0-3.368-4-3.113-4 0v5.604h-3v-11h3v1.765c1.396-2.586 7-2.777 7 2.476v6.759z"/></svg>
+            </div>
+            <div class="sbc-content">
+              <span class="sbc-platform">LinkedIn</span>
+              <h3 class="sbc-name">in/ashikurrahmanshaon</h3>
+              <p class="sbc-tagline">Professional network &amp; career</p>
+            </div>
+            <div class="sbc-arrow">&rarr;</div>
+          </a>
+
+          <!-- WhatsApp Card -->
+          <a href="https://wa.me/8801700000000" target="_blank" rel="noopener noreferrer" class="social-bento-card sbc-whatsapp">
+            <div class="sbc-icon-box">
+              <svg viewBox="0 0 24 24"><path d="M17.472 14.382c-.301-.15-1.782-.879-2.057-.98-.276-.1-.476-.15-.676.15-.2.301-.776.98-.951 1.18-.176.2-.351.226-.652.076-.301-.15-1.27-.468-2.42-1.493-.895-.798-1.5-1.784-1.675-2.084-.175-.301-.019-.464.132-.613.136-.135.301-.351.451-.527.151-.175.201-.301.301-.501.101-.201.051-.376-.025-.526-.075-.15-.676-1.63-.927-2.23-.244-.585-.492-.505-.676-.515l-.576-.01c-.2 0-.526.075-.802.376-.275.3-1.052 1.028-1.052 2.508 0 1.48 1.077 2.909 1.228 3.11.15.2 2.12 3.238 5.136 4.54 3.015 1.302 3.015.868 3.566.818.552-.05 1.781-.727 2.032-1.43.25-.702.25-1.304.175-1.43-.075-.125-.276-.2-.577-.35zM12.04 21.785h-.002c-1.764 0-3.493-.473-5.006-1.368l-.359-.213-3.724.976.993-3.63-.233-.371c-.982-1.564-1.5-3.376-1.5-5.234 0-5.503 4.478-9.98 9.986-9.98 2.668 0 5.176 1.039 7.06 2.924 1.884 1.885 2.922 4.394 2.92 7.064-.002 5.505-4.48 9.982-9.885 9.982z"/></svg>
+            </div>
+            <div class="sbc-content">
+              <span class="sbc-platform">WhatsApp</span>
+              <h3 class="sbc-name">Direct Chat</h3>
+              <p class="sbc-tagline">Instant personal messaging</p>
+            </div>
+            <div class="sbc-arrow">&rarr;</div>
+          </a>
+
+          <!-- YouTube Card -->
+          <a href="https://youtube.com" target="_blank" rel="noopener noreferrer" class="social-bento-card sbc-youtube">
+            <div class="sbc-icon-box">
+              <svg viewBox="0 0 24 24"><path d="M23.498 6.186a3.016 3.016 0 0 0-2.122-2.136C19.505 3.545 12 3.545 12 3.545s-7.505 0-9.377.505A3.017 3.017 0 0 0 .502 6.186C0 8.07 0 12 0 12s0 3.93.502 5.814a3.016 3.016 0 0 0 2.122 2.136c1.871.505 9.376.505 9.376.505s7.505 0 9.377-.505a3.015 3.015 0 0 0 2.122-2.136C24 15.93 24 12 24 12s0-3.93-.502-5.814zM9.545 15.568V8.432L15.818 12l-6.273 3.568z"/></svg>
+            </div>
+            <div class="sbc-content">
+              <span class="sbc-platform">YouTube</span>
+              <h3 class="sbc-name">@ashikurrahmanshaon</h3>
+              <p class="sbc-tagline">Videos, stories &amp; creative content</p>
+            </div>
+            <div class="sbc-arrow">&rarr;</div>
+          </a>
+
+          <!-- Twitter / X Card -->
+          <a href="https://twitter.com" target="_blank" rel="noopener noreferrer" class="social-bento-card sbc-twitter">
+            <div class="sbc-icon-box">
+              <svg viewBox="0 0 24 24"><path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z"/></svg>
+            </div>
+            <div class="sbc-content">
+              <span class="sbc-platform">Twitter / X</span>
+              <h3 class="sbc-name">@arshaon</h3>
+              <p class="sbc-tagline">Thoughts, ideas &amp; updates</p>
+            </div>
+            <div class="sbc-arrow">&rarr;</div>
+          </a>
+        </div>
+      </div>
+    </section>
+
+    <!-- =========================================================================
+         Contact Section (Simple, Clean, Functional)
+         ========================================================================= -->
+    <section class="section contact-section" id="contact">
+      <div class="container">
+        <div class="section-header">
+          <span class="section-tag">Direct Contact</span>
+          <h2 class="section-title">Say Hello or <span class="gradient-text">Leave a Message</span></h2>
+          <p class="section-subtitle">Have a question, an opportunity, or just want to get in touch? Send a message anytime.</p>
+        </div>
+
+        <div class="contact-grid">
+          <!-- Left Column: Copy Email & Fast Info -->
+          <div class="contact-info-col">
+            <div>
+              <h3 class="contact-card-title">Let's Connect</h3>
+              <p class="contact-desc">
+                Feel free to reach out directly via email, message on social platforms, or drop a quick note through the contact form. I typically respond within 24 hours.
+              </p>
+            </div>
+
+            <!-- 1-Click Copy Email Card -->
+            <div class="email-copy-box">
+              <div>
+                <span class="email-label">Direct Email Address</span>
+                <span class="email-address" id="email-text">ashikurrahmanshaon@gmail.com</span>
+              </div>
+              <button class="copy-btn" id="copy-email-btn" aria-label="Copy email address to clipboard">
+                <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                  <rect x="9" y="9" width="13" height="13" rx="2" ry="2"></rect>
+                  <path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"></path>
+                </svg>
+                <span id="copy-btn-text">Copy</span>
+              </button>
+            </div>
+
+            <!-- Fast Contact Note -->
+            <div class="feature-card" style="margin-top: 6px;">
+              <h4 style="font-size: 1.05rem; margin-bottom: 6px; color: var(--text-primary);">⚡ Quick Response</h4>
+              <p style="font-size: 0.9rem; color: var(--text-secondary); margin-bottom: 0;">
+                For urgent communications, WhatsApp is recommended. For formal inquiries or opportunities, please send an email directly.
+              </p>
+            </div>
+          </div>
+
+          <!-- Right Column: Simple Contact Form -->
+          <div class="contact-form-card">
+            <h3 style="font-size: 1.35rem; margin-bottom: 8px;">Send a Message</h3>
+            <p style="font-size: 0.92rem; color: var(--text-secondary); margin-bottom: 24px;">
+              Fill out the form below and it will be delivered directly to my inbox.
+            </p>
+
+            <form id="contact-form">
+              <div class="form-group">
+                <label for="form-name" class="form-label">Your Name</label>
+                <input type="text" id="form-name" class="form-control" placeholder="Enter your full name" required>
+              </div>
+
+              <div class="form-group">
+                <label for="form-email" class="form-label">Your Email</label>
+                <input type="email" id="form-email" class="form-control" placeholder="yourname@example.com" required>
+              </div>
+
+              <div class="form-group">
+                <label for="form-subject" class="form-label">Subject</label>
+                <input type="text" id="form-subject" class="form-control" placeholder="Inquiry / Greetings" required>
+              </div>
+
+              <div class="form-group">
+                <label for="form-message" class="form-label">Message</label>
+                <textarea id="form-message" class="form-control" placeholder="Write your message here..." required></textarea>
+              </div>
+
+              <button type="submit" class="btn btn-primary" style="width: 100%;" id="contact-submit-btn">
+                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                  <line x1="22" y1="2" x2="11" y2="13"></line>
+                  <polygon points="22 2 15 22 11 13 2 9 22 2"></polygon>
+                </svg>
+                <span>Send Message</span>
+              </button>
+            </form>
+          </div>
+        </div>
+      </div>
+    </section>
   </main>
-  
-  <script src="main.js" defer></script>
+
+  <!-- =========================================================================
+       Footer
+       ========================================================================= -->
+  <footer class="footer">
+    <div class="container footer-content">
+      <div class="footer-brand">
+        <a href="#hero" class="brand-logo">
+          <div class="brand-logo-icon-wrap" style="width: 32px; height: 32px;">
+            <img src="assets/favicon.svg" alt="AR Monogram" class="brand-logo-icon">
+          </div>
+          <span class="brand-title">Ashikur Rahman <span class="gradient-text">Shaon</span></span>
+        </a>
+        <p>&copy; 2026 Ashikur Rahman Shaon. All rights reserved.</p>
+      </div>
+
+      <ul class="footer-links">
+        <li><a href="#hero" class="footer-link">Home</a></li>
+        <li><a href="#about" class="footer-link">About</a></li>
+        <li><a href="#info" class="footer-link">Info</a></li>
+        <li><a href="#cv" class="footer-link">CV</a></li>
+        <li><a href="#socials" class="footer-link">Socials</a></li>
+        <li><a href="#contact" class="footer-link">Contact</a></li>
+      </ul>
+
+      <button class="back-to-top-btn" id="back-to-top" aria-label="Scroll to top of page" title="Back to Top">
+        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+          <polyline points="18 15 12 9 6 15"></polyline>
+        </svg>
+      </button>
+    </div>
+  </footer>
+
+  <!-- =========================================================================
+       Printable Interactive CV / Resume Modal
+       ========================================================================= -->
+  <div class="cv-modal-backdrop" id="cv-modal-backdrop" role="dialog" aria-modal="true" aria-labelledby="cv-modal-title-text">
+    <div class="cv-modal-container">
+      <div class="cv-modal-header">
+        <div class="cv-modal-title" id="cv-modal-title-text">
+          <img src="assets/favicon.svg" alt="Logo" style="width: 24px; height: 24px;">
+          <span>Curriculum Vitae — Ashikur Rahman Shaon</span>
+        </div>
+        <div class="cv-modal-actions">
+          <button class="btn btn-primary btn-sm" id="print-cv-btn" title="Print or Save as PDF">
+            <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+              <polyline points="6 9 6 2 18 2 18 9"></polyline>
+              <path d="M6 18H4a2 2 0 0 1-2-2v-5a2 2 0 0 1 2-2h16a2 2 0 0 1 2 2v5a2 2 0 0 1-2 2h-2"></path>
+              <rect x="6" y="14" width="12" height="8"></rect>
+            </svg>
+            <span>Print / PDF</span>
+          </button>
+          <button class="theme-toggle-btn" id="close-cv-modal-btn" aria-label="Close CV Modal" style="width: 36px; height: 36px;">
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+              <line x1="18" y1="6" x2="6" y2="18"></line>
+              <line x1="6" y1="6" x2="18" y2="18"></line>
+            </svg>
+          </button>
+        </div>
+      </div>
+
+      <!-- Scrollable Printable CV Body (A4 Ratio Standard) -->
+      <div class="cv-modal-body">
+        <div class="printable-cv">
+          <!-- CV Header -->
+          <div class="pcv-header">
+            <div>
+              <h1 class="pcv-name">Ashikur Rahman Shaon</h1>
+              <div class="pcv-role">Personal Curriculum Vitae</div>
+            </div>
+            <div class="pcv-contact-info">
+              <div>Email: <strong>ashikurrahmanshaon@gmail.com</strong></div>
+              <div>Location: <strong>Dhaka, Bangladesh</strong></div>
+            </div>
+          </div>
+
+          <!-- Professional Summary -->
+          <h2 class="pcv-section-title">Personal Summary</h2>
+          <p class="pcv-summary">
+            A motivated, articulate, and dedicated professional with a Bachelor's degree and a passion for creative leadership, communication, and project coordination. Committed to bringing positive energy, high integrity, and quality execution to every initiative.
+          </p>
+
+          <!-- Core Competencies -->
+          <h2 class="pcv-section-title">Core Competencies &amp; Strengths</h2>
+          <div class="pcv-skills-list">
+            <div class="pcv-skill-bullet"><strong>Leadership &amp; Management:</strong> Project Coordination, Teamwork, Planning</div>
+            <div class="pcv-skill-bullet"><strong>Communication:</strong> Interpersonal Skills, English &amp; Bengali Proficiency, Public Speaking</div>
+            <div class="pcv-skill-bullet"><strong>Organization &amp; Strategy:</strong> Event Organization, Creative Aesthetics, Problem Solving</div>
+            <div class="pcv-skill-bullet"><strong>Personal Attributes:</strong> Enthusiastic, Fast Learner, Highly Adaptable, Result-Oriented</div>
+          </div>
+
+          <!-- Education -->
+          <h2 class="pcv-section-title">Education &amp; Academic Background</h2>
+          <div class="pcv-item">
+            <div class="pcv-item-header">
+              <span>Bachelor of Science (B.Sc.)</span>
+              <span>2021 — 2025</span>
+            </div>
+            <div class="pcv-item-sub">University Graduate</div>
+            <div class="pcv-item-desc">
+              Completed graduation with strong foundations in analytical thinking, leadership, project management, and collaborative execution.
+            </div>
+          </div>
+
+          <!-- Experience & Activities -->
+          <h2 class="pcv-section-title">Experience &amp; Activities</h2>
+          
+          <div class="pcv-item">
+            <div class="pcv-item-header">
+              <span>Project &amp; Operations Lead</span>
+              <span>2024 — Present</span>
+            </div>
+            <div class="pcv-item-sub">Creative &amp; Community Initiatives</div>
+            <div class="pcv-item-desc">
+              • Successfully led team initiatives, coordinating community activities, schedules, and workflows.<br>
+              • Managed communications, streamlined operations, and ensured high participant satisfaction.
+            </div>
+          </div>
+
+          <div class="pcv-item">
+            <div class="pcv-item-header">
+              <span>Client Relations &amp; Event Coordinator</span>
+              <span>2023 — 2024</span>
+            </div>
+            <div class="pcv-item-sub">Brand &amp; Event Management</div>
+            <div class="pcv-item-desc">
+              • Planned and executed events, coordinated presentations, and elevated audience experience.<br>
+              • Maintained strong client relationships and delivered tailored solutions on schedule.
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Interactive Toast Notification -->
+  <div class="toast-notification" id="toast-notification" role="status" aria-live="polite">
+    <svg class="toast-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+      <path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"></path>
+      <polyline points="22 4 12 14.01 9 11.01"></polyline>
+    </svg>
+    <span id="toast-message">Notification text</span>
+  </div>
+
+  <!-- Script File -->
+  <script src="js/main.js"></script>
 </body>
 </html>

@@ -1,0 +1,7 @@
+# Development & Scratch test scripts
+scratch/
+
+# System & IDE files
+.DS_Store
+Thumbs.db
+*.log
