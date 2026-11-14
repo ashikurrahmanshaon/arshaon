@@ -50,18 +50,43 @@ window.SITE = {
       pinned: true,
       date: "Pinned",
       html: `
-        <h1>Ashikur Rahman Shaon</h1>
-        <p><b>Digital Entrepreneur, Marketing Strategist &amp; Creative Technologist</b> — Founder of <b>ARSHAON</b> (<a data-open="safari" data-arg="arshaon">arshaon.com</a>).</p>
-        <p>I build modern web platforms, scalable SaaS applications, AI automation workflows, and full-funnel digital growth systems across Meta Ads, Google Ads, and Technical SEO.</p>
-        <h2>Quick Links</h2>
-        <ul>
-          <li><a data-open="preview">📄 My CV / Resume</a> — View, print, or download my A4 PDF Resume</li>
-          <li><a data-open="photos" data-arg="library">📷 My Photos</a> — View my personal photo gallery</li>
-          <li><a data-open="safari" data-arg="linkedin">🔗 LinkedIn Profile</a> — View my LinkedIn inside Mac</li>
-          <li><a data-open="messages">💬 Messages</a> — Chat with me directly</li>
-          <li><a data-open="mail">✉️ Mail</a> — Send me a message or email (<a href="mailto:arshaonx@gmail.com">arshaonx@gmail.com</a>)</li>
-        </ul>
-        <p><i>Want to leave me a private note? Click <b>+ Write a Note</b> on the left — your note saves in your browser and can be sent privately to my inbox or via email.</i></p>`,
+        <div class="nt-hero-card">
+          <div class="nt-hero-top">
+            <img class="nt-hero-av" src="icons/ashikur.jpg" alt="Ashikur Rahman Shaon">
+            <div class="nt-hero-meta">
+              <div class="nt-hero-badge"><span class="nt-dot"></span> Available for Strategic Projects</div>
+              <h1>Ashikur Rahman Shaon <span class="nt-verified" title="Verified">✓</span></h1>
+              <p class="nt-hero-role">Founder &amp; Digital Product Architect · <b>ARSHAON</b> (<a data-open="safari" data-arg="arshaon">arshaon.com</a>)</p>
+            </div>
+          </div>
+          <p class="nt-hero-bio">I design and engineer high-speed web platforms, scalable SaaS applications, custom AI automation workflows, and full-funnel digital growth systems across Meta Ads, Google Ads, and Technical SEO.</p>
+          <div class="nt-pill-row">
+            <button type="button" class="nt-pill primary" data-open="preview">📄 View CV / Resume</button>
+            <button type="button" class="nt-pill" data-open="photos" data-arg="library">📷 Photo Gallery</button>
+            <button type="button" class="nt-pill" data-open="safari" data-arg="linkedin">🔗 LinkedIn</button>
+            <button type="button" class="nt-pill" data-open="messages">💬 Messages</button>
+            <button type="button" class="nt-pill" data-open="mail">✉️ Mail</button>
+          </div>
+        </div>
+        <h2>What I Build</h2>
+        <div class="nt-bento">
+          <div class="nt-bento-card">
+            <span class="nt-bento-ic">⚡</span>
+            <b>Web &amp; SaaS Engineering</b>
+            <small>Next.js, React, TypeScript, Tailwind CSS &amp; high-converting digital storefronts.</small>
+          </div>
+          <div class="nt-bento-card">
+            <span class="nt-bento-ic">📈</span>
+            <b>Performance Marketing</b>
+            <small>Meta Ads (Pixel + Server-Side CAPI), Google Ads (Search, PMax) &amp; Technical SEO.</small>
+          </div>
+          <div class="nt-bento-card">
+            <span class="nt-bento-ic">🤖</span>
+            <b>AI &amp; Automation</b>
+            <small>Custom LLM agents, automated CRM pipelines, and intelligent business workflows.</small>
+          </div>
+        </div>
+        <p class="nt-tip-box">💡 <b>Leave a Private Note:</b> Click <b>+ Write a Note</b> in the sidebar to write a private note or message directly to my inbox.</p>`,
     },
     {
       title: "💼 Experience & Core Skills",
@@ -69,18 +94,26 @@ window.SITE = {
       date: "Pinned",
       html: `
         <h1>Experience &amp; Core Skills</h1>
-        <h2>Experience</h2>
-        <ul>
-          <li><b>Founder &amp; Lead Digital Strategist — ARSHAON</b> (2020 – Present)<br>Leading full-stack web &amp; SaaS product engineering, AI workflow automation, and performance marketing systems.</li>
-          <li><b>Performance Marketing Specialist — ARSHAON Growth</b> (2019 – Present)<br>Scaling full-funnel acquisition across Meta Ads (Pixel + Server-Side CAPI), Google Ads (Search, PMax, YouTube), and Technical SEO.</li>
-          <li><b>Creative Technologist &amp; AI Architect — ARSHAON Studio</b> (2021 – Present)<br>Building custom LLM automation pipelines, high-speed e-commerce storefronts, and interactive digital experiences.</li>
-        </ul>
+        <div class="nt-exp-list">
+          <div class="nt-exp-item">
+            <div class="nt-exp-head"><b>Founder &amp; Lead Digital Strategist — ARSHAON</b><span>2020 – Present</span></div>
+            <p>Leading full-stack web &amp; SaaS product engineering, AI workflow automation, and performance marketing systems at <a data-open="safari" data-arg="arshaon">arshaon.com</a>.</p>
+          </div>
+          <div class="nt-exp-item">
+            <div class="nt-exp-head"><b>Performance Marketing Specialist — Growth &amp; Ads</b><span>2019 – Present</span></div>
+            <p>Scaling full-funnel acquisition across Meta Ads (Pixel + Server-Side CAPI), Google Ads (Search, PMax, YouTube), GA4 &amp; GTM attribution.</p>
+          </div>
+          <div class="nt-exp-item">
+            <div class="nt-exp-head"><b>Full-Stack &amp; AI Product Architect — SaaS &amp; AI</b><span>2021 – Present</span></div>
+            <p>Building custom LLM automation pipelines, high-speed e-commerce storefronts, and interactive digital experiences.</p>
+          </div>
+        </div>
         <h2>Core Capabilities</h2>
-        <ul>
-          <li><b>Web &amp; SaaS:</b> Next.js, React, TypeScript, Tailwind CSS, E-Commerce Architecture</li>
-          <li><b>Digital Growth:</b> Meta Ads, Server-Side CAPI, Google Ads, Technical SEO, GA4 &amp; GTM</li>
-          <li><b>AI &amp; Automation:</b> Custom AI Agents, LLM APIs, Webhook &amp; CRM Workflows</li>
-        </ul>`,
+        <div class="nt-skill-chips">
+          <span>Next.js &amp; React</span><span>TypeScript</span><span>Tailwind CSS</span><span>Full-Stack SaaS</span>
+          <span>Meta Ads &amp; CAPI</span><span>Google Ads &amp; PMax</span><span>Technical SEO</span><span>GA4 &amp; GTM</span>
+          <span>AI Workflow Automation</span><span>LLM Integrations</span><span>E-Commerce Systems</span>
+        </div>`,
     },
     {
       title: "📬 Contact & Direct Reach",
@@ -89,13 +122,28 @@ window.SITE = {
       html: `
         <h1>Get in Touch</h1>
         <p>Available for strategic projects, SaaS product builds, AI automation, and growth partnerships.</p>
-        <ul>
-          <li><b>Email:</b> <a href="mailto:arshaonx@gmail.com">arshaonx@gmail.com</a></li>
-          <li><b>LinkedIn:</b> <a data-open="safari" data-arg="linkedin">linkedin.com/in/ashikurrahmanshaon</a></li>
-          <li><b>Website:</b> <a data-open="safari" data-arg="arshaon">arshaon.com</a></li>
-          <li><b>Location:</b> Dhaka, Bangladesh</li>
-        </ul>
-        <p>You can also click <b>+ Write a Note</b> in this app to send a private message straight to me, or open the <a data-open="mail">Mail</a> app.</p>`,
+        <div class="nt-bento">
+          <div class="nt-bento-card">
+            <span class="nt-bento-ic">✉️</span>
+            <b>Email Directly</b>
+            <small><a href="mailto:arshaonx@gmail.com">arshaonx@gmail.com</a></small>
+          </div>
+          <div class="nt-bento-card">
+            <span class="nt-bento-ic">🔗</span>
+            <b>LinkedIn Profile</b>
+            <small><a data-open="safari" data-arg="linkedin">in/ashikurrahmanshaon</a></small>
+          </div>
+          <div class="nt-bento-card">
+            <span class="nt-bento-ic">📍</span>
+            <b>Location</b>
+            <small>Dhaka, Bangladesh · <a data-open="safari" data-arg="arshaon">arshaon.com</a></small>
+          </div>
+        </div>
+        <div class="nt-pill-row" style="margin-top:14px">
+          <button type="button" class="nt-pill primary" data-open="mail">✉️ Send a Message in Mail</button>
+          <button type="button" class="nt-pill" data-open="messages">💬 Live Chat in Messages</button>
+          <button type="button" class="nt-pill" data-open="preview">📄 View My CV</button>
+        </div>`,
     },
   ],
 

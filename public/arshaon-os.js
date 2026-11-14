@@ -160,14 +160,15 @@
     const inner = custom ? `<img src="${esc(custom)}" alt="">` : `<svg viewBox="0 0 100 100">${art}</svg>`;
     return `<span class="appicon" data-ic="${id}" style="--s:${size}px">${inner}</span>`;
   };
-  const FOLDER = '<svg viewBox="0 0 64 52"><path d="M2 8a4 4 0 0 1 4-4h16l6 6h30a4 4 0 0 1 4 4v32a4 4 0 0 1-4 4H6a4 4 0 0 1-4-4z" fill="#3d9cf0"/><path d="M2 16h60v30a4 4 0 0 1-4 4H6a4 4 0 0 1-4-4z" fill="#74bdfb"/></svg>';
+  const FOLDER = '<svg viewBox="0 0 64 52"><defs><linearGradient id="fd-b" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#3fa3f7"/><stop offset="1" stop-color="#1e76d6"/></linearGradient><linearGradient id="fd-f" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#87d0ff"/><stop offset=".15" stop-color="#6cc2ff"/><stop offset="1" stop-color="#3898f2"/></linearGradient></defs><path d="M2 8.5A4.5 4.5 0 0 1 6.5 4h15.2a4.5 4.5 0 0 1 3.2 1.3l4.2 4.2H57.5A4.5 4.5 0 0 1 62 14v31.5a4.5 4.5 0 0 1-4.5 4.5h-51A4.5 4.5 0 0 1 2 45.5z" fill="url(#fd-b)"/><path d="M2 16.5A3.5 3.5 0 0 1 5.5 13h53a3.5 3.5 0 0 1 3.5 3.5v29a4.5 4.5 0 0 1-4.5 4.5h-51A4.5 4.5 0 0 1 2 45.5z" fill="url(#fd-f)"/><path d="M5.5 13.7h53a2.8 2.8 0 0 1 2.8 2.8v.6A2.8 2.8 0 0 0 58.5 14.3h-53A2.8 2.8 0 0 0 2.7 17v-.5a2.8 2.8 0 0 1 2.8-2.8z" fill="rgba(255,255,255,.55)"/></svg>';
   const DOC_LABEL = { TXT: "TEXT", PROJ: "PROJECT" };
   const docIcon = (color, label) => {
     const L = DOC_LABEL[label] || String(label || "FILE").toUpperCase(), long = L.length > 5;
-    return `<svg viewBox="0 0 48 60"><path d="M11 1.5h21.5L45 14v41.5a3 3 0 0 1-3 3H11a3 3 0 0 1-3-3v-51a3 3 0 0 1 3-3z" fill="#e3e6ea"/>` +
-      `<path d="M32.5 1.5V11a3 3 0 0 0 3 3H45z" fill="#b4b9c1"/><path d="M35.5 14L45 23.5V14z" fill="#cfd3d8"/>` +
-      `<rect x="2" y="27" width="37" height="17" rx="3" fill="${color}"/><rect x="8" y="44" width="31" height="2" fill="#cfd3d8"/>` +
-      `<text x="20.5" y="39.4" font-size="${long ? 9 : L.length > 4 ? 10.5 : 12.5}" font-weight="700" fill="#fff" text-anchor="middle" font-family="Inter,Arial,sans-serif"${long ? ' textLength="31" lengthAdjust="spacingAndGlyphs"' : ""}>${esc(L)}</text></svg>`;
+    return `<svg viewBox="0 0 48 60"><defs><linearGradient id="dc-p" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#ffffff"/><stop offset="1" stop-color="#e5e9f0"/></linearGradient></defs><path d="M11 1.5h21.5L45 14v41.5a3.5 3.5 0 0 1-3.5 3.5h-30.5A3.5 3.5 0 0 1 7.5 55.5v-50.5A3.5 3.5 0 0 1 11 1.5z" fill="url(#dc-p)" stroke="rgba(0,0,0,.12)" stroke-width=".8"/>` +
+      `<path d="M14 14h13M14 19.5h24M14 24.5h20" stroke="#cfd6e0" stroke-width="2" stroke-linecap="round"/>` +
+      `<path d="M32.5 1.5V11a3 3 0 0 0 3 3H45z" fill="#c3cad5"/><path d="M35.5 14L45 22.5V14z" fill="rgba(0,0,0,.09)"/>` +
+      `<rect x="2.5" y="28.5" width="37" height="17" rx="4" fill="${color}"/><rect x="8" y="45.5" width="31" height="2" fill="rgba(0,0,0,.12)"/>` +
+      `<text x="21" y="40.6" font-size="${long ? 9 : L.length > 4 ? 10.5 : 12.2}" font-weight="800" letter-spacing=".4" fill="#fff" text-anchor="middle" font-family="-apple-system,BlinkMacSystemFont,Inter,Arial,sans-serif"${long ? ' textLength="31" lengthAdjust="spacingAndGlyphs"' : ""}>${esc(L)}</text></svg>`;
   };
 
   /* ---------- Documents (TextEdit windows) ---------- */
@@ -931,7 +932,7 @@
       ...c, id: i,
       initials: c.initials || c.name.replace(/[^A-Za-z0-9 ]/g, "").split(" ").filter(Boolean).map((w) => w[0]).slice(0, 2).join("").toUpperCase(),
       msgs: (c.greeting || []).map((t) => ({ who: "them", text: t, react: null })),
-      unread: i > 0, time: Date.now() - i * 7.3e7,
+      unread: true, time: Date.now() - i * 7.3e7,
     }));
     return CONVOS;
   }
@@ -1740,7 +1741,7 @@
   function buildDesktop() {
     const items = deskItems = [
       { name: "My CV.pdf", icon: docIcon("#e2483d", "PDF"), open: () => openApp("preview") },
-      { name: "About Me", icon: docIcon("#ffc400", "INFO"), open: () => openApp("notes") },
+      { name: "About Me", icon: docIcon("#f5a623", "INFO"), open: () => openApp("notes") },
       { name: "My Photos", icon: FOLDER, open: () => openApp("photos", "library") },
     ];
     const box = $("#desk-icons");
@@ -1782,7 +1783,7 @@
     };
     document.addEventListener("pointerdown", (e) => { if (!e.target.closest(".dicon")) $$(".dicon.sel").forEach((x) => x.classList.remove("sel")); });
 
-    $("#home").innerHTML = `<div class="home-card"><div class="home-card-top">${avatar()}<div><h3>${esc(SITE.name)}</h3><p>${esc(SITE.mobileTitle || String(SITE.title).split("|")[0].trim())}</p></div></div></div>
+    $("#home").innerHTML = `<div class="home-card"><div class="home-card-top"><div class="hc-av-wrap">${avatar()}<span class="hc-status-dot" title="Online"></span></div><div class="hc-info"><h3>${esc(SITE.name)} <span class="hc-verified" title="Verified">✓</span></h3><p>${esc(SITE.mobileTitle || "Founder · ARSHAON")}</p></div><button type="button" class="hc-action-pill" data-open="preview" aria-label="Open CV">CV ↗</button></div></div>
       <div class="home-grid">${["notes", "messages", "photos", "finder", "mail", "calendar", "settings"].filter((id) => APPS[id]).map((id) => `<button class="home-app" data-app="${id}">${icon(id, 60)}<span>${APPS[id].name}</span></button>`).join("")}</div>`;
     $("#home").onclick = (e) => { const b = e.target.closest("[data-app]"); if (b) openApp(b.dataset.app); };
   }
@@ -2991,7 +2992,7 @@
     if (finder) finder.insertAdjacentElement("afterend", lp); else $("#dock").prepend(lp);
   };
   const buildDesktopLp = buildDesktop;
-  buildDesktop = () => { buildDesktopLp(); };
+  buildDesktop = () => { buildDesktopLp(); updateBadge(); };
   const helpLp = MENUS.help;
   MENUS.help = () => [...helpLp(), "-", ["Show All Apps (Launchpad)", openLaunchpad]];
 
@@ -3628,6 +3629,12 @@
     const s = `--wk:${size}px`;
     if (item.logo) return `<span class="wk-logo wk-img" style="${s}"><img src="${esc(srcUrl(item.logo))}" alt=""></span>`;
     const name = item.company || item.school || "";
+    if (/growth|ads|marketing/i.test(name)) {
+      return `<span class="wk-logo wk-svg" style="${s};background:linear-gradient(145deg,#32ade6,#0066cc)"><svg viewBox="0 0 24 24" width="${Math.round(size * .58)}" height="${Math.round(size * .58)}" fill="none" stroke="#fff" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M3 17l6-6 4 4 8-8"/><path d="M15 7h6v6"/></svg></span>`;
+    }
+    if (/saas|ai|product|tech/i.test(name)) {
+      return `<span class="wk-logo wk-svg" style="${s};background:linear-gradient(145deg,#7c5dfa,#312e81)"><svg viewBox="0 0 24 24" width="${Math.round(size * .58)}" height="${Math.round(size * .58)}" fill="none" stroke="#fff" stroke-width="2.1" stroke-linecap="round" stroke-linejoin="round"><path d="M12 3l1.9 5.1L19 10l-5.1 1.9L12 17l-1.9-5.1L5 10l5.1-1.9L12 3z"/><path d="M19 16l.9 2.1L22 19l-2.1.9L19 22l-.9-2.1L16 19l2.1-.9L19 16z"/></svg></span>`;
+    }
     const bg = item.color || WK_COLORS[hashNum(name) % WK_COLORS.length];
     const ini = wkInitials(name);
     return `<span class="wk-logo" style="${s};background:${esc(bg)}"><b style="font-size:${Math.round(size * (ini.length > 2 ? .3 : .4))}px">${esc(ini)}</b></span>`;
@@ -3815,7 +3822,7 @@
     if (WX.show === false || $("#weather")) return;
     const w = el(`<div id="weather" class="wx" hidden><div class="wx-city">${esc(WX.city)} <svg viewBox="0 0 24 24"><path d="M21 3L3 10.5l7.5 3L13.5 21z" fill="currentColor"/></svg></div>
         <div class="wx-temp">--°</div><div class="wx-ic"></div><div class="wx-cond"></div><div class="wx-hl"></div></div>`);
-    document.body.append(w);
+    w.style.cursor = "pointer"; w.title = "Open Calendar"; w.onclick = () => openApp("calendar"); document.body.append(w);
     const load = async () => {
       try {
         const u = `https://api.open-meteo.com/v1/forecast?latitude=${WX.lat}&longitude=${WX.lon}&current=temperature_2m,weather_code,is_day&daily=temperature_2m_max,temperature_2m_min&timezone=auto&forecast_days=1`;
@@ -4030,6 +4037,7 @@
     const swap = (a, b) => { if (!a || !b || a === b) return; const mark = document.createComment(""); a.replaceWith(mark); b.replaceWith(a); mark.replaceWith(b); };
     const li = $("a.home-app", grid), cal = $('.home-app[data-app="calendar"]', grid);
     if (li && cal) cal.insertAdjacentElement("beforebegin", li);
+    updateBadge();
   };
   /* =====================================================================
      PHONE: the phone's own Back button (or back swipe) works too.
