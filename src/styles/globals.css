@@ -2720,6 +2720,113 @@ button:focus-visible,
 .nt-act-btn.primary svg {
   opacity: 1;
 }
+.nt-act-btn.call,
+.sfli-btn.call,
+.btn.green {
+  background: linear-gradient(145deg, #32d74b, #1ca638) !important;
+  color: #fff !important;
+  border-color: #24b641 !important;
+  text-decoration: none !important;
+  box-shadow: 0 4px 12px rgba(48, 209, 88, .34), inset 0 1px 0 rgba(255, 255, 255, .32) !important;
+}
+.nt-act-btn.call svg {
+  opacity: 1;
+}
+.nt-act-btn.call:hover,
+.sfli-btn.call:hover,
+.btn.green:hover {
+  transform: translateY(-1px);
+  box-shadow: 0 6px 16px rgba(48, 209, 88, .44), inset 0 1px 0 rgba(255, 255, 255, .4) !important;
+}
+.avatar,
+.nt-hero-av,
+.sfli-avatar,
+.wk-logo.wk-img {
+  background-color: #ffffff !important;
+}
+.wk-logo.wk-img img {
+  background-color: #ffffff !important;
+  object-fit: contain !important;
+}
+
+/* ---------- Apple Phone / Direct Call App Window ---------- */
+.ph-call-app {
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  background: var(--win);
+}
+.ph-call-body {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 28px 24px 32px;
+  text-align: center;
+}
+.ph-call-ring {
+  padding: 5px;
+  border-radius: 50%;
+  background: linear-gradient(145deg, rgba(48, 209, 88, .28), rgba(10, 132, 255, .22));
+  margin-bottom: 14px;
+  box-shadow: 0 8px 24px rgba(48, 209, 88, .22);
+}
+.ph-call-ring .avatar.big {
+  width: 88px;
+  height: 88px;
+  border: 3px solid #fff;
+}
+.ph-call-body h2 {
+  font-size: 20px;
+  font-weight: 700;
+  margin: 0 0 3px;
+  letter-spacing: -.015em;
+}
+.ph-call-role {
+  font-size: 13px;
+  color: var(--muted);
+  margin: 0 0 14px;
+}
+.ph-call-num {
+  font-size: 26px;
+  font-weight: 800;
+  letter-spacing: .02em;
+  color: var(--text);
+  margin-bottom: 18px;
+  font-variant-numeric: tabular-nums;
+}
+.ph-dial-btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  width: 100%;
+  max-width: 240px;
+  padding: 13px 20px;
+  border-radius: 99px;
+  background: linear-gradient(145deg, #32d74b, #1ca638);
+  color: #fff !important;
+  font-size: 15px;
+  font-weight: 700;
+  text-decoration: none !important;
+  box-shadow: 0 8px 22px rgba(48, 209, 88, .38), inset 0 1px 0 rgba(255, 255, 255, .36);
+  transition: transform .14s ease, box-shadow .14s ease;
+}
+.ph-dial-btn:hover {
+  transform: translateY(-1px);
+  box-shadow: 0 10px 26px rgba(48, 209, 88, .46), inset 0 1px 0 rgba(255, 255, 255, .45);
+}
+.ph-dial-btn:active {
+  transform: scale(.96);
+}
+.ph-call-subactions {
+  display: flex;
+  gap: 8px;
+  margin-top: 16px;
+  flex-wrap: wrap;
+  justify-content: center;
+}
 .nt-bento {
   display: grid;
   grid-template-columns: repeat(3, minmax(0, 1fr));
@@ -3055,9 +3162,33 @@ button:focus-visible,
     color: var(--muted);
     margin-top: 1px;
   }
+  .hc-pills {
+    display: inline-flex;
+    align-items: center;
+    gap: 6px;
+    flex: none;
+  }
+  .hc-call-pill {
+    display: inline-flex;
+    align-items: center;
+    gap: 4.5px;
+    padding: 6px 10.5px;
+    border-radius: 99px;
+    background: linear-gradient(145deg, #32d74b, #1ca638);
+    color: #fff !important;
+    font-size: 12px;
+    font-weight: 700;
+    letter-spacing: -.01em;
+    text-decoration: none !important;
+    box-shadow: 0 3px 10px rgba(48, 209, 88, .36), inset 0 1px 0 rgba(255, 255, 255, .35);
+    transition: transform .12s ease;
+  }
+  .hc-call-pill:active {
+    transform: scale(.93);
+  }
   .hc-action-pill {
     flex: none;
-    padding: 6px 11px;
+    padding: 6px 10.5px;
     border-radius: 99px;
     background: var(--accent);
     color: #fff;

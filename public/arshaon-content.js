@@ -11,11 +11,12 @@ window.SITE = {
   title: "Digital Entrepreneur, Marketing Strategist & Creative Technologist",
   mobileTitle: "Founder · ARSHAON",
   location: "Dhaka, Bangladesh · arshaon.com",
+  phone: "01787081119",
   email: "arshaonx@gmail.com",
   linkedin: "https://www.linkedin.com/in/ashikurrahmanshaon/",
   resume: "Ashikur-Rahman-Shaon-Resume.pdf",
   favicon: "/icons/apple-favicon.svg?v=apple3",
-  photo: "icons/ashikur.jpg?v=20261115d",
+  photo: "icons/ashikur.jpg?v=20261115e",
   status: "Founder @ ARSHAON (arshaon.com)",
   noteEndpoint: "/api/note",
   mailEndpoint: "/api/mail",
@@ -46,7 +47,7 @@ window.SITE = {
       html: `
         <div class="nt-hero-card">
           <div class="nt-hero-top">
-            <img class="nt-hero-av" src="icons/ashikur.jpg?v=20261115d" alt="Ashikur Rahman Shaon">
+            <img class="nt-hero-av" src="icons/ashikur.jpg?v=20261115e" alt="Ashikur Rahman Shaon">
             <div class="nt-hero-meta">
               <div class="nt-hero-badge"><span class="nt-dot"></span> Available for Strategic Projects</div>
               <h1>Ashikur Rahman Shaon <span class="nt-verified" title="Verified">✓</span></h1>
@@ -55,11 +56,12 @@ window.SITE = {
           </div>
           <p class="nt-hero-bio">I design and engineer high-speed web platforms, scalable SaaS applications, custom AI automation workflows, and full-funnel digital growth systems across Meta Ads, Google Ads, and Technical SEO.</p>
           <div class="nt-act-row">
-            <button type="button" class="nt-act-btn primary" data-open="preview"><svg viewBox="0 0 16 16" width="13.5" height="13.5" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><path d="M9.5 1.8H4.2A1.4 1.4 0 0 0 2.8 3.2v9.6a1.4 1.4 0 0 0 1.4 1.4h7.6a1.4 1.4 0 0 0 1.4-1.4V5.5z"/><path d="M9.5 1.8v3.7h3.7M5.5 8.5h5M5.5 11.2h3.5"/></svg><span>View CV / Resume</span></button>
-            <button type="button" class="nt-act-btn" data-open="photos" data-arg="library"><svg viewBox="0 0 16 16" width="13.5" height="13.5" fill="none" stroke="currentColor" stroke-width="1.65" stroke-linecap="round" stroke-linejoin="round"><rect x="1.8" y="2.5" width="12.4" height="11" rx="2"/><circle cx="5.4" cy="6.1" r="1.2"/><path d="M2.2 11.8l3.5-3.4 2.4 2.3 2.1-2 3.8 3.5"/></svg><span>Photo Gallery</span></button>
-            <button type="button" class="nt-act-btn" data-open="safari" data-arg="linkedin"><svg viewBox="0 0 16 16" width="13.5" height="13.5" fill="none" stroke="currentColor" stroke-width="1.65" stroke-linecap="round" stroke-linejoin="round"><path d="M6.8 9.2a3 3 0 0 0 4.2 0l2-2a3 3 0 0 0-4.2-4.2L7.7 4.1"/><path d="M9.2 6.8a3 3 0 0 0-4.2 0l-2 2a3 3 0 0 0 4.2 4.2l1.1-1.1"/></svg><span>LinkedIn</span></button>
-            <button type="button" class="nt-act-btn" data-open="messages"><svg viewBox="0 0 16 16" width="13.5" height="13.5" fill="none" stroke="currentColor" stroke-width="1.65" stroke-linecap="round" stroke-linejoin="round"><path d="M8 2.2c3.6 0 6.4 2.3 6.4 5.2s-2.8 5.2-6.4 5.2c-.8 0-1.6-.1-2.3-.3L2.6 13.8l.8-2.6C2.3 10.2 1.6 8.9 1.6 7.4c0-2.9 2.8-5.2 6.4-5.2z"/></svg><span>Messages</span></button>
-            <button type="button" class="nt-act-btn" data-open="mail"><svg viewBox="0 0 16 16" width="13.5" height="13.5" fill="none" stroke="currentColor" stroke-width="1.65" stroke-linecap="round" stroke-linejoin="round"><rect x="1.8" y="3.2" width="12.4" height="9.6" rx="1.8"/><path d="M2.2 4l5.8 4.4L13.8 4"/></svg><span>Mail</span></button>
+            <button type="button" class="nt-act-btn primary" data-open="preview"><svg viewBox="0 0 16 16" width="13" height="13" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><path d="M9.5 1.8H4.2A1.4 1.4 0 0 0 2.8 3.2v9.6a1.4 1.4 0 0 0 1.4 1.4h7.6a1.4 1.4 0 0 0 1.4-1.4V5.5z"/><path d="M9.5 1.8v3.7h3.7M5.5 8.5h5M5.5 11.2h3.5"/></svg><span>View CV</span></button>
+            <a class="nt-act-btn call" href="tel:01787081119" data-external-link><svg viewBox="0 0 16 16" width="13" height="13" fill="currentColor"><path d="M3.65 1.75c.32-.32.84-.36 1.2-.08l1.82 1.42c.36.28.47.79.26 1.2l-.77 1.54a.65.65 0 0 0 .12.75l2.83 2.83a.65.65 0 0 0 .75.12l1.54-.77c.41-.21.92-.1 1.2.26l1.42 1.82c.28.36.24.88-.08 1.2l-1.08 1.08c-.85.85-2.15 1.12-3.28.66-2.22-.9-4.3-2.61-6.02-4.33-1.72-1.72-3.43-3.8-4.33-6.02-.46-1.13-.19-2.43.66-3.28l1.08-1.08z"/></svg><span>Call 01787081119</span></a>
+            <button type="button" class="nt-act-btn" data-open="photos" data-arg="library"><svg viewBox="0 0 16 16" width="13" height="13" fill="none" stroke="currentColor" stroke-width="1.65" stroke-linecap="round" stroke-linejoin="round"><rect x="1.8" y="2.5" width="12.4" height="11" rx="2"/><circle cx="5.4" cy="6.1" r="1.2"/><path d="M2.2 11.8l3.5-3.4 2.4 2.3 2.1-2 3.8 3.5"/></svg><span>Photos</span></button>
+            <button type="button" class="nt-act-btn" data-open="safari" data-arg="linkedin"><svg viewBox="0 0 16 16" width="13" height="13" fill="none" stroke="currentColor" stroke-width="1.65" stroke-linecap="round" stroke-linejoin="round"><path d="M6.8 9.2a3 3 0 0 0 4.2 0l2-2a3 3 0 0 0-4.2-4.2L7.7 4.1"/><path d="M9.2 6.8a3 3 0 0 0-4.2 0l-2 2a3 3 0 0 0 4.2 4.2l1.1-1.1"/></svg><span>LinkedIn</span></button>
+            <button type="button" class="nt-act-btn" data-open="messages"><svg viewBox="0 0 16 16" width="13" height="13" fill="none" stroke="currentColor" stroke-width="1.65" stroke-linecap="round" stroke-linejoin="round"><path d="M8 2.2c3.6 0 6.4 2.3 6.4 5.2s-2.8 5.2-6.4 5.2c-.8 0-1.6-.1-2.3-.3L2.6 13.8l.8-2.6C2.3 10.2 1.6 8.9 1.6 7.4c0-2.9 2.8-5.2 6.4-5.2z"/></svg><span>Messages</span></button>
+            <button type="button" class="nt-act-btn" data-open="mail"><svg viewBox="0 0 16 16" width="13" height="13" fill="none" stroke="currentColor" stroke-width="1.65" stroke-linecap="round" stroke-linejoin="round"><rect x="1.8" y="3.2" width="12.4" height="9.6" rx="1.8"/><path d="M2.2 4l5.8 4.4L13.8 4"/></svg><span>Mail</span></button>
           </div>
         </div>
         <h2>What I Build</h2>
@@ -118,6 +120,11 @@ window.SITE = {
         <p>Available for strategic projects, SaaS product builds, AI automation, and growth partnerships.</p>
         <div class="nt-bento">
           <div class="nt-bento-card">
+            <span class="nt-bento-ic green"><svg viewBox="0 0 24 24" width="16" height="16" fill="#fff"><path d="M5.5 2.6c.48-.48 1.26-.54 1.8-.12l2.73 2.13c.54.42.7 1.18.39 1.8l-1.15 2.31a.98.98 0 0 0 .18 1.12l4.25 4.25a.98.98 0 0 0 1.12.18l2.31-1.15c.62-.31 1.38-.15 1.8.39l2.13 2.73c.42.54.36 1.32-.12 1.8l-1.62 1.62c-1.28 1.28-3.22 1.68-4.92.99-3.33-1.35-6.45-3.91-9.03-6.49-2.58-2.58-5.14-5.7-6.49-9.03-.69-1.7-.29-3.64.99-4.92l1.62-1.62z"/></svg></span>
+            <b>Phone / Direct Call</b>
+            <small><a href="tel:01787081119" data-external-link>01787081119</a></small>
+          </div>
+          <div class="nt-bento-card">
             <span class="nt-bento-ic blue"><svg viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="#fff" stroke-width="2.1" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="5" width="18" height="14" rx="2.5"/><path d="M3.5 6l8.5 6.5L20.5 6"/></svg></span>
             <b>Email Directly</b>
             <small><a href="mailto:arshaonx@gmail.com">arshaonx@gmail.com</a></small>
@@ -127,13 +134,9 @@ window.SITE = {
             <b>LinkedIn Profile</b>
             <small><a data-open="safari" data-arg="linkedin">in/ashikurrahmanshaon</a></small>
           </div>
-          <div class="nt-bento-card">
-            <span class="nt-bento-ic amber"><svg viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="#fff" stroke-width="2.1" stroke-linecap="round" stroke-linejoin="round"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg></span>
-            <b>Location</b>
-            <small>Dhaka, Bangladesh · <a data-open="safari" data-arg="arshaon">arshaon.com</a></small>
-          </div>
         </div>
         <div class="nt-act-row" style="margin-top:14px">
+          <a class="nt-act-btn call" href="tel:01787081119" data-external-link><svg viewBox="0 0 16 16" width="13.5" height="13.5" fill="currentColor"><path d="M3.65 1.75c.32-.32.84-.36 1.2-.08l1.82 1.42c.36.28.47.79.26 1.2l-.77 1.54a.65.65 0 0 0 .12.75l2.83 2.83a.65.65 0 0 0 .75.12l1.54-.77c.41-.21.92-.1 1.2.26l1.42 1.82c.28.36.24.88-.08 1.2l-1.08 1.08c-.85.85-2.15 1.12-3.28.66-2.22-.9-4.3-2.61-6.02-4.33-1.72-1.72-3.43-3.8-4.33-6.02-.46-1.13-.19-2.43.66-3.28l1.08-1.08z"/></svg><span>Call 01787081119</span></a>
           <button type="button" class="nt-act-btn primary" data-open="mail"><svg viewBox="0 0 16 16" width="13.5" height="13.5" fill="none" stroke="currentColor" stroke-width="1.65" stroke-linecap="round" stroke-linejoin="round"><rect x="1.8" y="3.2" width="12.4" height="9.6" rx="1.8"/><path d="M2.2 4l5.8 4.4L13.8 4"/></svg><span>Send a Message in Mail</span></button>
           <button type="button" class="nt-act-btn" data-open="messages"><svg viewBox="0 0 16 16" width="13.5" height="13.5" fill="none" stroke="currentColor" stroke-width="1.65" stroke-linecap="round" stroke-linejoin="round"><path d="M8 2.2c3.6 0 6.4 2.3 6.4 5.2s-2.8 5.2-6.4 5.2c-.8 0-1.6-.1-2.3-.3L2.6 13.8l.8-2.6C2.3 10.2 1.6 8.9 1.6 7.4c0-2.9 2.8-5.2 6.4-5.2z"/></svg><span>Live Chat in Messages</span></button>
           <button type="button" class="nt-act-btn" data-open="preview"><svg viewBox="0 0 16 16" width="13.5" height="13.5" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><path d="M9.5 1.8H4.2A1.4 1.4 0 0 0 2.8 3.2v9.6a1.4 1.4 0 0 0 1.4 1.4h7.6a1.4 1.4 0 0 0 1.4-1.4V5.5z"/><path d="M9.5 1.8v3.7h3.7M5.5 8.5h5M5.5 11.2h3.5"/></svg><span>View My CV</span></button>
@@ -148,7 +151,7 @@ window.SITE = {
       role: "Founder & Lead Digital Strategist",
       company: "ARSHAON",
       dates: "2020 – Present",
-      logo: "icons/ashikur.jpg?v=20261115d",
+      logo: "icons/ashikur.jpg?v=20261115e",
       color: "#0a84ff",
       link: "https://arshaon.com",
       about: "Full-stack digital product engineering, AI automation, and performance marketing under ARSHAON (arshaon.com).",
@@ -238,9 +241,9 @@ window.SITE = {
       a: "Open the Photos app from the Dock to view my personal photos in full resolution!",
     },
     {
-      q: "How can I contact you?",
-      words: ["contact", "email", "hire", "reach", "message", "note", "talk", "linkedin"],
-      a: "You can write a private note to me in the Notes app, send a message in the Mail app, check my LinkedIn (linkedin.com/in/ashikurrahmanshaon), or email arshaonx@gmail.com.",
+      q: "How can I contact or call you?",
+      words: ["contact", "call", "phone", "number", "01787081119", "email", "hire", "reach", "message", "note", "talk", "linkedin"],
+      a: "You can call me directly at 01787081119 (click the Phone button), write a private note in Notes, send a message in Mail, or email arshaonx@gmail.com.",
     },
   ],
   chatExtra: [
