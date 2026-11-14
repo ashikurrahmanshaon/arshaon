@@ -25,8 +25,8 @@ export function InteractiveOSWorkspace() {
         document.body.appendChild(s);
       });
 
-    loadScript('/arshaon-content.js?v=20261115c')
-      .then(() => loadScript('/arshaon-os.js?v=20261115c'))
+    loadScript('/arshaon-content.js?v=20261115d')
+      .then(() => loadScript('/arshaon-os.js?v=20261115d'))
       .catch((err) => {
         console.error('Failed to boot Macintosh OS:', err);
       });

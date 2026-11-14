@@ -55,7 +55,7 @@ const INDEX_HTML = `<!DOCTYPE html>
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin="anonymous" />
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@400;600&display=swap" rel="stylesheet" />
-  <link rel="stylesheet" href="/styles.css?v=20261115b" />
+  <link rel="stylesheet" href="/styles.css?v=20261115d" />
 </head>
 <body>
   <div id="wallpaper">
@@ -126,8 +126,8 @@ const INDEX_HTML = `<!DOCTYPE html>
     <div class="boot-hint" id="boot-hint"></div>
   </div>
 
-  <script src="/arshaon-content.js?v=20261115c"></script>
-  <script src="/arshaon-os.js?v=20261115c"></script>
+  <script src="/arshaon-content.js?v=20261115d"></script>
+  <script src="/arshaon-os.js?v=20261115d"></script>
 </body>
 </html>`;
 

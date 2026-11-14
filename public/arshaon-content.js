@@ -15,20 +15,14 @@ window.SITE = {
   linkedin: "https://www.linkedin.com/in/ashikurrahmanshaon/",
   resume: "Ashikur-Rahman-Shaon-Resume.pdf",
   favicon: "/icons/apple-favicon.svg?v=apple3",
-  photo: "icons/ashikur.jpg",
+  photo: "icons/ashikur.jpg?v=20261115d",
   status: "Founder @ ARSHAON (arshaon.com)",
   noteEndpoint: "/api/note",
   mailEndpoint: "/api/mail",
   inboxEndpoint: "/api/inbox",
 
-  /* ---------------- PERSONAL PHOTOS (Photos App) ---------------- */
+  /* ---------------- PERSONAL PHOTOS (Photos App — Only 2 Photos) ---------------- */
   eventPhotos: [
-    {
-      src: "images/photos/ashikur-portrait.jpg",
-      event: "Portraits",
-      caption: "Ashikur Rahman Shaon — Founder at ARSHAON",
-      date: "2026-01-15",
-    },
     {
       src: "images/photos/ashikur-lamborghini.jpg",
       event: "Lifestyle",
@@ -52,7 +46,7 @@ window.SITE = {
       html: `
         <div class="nt-hero-card">
           <div class="nt-hero-top">
-            <img class="nt-hero-av" src="icons/ashikur.jpg" alt="Ashikur Rahman Shaon">
+            <img class="nt-hero-av" src="icons/ashikur.jpg?v=20261115d" alt="Ashikur Rahman Shaon">
             <div class="nt-hero-meta">
               <div class="nt-hero-badge"><span class="nt-dot"></span> Available for Strategic Projects</div>
               <h1>Ashikur Rahman Shaon <span class="nt-verified" title="Verified">✓</span></h1>
@@ -154,7 +148,7 @@ window.SITE = {
       role: "Founder & Lead Digital Strategist",
       company: "ARSHAON",
       dates: "2020 – Present",
-      logo: "icons/ashikur.jpg",
+      logo: "icons/ashikur.jpg?v=20261115d",
       color: "#0a84ff",
       link: "https://arshaon.com",
       about: "Full-stack digital product engineering, AI automation, and performance marketing under ARSHAON (arshaon.com).",
