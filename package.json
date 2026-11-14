@@ -2,13 +2,19 @@
   "name": "arshaon-city",
   "version": "1.0.0",
   "private": true,
-  "description": "ARSHAON CITY — Realistic Interactive 3D Personal Website & Portfolio for Ashikur Rahman Shaon (arshaon.com)",
+  "description": "ARSHAON OS — Interactive macOS & iOS Personal Portfolio for Ashikur Rahman Shaon (arshaon.com)",
+  "main": "server.js",
   "scripts": {
+    "start": "node server.js",
+    "build": "node server.js --check",
     "dev": "next dev",
-    "build": "next build",
-    "start": "next start",
+    "next:build": "next build",
+    "next:start": "next start",
     "lint": "next lint",
     "typecheck": "tsc --noEmit"
+  },
+  "engines": {
+    "node": ">=18.0.0"
   },
   "dependencies": {
     "@react-three/drei": "^9.114.3",
