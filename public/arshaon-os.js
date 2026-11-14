@@ -523,7 +523,7 @@
   const APPS = {
     safari: { name: "Safari", title: "Safari — Ashikur Rahman Shaon", w: 880, h: 620, mobile: true, render: renderSafari },
     finder: { name: "Finder", w: 820, h: 560, mobile: false, render: renderFinder },
-    notes: { name: "Notes", w: 800, h: 500, mobile: true, render: renderNotes },
+    notes: { name: "Notes", w: 880, h: 650, mobile: true, render: renderNotes },
     messages: { name: "Messages", w: 860, h: 580, mobile: true, render: renderMessages },
     photos: { name: "Photos", w: 980, h: 640, mobile: true, render: renderPhotos },
     preview: { name: "Preview", title: resumeName(), w: 720, h: 620, mobile: true, render: renderPreview },
@@ -610,7 +610,7 @@
         <label class="nt-search">${NT_IC.search}<input placeholder="Search" aria-label="Search notes"></label>
       </div>
       <div class="split nt show-main">
-        <div class="side nt-side"><div class="nt-compose-cta"><button class="nt-write-btn" data-a="new">+ Write a Note / Message Ashikur</button></div><div class="nt-list"></div></div>
+        <div class="side nt-side"><div class="nt-compose-cta"><button class="nt-write-btn" data-a="new"><svg viewBox="0 0 16 16" width="13.5" height="13.5" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M8 2.5H3.5A1.5 1.5 0 0 0 2 4v8.5A1.5 1.5 0 0 0 3.5 14H12a1.5 1.5 0 0 0 1.5-1.5V8"/><path d="M11.8 2.2a1.6 1.6 0 0 1 2.3 2.3L8.5 10l-2.8.7.7-2.8z"/></svg><span>Write a Note to Ashikur</span></button></div><div class="nt-list"></div></div>
         <div class="main nt-main"></div>
       </div></div>`;
     const root = $(".nt2", body), split = $(".split", body), list = $(".nt-list", body), main = $(".nt-main", body), search = $(".nt-search input", body);
@@ -3667,12 +3667,22 @@
     const rows = wkCompanies().slice(0, 4).map((c) => `<div class="wkw-row">${wkLogo(c, 30)}<span><b>${esc(c.company)}</b><small>${esc(c.years)}</small></span></div>`).join("");
     const row = el(`<div class="m-widgets${wkCompanies().length > 3 ? " wk4" : ""}">
         <div class="mw"><button class="mw-box mw-work" aria-label="Work experience"><span class="mw-head">Work <i>›</i></span>${rows}</button><span class="mw-label">Work</span></div>
-        <div class="mw"><button class="mw-box mw-proj" aria-label="Open Resume and CV"><span class="mw-head">Start here 👋</span>
+        <div class="mw"><button class="mw-box mw-proj" aria-label="Open Resume and CV"><span class="mw-head">Start here <i class="mw-pdf-tag">PDF</i></span>
           <span class="mw-big">CV</span><span class="mw-sub">Resume &amp; Profile</span>
           <span class="mw-counts">Web · SaaS · AI · Growth</span>
           <span class="mw-go">View My CV →</span></button><span class="mw-label">Resume</span></div></div>`);
     $(".mw-work", row).onclick = (e) => { launchRect = e.currentTarget.getBoundingClientRect(); openWork(); };
     $(".mw-proj", row).onclick = (e) => { launchRect = e.currentTarget.getBoundingClientRect(); openApp("preview"); };
+    const hc = $("#home .home-card");
+    if (hc && !hc._bound) {
+      hc._bound = true;
+      hc.style.cursor = "pointer";
+      hc.addEventListener("click", (e) => {
+        if (e.target.closest("[data-open]")) return;
+        launchRect = hc.getBoundingClientRect();
+        openApp("notes");
+      });
+    }
     if (card) card.insertAdjacentElement("afterend", row); else home.prepend(row);
   }
   const buildDesktopWk = buildDesktop;
@@ -3823,6 +3833,11 @@
     const w = el(`<div id="weather" class="wx" hidden><div class="wx-city">${esc(WX.city)} <svg viewBox="0 0 24 24"><path d="M21 3L3 10.5l7.5 3L13.5 21z" fill="currentColor"/></svg></div>
         <div class="wx-temp">--°</div><div class="wx-ic"></div><div class="wx-cond"></div><div class="wx-hl"></div></div>`);
     w.style.cursor = "pointer"; w.title = "Open Calendar"; w.onclick = () => openApp("calendar"); document.body.append(w);
+    if (!$("#desk-cv-card")) {
+      const cw = el('<div id="desk-cv-card" class="desk-cv-widget" role="button" tabindex="0" title="Open Resume & CV" aria-label="Open Resume and CV"><div class="dcv-top"><span>Start here</span><span class="dcv-badge">PDF</span></div><div class="dcv-big">CV</div><div class="dcv-sub">Resume &amp; Profile</div><div class="dcv-tags">Web · SaaS · AI · Growth</div><div class="dcv-go">View My CV →</div></div>');
+      cw.onclick = () => openApp("preview");
+      document.body.append(cw);
+    }
     const load = async () => {
       try {
         const u = `https://api.open-meteo.com/v1/forecast?latitude=${WX.lat}&longitude=${WX.lon}&current=temperature_2m,weather_code,is_day&daily=temperature_2m_max,temperature_2m_min&timezone=auto&forecast_days=1`;

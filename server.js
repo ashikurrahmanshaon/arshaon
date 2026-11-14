@@ -126,8 +126,8 @@ const INDEX_HTML = `<!DOCTYPE html>
     <div class="boot-hint" id="boot-hint"></div>
   </div>
 
-  <script src="/arshaon-content.js?v=20261115b"></script>
-  <script src="/arshaon-os.js?v=20261115b"></script>
+  <script src="/arshaon-content.js?v=20261115c"></script>
+  <script src="/arshaon-os.js?v=20261115c"></script>
 </body>
 </html>`;
 

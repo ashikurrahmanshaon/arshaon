@@ -46,7 +46,7 @@ window.SITE = {
   /* ---------------- NOTES APP (Concise Information About Ashikur) ---------------- */
   notes: [
     {
-      title: "👋 About Ashikur Rahman Shaon",
+      title: "About Ashikur Rahman Shaon",
       pinned: true,
       date: "Pinned",
       html: `
@@ -60,36 +60,36 @@ window.SITE = {
             </div>
           </div>
           <p class="nt-hero-bio">I design and engineer high-speed web platforms, scalable SaaS applications, custom AI automation workflows, and full-funnel digital growth systems across Meta Ads, Google Ads, and Technical SEO.</p>
-          <div class="nt-pill-row">
-            <button type="button" class="nt-pill primary" data-open="preview">📄 View CV / Resume</button>
-            <button type="button" class="nt-pill" data-open="photos" data-arg="library">📷 Photo Gallery</button>
-            <button type="button" class="nt-pill" data-open="safari" data-arg="linkedin">🔗 LinkedIn</button>
-            <button type="button" class="nt-pill" data-open="messages">💬 Messages</button>
-            <button type="button" class="nt-pill" data-open="mail">✉️ Mail</button>
+          <div class="nt-act-row">
+            <button type="button" class="nt-act-btn primary" data-open="preview"><svg viewBox="0 0 16 16" width="13.5" height="13.5" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><path d="M9.5 1.8H4.2A1.4 1.4 0 0 0 2.8 3.2v9.6a1.4 1.4 0 0 0 1.4 1.4h7.6a1.4 1.4 0 0 0 1.4-1.4V5.5z"/><path d="M9.5 1.8v3.7h3.7M5.5 8.5h5M5.5 11.2h3.5"/></svg><span>View CV / Resume</span></button>
+            <button type="button" class="nt-act-btn" data-open="photos" data-arg="library"><svg viewBox="0 0 16 16" width="13.5" height="13.5" fill="none" stroke="currentColor" stroke-width="1.65" stroke-linecap="round" stroke-linejoin="round"><rect x="1.8" y="2.5" width="12.4" height="11" rx="2"/><circle cx="5.4" cy="6.1" r="1.2"/><path d="M2.2 11.8l3.5-3.4 2.4 2.3 2.1-2 3.8 3.5"/></svg><span>Photo Gallery</span></button>
+            <button type="button" class="nt-act-btn" data-open="safari" data-arg="linkedin"><svg viewBox="0 0 16 16" width="13.5" height="13.5" fill="none" stroke="currentColor" stroke-width="1.65" stroke-linecap="round" stroke-linejoin="round"><path d="M6.8 9.2a3 3 0 0 0 4.2 0l2-2a3 3 0 0 0-4.2-4.2L7.7 4.1"/><path d="M9.2 6.8a3 3 0 0 0-4.2 0l-2 2a3 3 0 0 0 4.2 4.2l1.1-1.1"/></svg><span>LinkedIn</span></button>
+            <button type="button" class="nt-act-btn" data-open="messages"><svg viewBox="0 0 16 16" width="13.5" height="13.5" fill="none" stroke="currentColor" stroke-width="1.65" stroke-linecap="round" stroke-linejoin="round"><path d="M8 2.2c3.6 0 6.4 2.3 6.4 5.2s-2.8 5.2-6.4 5.2c-.8 0-1.6-.1-2.3-.3L2.6 13.8l.8-2.6C2.3 10.2 1.6 8.9 1.6 7.4c0-2.9 2.8-5.2 6.4-5.2z"/></svg><span>Messages</span></button>
+            <button type="button" class="nt-act-btn" data-open="mail"><svg viewBox="0 0 16 16" width="13.5" height="13.5" fill="none" stroke="currentColor" stroke-width="1.65" stroke-linecap="round" stroke-linejoin="round"><rect x="1.8" y="3.2" width="12.4" height="9.6" rx="1.8"/><path d="M2.2 4l5.8 4.4L13.8 4"/></svg><span>Mail</span></button>
           </div>
         </div>
         <h2>What I Build</h2>
         <div class="nt-bento">
           <div class="nt-bento-card">
-            <span class="nt-bento-ic">⚡</span>
+            <span class="nt-bento-ic blue"><svg viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="#fff" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><polyline points="16 18 22 12 16 6"/><polyline points="8 6 2 12 8 18"/></svg></span>
             <b>Web &amp; SaaS Engineering</b>
             <small>Next.js, React, TypeScript, Tailwind CSS &amp; high-converting digital storefronts.</small>
           </div>
           <div class="nt-bento-card">
-            <span class="nt-bento-ic">📈</span>
+            <span class="nt-bento-ic green"><svg viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="#fff" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M3 17l6-6 4 4 8-8"/><path d="M15 7h6v6"/></svg></span>
             <b>Performance Marketing</b>
             <small>Meta Ads (Pixel + Server-Side CAPI), Google Ads (Search, PMax) &amp; Technical SEO.</small>
           </div>
           <div class="nt-bento-card">
-            <span class="nt-bento-ic">🤖</span>
+            <span class="nt-bento-ic purple"><svg viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="#fff" stroke-width="2.1" stroke-linecap="round" stroke-linejoin="round"><path d="M12 3l1.9 5.1L19 10l-5.1 1.9L12 17l-1.9-5.1L5 10l5.1-1.9L12 3z"/><path d="M19 16l.9 2.1L22 19l-2.1.9L19 22l-.9-2.1L16 19l2.1-.9L19 16z"/></svg></span>
             <b>AI &amp; Automation</b>
             <small>Custom LLM agents, automated CRM pipelines, and intelligent business workflows.</small>
           </div>
         </div>
-        <p class="nt-tip-box">💡 <b>Leave a Private Note:</b> Click <b>+ Write a Note</b> in the sidebar to write a private note or message directly to my inbox.</p>`,
+        <p class="nt-tip-box"><b>Leave a Private Note:</b> Click <b>Write a Note to Ashikur</b> in the sidebar to send a private note directly to my inbox.</p>`,
     },
     {
-      title: "💼 Experience & Core Skills",
+      title: "Experience & Core Skills",
       pinned: true,
       date: "Pinned",
       html: `
@@ -116,7 +116,7 @@ window.SITE = {
         </div>`,
     },
     {
-      title: "📬 Contact & Direct Reach",
+      title: "Contact & Direct Reach",
       pinned: true,
       date: "Pinned",
       html: `
@@ -124,25 +124,25 @@ window.SITE = {
         <p>Available for strategic projects, SaaS product builds, AI automation, and growth partnerships.</p>
         <div class="nt-bento">
           <div class="nt-bento-card">
-            <span class="nt-bento-ic">✉️</span>
+            <span class="nt-bento-ic blue"><svg viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="#fff" stroke-width="2.1" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="5" width="18" height="14" rx="2.5"/><path d="M3.5 6l8.5 6.5L20.5 6"/></svg></span>
             <b>Email Directly</b>
             <small><a href="mailto:arshaonx@gmail.com">arshaonx@gmail.com</a></small>
           </div>
           <div class="nt-bento-card">
-            <span class="nt-bento-ic">🔗</span>
+            <span class="nt-bento-ic linkedin"><svg viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="#fff" stroke-width="2.1" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"/><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"/></svg></span>
             <b>LinkedIn Profile</b>
             <small><a data-open="safari" data-arg="linkedin">in/ashikurrahmanshaon</a></small>
           </div>
           <div class="nt-bento-card">
-            <span class="nt-bento-ic">📍</span>
+            <span class="nt-bento-ic amber"><svg viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="#fff" stroke-width="2.1" stroke-linecap="round" stroke-linejoin="round"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg></span>
             <b>Location</b>
             <small>Dhaka, Bangladesh · <a data-open="safari" data-arg="arshaon">arshaon.com</a></small>
           </div>
         </div>
-        <div class="nt-pill-row" style="margin-top:14px">
-          <button type="button" class="nt-pill primary" data-open="mail">✉️ Send a Message in Mail</button>
-          <button type="button" class="nt-pill" data-open="messages">💬 Live Chat in Messages</button>
-          <button type="button" class="nt-pill" data-open="preview">📄 View My CV</button>
+        <div class="nt-act-row" style="margin-top:14px">
+          <button type="button" class="nt-act-btn primary" data-open="mail"><svg viewBox="0 0 16 16" width="13.5" height="13.5" fill="none" stroke="currentColor" stroke-width="1.65" stroke-linecap="round" stroke-linejoin="round"><rect x="1.8" y="3.2" width="12.4" height="9.6" rx="1.8"/><path d="M2.2 4l5.8 4.4L13.8 4"/></svg><span>Send a Message in Mail</span></button>
+          <button type="button" class="nt-act-btn" data-open="messages"><svg viewBox="0 0 16 16" width="13.5" height="13.5" fill="none" stroke="currentColor" stroke-width="1.65" stroke-linecap="round" stroke-linejoin="round"><path d="M8 2.2c3.6 0 6.4 2.3 6.4 5.2s-2.8 5.2-6.4 5.2c-.8 0-1.6-.1-2.3-.3L2.6 13.8l.8-2.6C2.3 10.2 1.6 8.9 1.6 7.4c0-2.9 2.8-5.2 6.4-5.2z"/></svg><span>Live Chat in Messages</span></button>
+          <button type="button" class="nt-act-btn" data-open="preview"><svg viewBox="0 0 16 16" width="13.5" height="13.5" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><path d="M9.5 1.8H4.2A1.4 1.4 0 0 0 2.8 3.2v9.6a1.4 1.4 0 0 0 1.4 1.4h7.6a1.4 1.4 0 0 0 1.4-1.4V5.5z"/><path d="M9.5 1.8v3.7h3.7M5.5 8.5h5M5.5 11.2h3.5"/></svg><span>View My CV</span></button>
         </div>`,
     },
   ],
