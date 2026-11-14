@@ -39,11 +39,10 @@ const INDEX_HTML = `<!DOCTYPE html>
   <title>Ashikur Rahman Shaon — ARSHAON OS</title>
   <meta name="description" content="The interactive portfolio of Ashikur Rahman Shaon (ARSHAON · arshaon.com) — Digital Entrepreneur, Marketing Strategist &amp; Creative Technologist. Explore my work on a tiny Apple computer in your browser." />
   <link rel="canonical" href="https://arshaon.com" />
-  <link rel="icon" href="/icons/apple-favicon.svg?v=apple2" type="image/svg+xml" />
-  <link rel="icon" href="/favicon.ico?v=apple2" sizes="32x32" />
-  <link rel="icon" href="/icons/favicon.png?v=apple2" type="image/png" sizes="64x64" />
-  <link rel="shortcut icon" href="/favicon.ico?v=apple2" />
-  <link rel="apple-touch-icon" href="/icons/favicon.png?v=apple2" />
+  <link rel="icon" href="/icons/apple-favicon.svg?v=apple3" type="image/svg+xml" />
+  <link rel="icon" href="/icons/favicon.png?v=apple3" type="image/png" sizes="64x64" />
+  <link rel="shortcut icon" href="/favicon.ico?v=apple3" />
+  <link rel="apple-touch-icon" href="/icons/favicon.png?v=apple3" />
   <meta property="og:type" content="website" />
   <meta property="og:locale" content="en_US" />
   <meta property="og:url" content="https://arshaon.com" />
@@ -56,7 +55,7 @@ const INDEX_HTML = `<!DOCTYPE html>
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin="anonymous" />
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@400;600&display=swap" rel="stylesheet" />
-  <link rel="stylesheet" href="/styles.css?v=20261115" />
+  <link rel="stylesheet" href="/styles.css?v=20261115a" />
 </head>
 <body>
   <div id="wallpaper">
@@ -127,8 +126,8 @@ const INDEX_HTML = `<!DOCTYPE html>
     <div class="boot-hint" id="boot-hint"></div>
   </div>
 
-  <script src="/arshaon-content.js?v=20261115"></script>
-  <script src="/arshaon-os.js?v=20261115"></script>
+  <script src="/arshaon-content.js?v=20261115a"></script>
+  <script src="/arshaon-os.js?v=20261115a"></script>
 </body>
 </html>`;
 

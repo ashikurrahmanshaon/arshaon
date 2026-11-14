@@ -14,7 +14,7 @@ window.SITE = {
   email: "arshaonx@gmail.com",
   linkedin: "https://www.linkedin.com/in/ashikurrahmanshaon/",
   resume: "Ashikur-Rahman-Shaon-Resume.pdf",
-  favicon: "/icons/apple-favicon.svg?v=apple2",
+  favicon: "/icons/apple-favicon.svg?v=apple3",
   photo: "icons/ashikur.jpg",
   status: "Founder @ ARSHAON (arshaon.com)",
   noteEndpoint: "/api/note",
@@ -99,8 +99,8 @@ window.SITE = {
     },
   ],
 
-  /* ---------------- EXPERIENCE (Finder & CV Reference) ---------------- */
-  workWidget: false,
+  /* ---------------- EXPERIENCE (Finder, Mobile Work Widget & CV Reference) ---------------- */
+  workWidget: true,
   experience: [
     {
       role: "Founder & Lead Digital Strategist",
@@ -117,15 +117,26 @@ window.SITE = {
     },
     {
       role: "Performance Marketing & Growth Specialist",
-      company: "ARSHAON Growth",
+      company: "Growth & Ads",
       dates: "2019 – Present",
-      logo: "icons/ashikur.jpg",
-      color: "#111111",
+      color: "#0a84ff",
       link: "https://arshaon.com",
       about: "Full-funnel customer acquisition across Meta Ads, Google Ads, and Technical SEO.",
       points: [
-        "Scale paid acquisition across Meta Ads (Pixel + CAPI) and Google Ads (Search, PMax, YouTube).",
+        "Scale paid acquisition across Meta Ads (Pixel + Server-Side CAPI) and Google Ads (Search, PMax, YouTube).",
         "Implement Google Tag Manager (GTM), GA4 attribution, and conversion rate optimization.",
+      ],
+    },
+    {
+      role: "Full-Stack & AI Product Architect",
+      company: "SaaS & AI",
+      dates: "2021 – Present",
+      color: "#111111",
+      link: "https://arshaon.com",
+      about: "Custom AI workflow automation, LLM integrations, and high-speed web & e-commerce platforms.",
+      points: [
+        "Build custom AI agents, webhook & CRM pipelines, and scalable Next.js / TypeScript web applications.",
+        "Engineer ultra-fast, high-converting digital storefronts and interactive brand experiences.",
       ],
     },
   ],

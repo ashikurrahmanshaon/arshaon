@@ -37,12 +37,12 @@ export const metadata: Metadata = {
   publisher: 'ARSHAON',
   icons: {
     icon: [
-      { url: '/icons/apple-favicon.svg?v=apple2', type: 'image/svg+xml' },
-      { url: '/favicon.ico?v=apple2', sizes: '32x32' },
-      { url: '/icons/favicon.png?v=apple2', type: 'image/png', sizes: '64x64' },
+      { url: '/icons/apple-favicon.svg?v=apple3', type: 'image/svg+xml' },
+      { url: '/icons/favicon.png?v=apple3', type: 'image/png', sizes: '64x64' },
+      { url: '/favicon.ico?v=apple3', sizes: '32x32' },
     ],
-    shortcut: '/favicon.ico?v=apple2',
-    apple: '/icons/favicon.png?v=apple2',
+    shortcut: '/favicon.ico?v=apple3',
+    apple: '/icons/favicon.png?v=apple3',
   },
   alternates: {
     canonical: 'https://arshaon.com',

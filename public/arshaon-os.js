@@ -447,15 +447,16 @@
     const skills = Object.values(SITE.skills || {}).flat();
     body.innerHTML = `<div class="sf-app ${ios ? "sf-ios ios" : ""}">
       <div class="sf-bar">
-        ${ios ? '<button class="sf-nav-btn" data-sf="close" aria-label="Done">Done</button>' : `<div class="sf-nav-grp"><button class="sf-nav-btn ${isLI ? "on" : ""}" data-sf="linkedin" title="LinkedIn Profile">in LinkedIn</button><button class="sf-nav-btn ${isArshaon ? "on" : ""}" data-sf="arshaon" title="arshaon.com" style="display:inline-flex;align-items:center;gap:4px"><svg viewBox="0 0 814 1000" width="10" height="12" fill="currentColor" style="display:block" aria-hidden="true"><path d="M788.1 340.9c-5.8 4.5-108.2 62.2-108.2 190.5 0 148.4 130.3 200.9 134.2 202.2-.6 3.2-20.7 71.9-68.7 141.9-42.8 61.6-87.5 123.1-155.5 123.1s-85.5-39.5-164-39.5c-76.5 0-103.7 40.8-165.9 40.8s-105.6-57-155.5-127C46.7 790.7 0 663 0 541.8c0-194.4 126.4-297.5 250.8-297.5 66.1 0 121.2 43.4 162.7 43.4 39.5 0 101.1-46 176.3-46 28.5 0 130.9 2.6 198.3 99.2zm-234-181.5c31.1-36.9 53.1-88.1 53.1-139.3 0-7.1-.6-14.3-1.9-20.1-50.6 1.9-110.8 33.7-147.1 75.8-28.5 32.4-55.1 83.6-55.1 135.5 0 7.8 1.3 15.6 1.9 18.1 3.2.6 8.4 1.3 13.6 1.3 45.4 0 102.5-30.4 135.5-71.3z"/></svg> arshaon.com</button><button class="sf-nav-btn" data-sf="reload" title="Reload">↻</button></div>`}
+        ${ios ? '<button class="sf-nav-btn sf-done-btn" data-sf="close" aria-label="Done">‹ Home</button>' : `<div class="sf-nav-grp"><button class="sf-nav-btn ${isLI ? "on" : ""}" data-sf="linkedin" title="LinkedIn Profile">in LinkedIn</button><button class="sf-nav-btn ${isArshaon ? "on" : ""}" data-sf="arshaon" title="arshaon.com" style="display:inline-flex;align-items:center;gap:4px"><svg viewBox="0 0 814 1000" width="10" height="12" fill="currentColor" style="display:block" aria-hidden="true"><path d="M788.1 340.9c-5.8 4.5-108.2 62.2-108.2 190.5 0 148.4 130.3 200.9 134.2 202.2-.6 3.2-20.7 71.9-68.7 141.9-42.8 61.6-87.5 123.1-155.5 123.1s-85.5-39.5-164-39.5c-76.5 0-103.7 40.8-165.9 40.8s-105.6-57-155.5-127C46.7 790.7 0 663 0 541.8c0-194.4 126.4-297.5 250.8-297.5 66.1 0 121.2 43.4 162.7 43.4 39.5 0 101.1-46 176.3-46 28.5 0 130.9 2.6 198.3 99.2zm-234-181.5c31.1-36.9 53.1-88.1 53.1-139.3 0-7.1-.6-14.3-1.9-20.1-50.6 1.9-110.8 33.7-147.1 75.8-28.5 32.4-55.1 83.6-55.1 135.5 0 7.8 1.3 15.6 1.9 18.1 3.2.6 8.4 1.3 13.6 1.3 45.4 0 102.5-30.4 135.5-71.3z"/></svg> arshaon.com</button><button class="sf-nav-btn" data-sf="reload" title="Reload">↻</button></div>`}
         <div class="sf-url" title="${esc(cur)}">
           <svg viewBox="0 0 16 16" width="12" height="12"><rect x="3" y="7" width="10" height="7" rx="1.8" fill="currentColor"/><path d="M5.2 7V5a2.8 2.8 0 0 1 5.6 0v2" fill="none" stroke="currentColor" stroke-width="1.5"/></svg>
           <span>${esc(displayHost)}</span>
         </div>
         <div class="sf-actions">
-          <a class="sf-ext-btn" href="${esc(cur)}" target="_blank" rel="noopener" data-external-link title="Open in external browser tab">Open Tab ↗</a>
+          <a class="sf-ext-btn" href="${esc(cur)}" target="_blank" rel="noopener" data-external-link title="Open in external browser tab">Open ↗</a>
         </div>
       </div>
+      ${ios ? `<div class="sf-ios-tabs"><button class="sf-nav-btn ${isLI ? "on" : ""}" data-sf="linkedin">in LinkedIn</button><button class="sf-nav-btn ${isArshaon ? "on" : ""}" data-sf="arshaon" style="display:inline-flex;align-items:center;gap:4px"><svg viewBox="0 0 814 1000" width="10" height="12" fill="currentColor" style="display:block" aria-hidden="true"><path d="M788.1 340.9c-5.8 4.5-108.2 62.2-108.2 190.5 0 148.4 130.3 200.9 134.2 202.2-.6 3.2-20.7 71.9-68.7 141.9-42.8 61.6-87.5 123.1-155.5 123.1s-85.5-39.5-164-39.5c-76.5 0-103.7 40.8-165.9 40.8s-105.6-57-155.5-127C46.7 790.7 0 663 0 541.8c0-194.4 126.4-297.5 250.8-297.5 66.1 0 121.2 43.4 162.7 43.4 39.5 0 101.1-46 176.3-46 28.5 0 130.9 2.6 198.3 99.2zm-234-181.5c31.1-36.9 53.1-88.1 53.1-139.3 0-7.1-.6-14.3-1.9-20.1-50.6 1.9-110.8 33.7-147.1 75.8-28.5 32.4-55.1 83.6-55.1 135.5 0 7.8 1.3 15.6 1.9 18.1 3.2.6 8.4 1.3 13.6 1.3 45.4 0 102.5-30.4 135.5-71.3z"/></svg> arshaon.com</button></div>` : ""}
       <div class="sf-viewport">
         ${(isLI || isArshaon) ? `
           <div class="sfli-page">
@@ -1427,6 +1428,32 @@
 
   /* ---------- Preview (resume) ---------- */
   function renderPreview(body) {
+    if (isMobile()) {
+      const win = iosWindow(body);
+      body.style.overflow = "hidden";
+      body.innerHTML = `<div class="ios ios-pv">
+        <div class="ios-top">
+          <button class="ios-back" data-pv="close">${IOS_IC.back}<span>Home</span></button>
+          <b class="ios-pv-title">My CV.pdf</b>
+          <a class="ios-pv-dl" href="${esc(SITE.resume)}" download>Download</a>
+        </div>
+        <div class="ios-scroll pv-ios-scroll">
+          <div class="pv-ios-card">
+            <div class="pv-ios-head">${avatar()}<div><b>${esc(SITE.name)}</b><small>ARSHAON · Digital Product Architect</small></div></div>
+            <div class="pv-ios-btns">
+              <a class="btn blue" href="${esc(SITE.resume)}" download>⬇ Download CV (PDF)</a>
+              <a class="btn" href="${esc(SITE.resume)}" target="_blank" rel="noopener" data-external-link>Open Full PDF ↗</a>
+            </div>
+          </div>
+          <iframe class="pdf pv-ios-pdf" src="${esc(SITE.resume)}" title="CV"></iframe>
+        </div>
+        <button class="ios-homebar" aria-label="Go to Home screen"></button>
+      </div>`;
+      body.onclick = (e) => {
+        if (e.target.closest('[data-pv="close"]') || e.target.closest(".ios-homebar")) closeWin(win);
+      };
+      return;
+    }
     body.style.overflow = "hidden";
     body.innerHTML = `<div class="toolbar"><a class="btn blue" href="${SITE.resume}" download>Download CV (PDF)</a><button class="btn" data-act="print-pdf">Print CV</button><a class="btn" href="${SITE.resume}" target="_blank" rel="noopener" data-external-link>Open PDF Tab ↗</a></div>
       <iframe class="pdf" src="${SITE.resume}" title="CV"></iframe>`;
@@ -1756,7 +1783,7 @@
     document.addEventListener("pointerdown", (e) => { if (!e.target.closest(".dicon")) $$(".dicon.sel").forEach((x) => x.classList.remove("sel")); });
 
     $("#home").innerHTML = `<div class="home-card"><div class="home-card-top">${avatar()}<div><h3>${esc(SITE.name)}</h3><p>${esc(SITE.mobileTitle || String(SITE.title).split("|")[0].trim())}</p></div></div></div>
-      <div class="home-grid">${Object.entries(APPS).filter(([id]) => ["notes", "photos", "safari", "mail", "calendar", "finder", "settings"].includes(id)).map(([id, a]) => `<button class="home-app" data-app="${id}">${icon(id, 60)}<span>${id === "preview" ? "CV" : a.name}</span></button>`).join("")}</div>`;
+      <div class="home-grid">${["notes", "messages", "photos", "finder", "mail", "calendar", "settings"].filter((id) => APPS[id]).map((id) => `<button class="home-app" data-app="${id}">${icon(id, 60)}<span>${APPS[id].name}</span></button>`).join("")}</div>`;
     $("#home").onclick = (e) => { const b = e.target.closest("[data-app]"); if (b) openApp(b.dataset.app); };
   }
 
@@ -2727,7 +2754,14 @@
       if (k === "battery") return `<div class="ios-group iset-batt"><div class="iset-batt-big">${Math.round(batt.level * 100)}%</div><small>${batt.charging ? "Charging" : "On battery"}</small></div>
         <div class="ios-group">${cell({ label: "Low Power Mode", toggle: !!prefs.lowPower, tkey: "lowPower" })}</div>
         <p class="iset-note">Low Power Mode turns off animations on this website.</p>`;
-      if (k === "general") return `<div class="iset-hero">${avatar("big")}<h2>${esc(SITE.name)}</h2><p>ARSHAON · arshaon.com</p></div>`;
+      if (k === "general") return `<div class="iset-hero">${avatar("big")}<h2>${esc(SITE.name)}</h2><p>ARSHAON · arshaon.com</p></div>
+        <div class="ios-group">
+          <div class="iset-cell"><span class="iset-label">Name</span><span class="iset-val wrap">${esc(SITE.name)}</span></div>
+          <div class="iset-cell"><span class="iset-label">Brand</span><span class="iset-val wrap">ARSHAON</span></div>
+          <div class="iset-cell"><span class="iset-label">Role</span><span class="iset-val wrap">Founder &amp; Digital Strategist</span></div>
+          <div class="iset-cell"><span class="iset-label">Location</span><span class="iset-val wrap">${esc(SITE.location)}</span></div>
+        </div>
+        <div class="ios-group"><div class="iset-cell"><span class="iset-label">Software Update</span><span class="iset-val">Up to date</span></div></div>`;
       if (k === "display") return `<h4 class="iset-h">Appearance</h4><div class="ios-group"><div class="iset-looks">${["light", "dark"].map((t) => `<button class="iset-look ${prefs.theme === t ? "on" : ""}" data-theme-set="${t}"><span class="iset-phone ${t}"></span><span>${t === "light" ? "Light" : "Dark"}</span><i>${prefs.theme === t ? "✓" : ""}</i></button>`).join("")}</div>
           ${cell({ label: "Automatic", toggle: prefs.theme === "auto", tkey: "autotheme" })}</div>
         <h4 class="iset-h">Accent Colour</h4><div class="ios-group"><div class="iset-accents">${Object.entries(ACCENTS).map(([a, c]) => `<button class="accent ${prefs.accent === a ? "on" : ""}" data-accent="${a}" style="background:${c}" aria-label="${a}"></button>`).join("")}</div></div>
@@ -2957,13 +2991,7 @@
     if (finder) finder.insertAdjacentElement("afterend", lp); else $("#dock").prepend(lp);
   };
   const buildDesktopLp = buildDesktop;
-  buildDesktop = () => {
-    buildDesktopLp();
-    const grid = $("#home .home-grid"); if (!grid) return;
-    const lp = el(`<button class="home-app" data-lp>${icon("launchpad", 60)}<span>App Library</span></button>`);
-    lp.addEventListener("click", openLaunchpad);
-    grid.append(lp);
-  };
+  buildDesktop = () => { buildDesktopLp(); };
   const helpLp = MENUS.help;
   MENUS.help = () => [...helpLp(), "-", ["Show All Apps (Launchpad)", openLaunchpad]];
 
@@ -3097,7 +3125,7 @@
   try { if (!localStorage.getItem("arshaon-h12-default")) { prefs.h24 = false; localStorage.setItem("arshaon-h12-default", "1"); savePrefs(); } } catch { prefs.h24 = false; }
 
   // Phone dock: Notes, Messages, Photos, Music (Music replaces Preview).
-  APPS.preview.mobile = true; APPS.music.mobile = false; APPS.safari.mobile = false;
+  APPS.preview.mobile = false; APPS.music.mobile = false; APPS.safari.mobile = true;
 
   // Phone: Finder becomes "Files" with the Files icon.
   ICONS.files = SQ("#ffffff") + '<path d="M17 33a8 8 0 0 1 8-8h15l7 7h28a8 8 0 0 1 8 8v30a8 8 0 0 1-8 8H25a8 8 0 0 1-8-8z" fill="#1a7cf0"/><path d="M17 43h66v27a8 8 0 0 1-8 8H25a8 8 0 0 1-8-8z" fill="#45a9ff"/>' + GLOSS;
@@ -3132,7 +3160,8 @@
       root._items = [];
       const tag = (n, c) => `<button class="iset-cell fl-row" data-tag="${n}"><span class="fl-dot" style="background:${c}"></span><span class="iset-label">${n}</span></button>`;
       view.innerHTML = `<h1 class="ios-large">Browse</h1>${searchBox}
-        <h3 class="fl-h">Favourites</h3><div class="ios-group">${row("documents", "Documents", FL_IC.folder)}${row("downloads", "Downloads", FL_IC.down)}</div>`;
+        <h3 class="fl-h">Locations</h3><div class="ios-group">${row("icloud", "iCloud Drive", FL_IC.cloud)}${row("onmymac", "On My iPhone", FL_IC.phone)}</div>
+        <h3 class="fl-h">Favourites</h3><div class="ios-group">${row("desktop", "Desktop", FL_IC.folder)}${row("documents", "Documents", FL_IC.folder)}${row("downloads", "Downloads", FL_IC.down)}${row("applications", "Applications", FL_IC.apps)}</div>`;
     };
     const openFolder = (title, items, back) => iosPush(root, `${iosTop(back)}<div class="ios-page-body"><h1 class="ios-large fl-title">${esc(title)}</h1><p class="ios-sub">${items.length} item${items.length === 1 ? "" : "s"}</p>${grid(items)}</div>`,
       (pg) => { pg._items = items; pg._name = title; });
@@ -3257,8 +3286,8 @@
     $$('link[rel~="icon"], link[rel="apple-touch-icon"]').forEach((l) => l.remove());
     const favHref = srcUrl(SITE.favicon);
     const l1 = document.createElement("link"); l1.rel = "icon"; l1.type = /\.svg(\?|$)/i.test(favHref) ? "image/svg+xml" : "image/png"; l1.href = favHref; document.head.append(l1);
-    const l2 = document.createElement("link"); l2.rel = "shortcut icon"; l2.href = "/favicon.ico?v=apple2"; document.head.append(l2);
-    const l3 = document.createElement("link"); l3.rel = "apple-touch-icon"; l3.href = "/icons/favicon.png?v=apple2"; document.head.append(l3);
+    const l2 = document.createElement("link"); l2.rel = "shortcut icon"; l2.href = "/favicon.ico?v=apple3"; document.head.append(l2);
+    const l3 = document.createElement("link"); l3.rel = "apple-touch-icon"; l3.href = "/icons/favicon.png?v=apple3"; document.head.append(l3);
   }
   if (SITE.siteTitle) document.title = SITE.siteTitle;
 
@@ -3631,12 +3660,12 @@
     const rows = wkCompanies().slice(0, 4).map((c) => `<div class="wkw-row">${wkLogo(c, 30)}<span><b>${esc(c.company)}</b><small>${esc(c.years)}</small></span></div>`).join("");
     const row = el(`<div class="m-widgets${wkCompanies().length > 3 ? " wk4" : ""}">
         <div class="mw"><button class="mw-box mw-work" aria-label="Work experience"><span class="mw-head">Work <i>›</i></span>${rows}</button><span class="mw-label">Work</span></div>
-        <div class="mw"><button class="mw-box mw-proj" aria-label="See all projects"><span class="mw-head">${esc(stickyInfo().title)}</span>
-          <span class="mw-big">${k.total}</span><span class="mw-sub">projects & campaigns</span>
-          <span class="mw-counts">${k.campaigns} campaigns · ${k.projects} projects</span>
-          <span class="mw-go">See all →</span></button><span class="mw-label">Projects</span></div></div>`);
+        <div class="mw"><button class="mw-box mw-proj" aria-label="Open Resume and CV"><span class="mw-head">Start here 👋</span>
+          <span class="mw-big">CV</span><span class="mw-sub">Resume &amp; Profile</span>
+          <span class="mw-counts">Web · SaaS · AI · Growth</span>
+          <span class="mw-go">View My CV →</span></button><span class="mw-label">Resume</span></div></div>`);
     $(".mw-work", row).onclick = (e) => { launchRect = e.currentTarget.getBoundingClientRect(); openWork(); };
-    $(".mw-proj", row).onclick = (e) => { launchRect = e.currentTarget.getBoundingClientRect(); openApp("photos", "projects"); };
+    $(".mw-proj", row).onclick = (e) => { launchRect = e.currentTarget.getBoundingClientRect(); openApp("preview"); };
     if (card) card.insertAdjacentElement("afterend", row); else home.prepend(row);
   }
   const buildDesktopWk = buildDesktop;
@@ -3973,8 +4002,8 @@
   const fdItemsBase = fdItems;
   fdItems = function (place) {
     const sub = (name, p) => ({ name, kind: "Folder", ic: "folder", children: () => fdItems(p) });
-    if (place === "home") return [sub("Applications", "applications"), sub("Desktop", "desktop"), sub("Documents", "documents"), sub("Downloads", "downloads"), sub("Projects", "projects")];
-    if (place === "icloud") return [sub("Desktop", "desktop"), sub("Documents", "documents"), sub("Projects", "projects")];
+    if (place === "home") return [sub("Applications", "applications"), sub("Desktop", "desktop"), sub("Documents", "documents"), sub("Downloads", "downloads")];
+    if (place === "icloud") return [sub("Desktop", "desktop"), sub("Documents", "documents"), sub("Downloads", "downloads")];
     if (place === "onmymac") return [sub("Applications", "applications"), sub("Downloads", "downloads")];
     if (place === "airdrop") return [];
     if (place === "onedrive") return [sub("Documents", "documents"), sub("Projects", "projects")];
@@ -3999,9 +4028,8 @@
     buildDesktopOrder();
     const grid = $("#home .home-grid"); if (!grid) return;
     const swap = (a, b) => { if (!a || !b || a === b) return; const mark = document.createComment(""); a.replaceWith(mark); b.replaceWith(a); mark.replaceWith(b); };
-    swap($('.home-app[data-app="settings"]', grid), $('.home-app[data-app="mail"]', grid));
-    swap($('.home-app[data-app="calendar"]', grid), $("a.home-app", grid)); // first social link (LinkedIn)
-    swap($('.home-app[data-app="calendar"]', grid), $('.home-app[data-app="music"]', grid)); // Calendar beside Quick View, Music last
+    const li = $("a.home-app", grid), cal = $('.home-app[data-app="calendar"]', grid);
+    if (li && cal) cal.insertAdjacentElement("beforebegin", li);
   };
   /* =====================================================================
      PHONE: the phone's own Back button (or back swipe) works too.
