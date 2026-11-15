@@ -77,7 +77,7 @@ const jsonLdSchema = {
       name: 'Ashikur Rahman Shaon',
       alternateName: 'ARSHAON',
       url: 'https://arshaon.com',
-      email: 'arshaonx@gmail.com',
+      email: 'info@arshaon.com',
       sameAs: ['https://www.linkedin.com/in/ashikurrahmanshaon/'],
       jobTitle: 'Founder & Digital Product Architect',
       knowsAbout: [

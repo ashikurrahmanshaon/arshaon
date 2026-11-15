@@ -480,8 +480,7 @@
                   <p class="sfli-headline">${esc(SITE.title)}</p>
                   <p class="sfli-loc">📍 ${esc(SITE.location)} · <span>linkedin.com/in/ashikurrahmanshaon</span></p>
                   <div class="sfli-btns">
-                    <a class="sfli-btn call" href="tel:01787081119" data-external-link>📞 Call 01787081119</a>
-                    <button class="sfli-btn primary" data-open="mail">✉️ Email (${esc(SITE.email)})</button>
+                    <button class="sfli-btn primary" data-open="mail">✉️ ${esc(SITE.email)}</button>
                     <button class="sfli-btn" data-open="preview">📄 View CV / Resume</button>
                     <button class="sfli-btn" data-open="photos" data-arg="library">🖼️ Photos</button>
                   </div>
@@ -490,10 +489,10 @@
             </div>
             <div class="sfli-card sfli-sec">
               <h3>About</h3>
-              <p>Founder & Digital Product Architect at <b>ARSHAON</b> (arshaon.com). Building high-performance web applications, AI-powered automation systems, scalable SaaS products, and full-funnel digital brand growth.</p>
+              <p>Founder &amp; Digital Product Architect at <b>ARSHAON</b> (arshaon.com). Building high-performance web applications, AI-powered automation systems, scalable SaaS products, and full-funnel digital brand growth.</p>
               <div class="sfli-contact-strip">
-                <div><small>Phone</small><b><a href="tel:01787081119" data-external-link style="color:inherit;text-decoration:none">01787081119</a></b></div>
-                <div><small>Email</small><b>${esc(SITE.email)}</b></div>
+                <div><small>Official Email</small><b><a data-open="mail" style="color:inherit;text-decoration:none;cursor:pointer">${esc(SITE.email)}</a></b></div>
+                <div><small>Website</small><b>arshaon.com</b></div>
                 <div><small>LinkedIn</small><b>in/ashikurrahmanshaon</b></div>
               </div>
             </div>
@@ -519,54 +518,8 @@
       if (e.target.closest('[data-sf="arshaon"]')) return renderSafari(body, "arshaon");
     };
   }
-  ICONS.phone =
-    SQ("url(#ic-msg)") +
-    '<g filter="url(#ic-sh)"><path d="M33.2 22.8c1.9-1.9 5-2.1 7.1-.5l10.8 8.4c2.1 1.6 2.8 4.7 1.5 7.1L48 46.9a3.9 3.9 0 0 0 .7 4.4l16.8 16.8a3.9 3.9 0 0 0 4.4.7l9.1-4.6c2.4-1.3 5.5-.6 7.1 1.5l8.4 10.8c1.6 2.1 1.4 5.2-.5 7.1l-6.4 6.4c-5 5-12.7 6.6-19.4 3.9-13.1-5.3-25.4-15.4-35.6-25.6-10.2-10.2-20.3-22.5-25.6-35.6-2.7-6.7-1.1-14.4 3.9-19.4l6.4-6.4z" transform="translate(15 15) scale(0.7)" fill="#ffffff"/></g>' +
-    GLOSS + RIM3D;
-  function renderPhone(body) {
-    const ios = isMobile();
-    const win = ios ? iosWindow(body) : body.closest(".window");
-    const num = SITE.phone || "01787081119";
-    body.innerHTML = `<div class="ph-call-app ${ios ? "ios" : ""}">
-      ${ios ? '<div class="ios-top"><button class="ios-back" data-ph="close">‹ Home</button><b>Phone</b><span></span></div>' : ""}
-      <div class="ph-call-body">
-        <div class="ph-call-ring">${avatar("big")}</div>
-        <h2>${esc(SITE.name)}</h2>
-        <p class="ph-call-role">Founder · ARSHAON (Direct Line)</p>
-        <div class="ph-call-num">${esc(num)}</div>
-        <a class="ph-dial-btn" href="tel:${esc(num)}" data-external-link>
-          <svg viewBox="0 0 16 16" width="16" height="16" fill="currentColor"><path d="M3.65 1.75c.32-.32.84-.36 1.2-.08l1.82 1.42c.36.28.47.79.26 1.2l-.77 1.54a.65.65 0 0 0 .12.75l2.83 2.83a.65.65 0 0 0 .75.12l1.54-.77c.41-.21.92-.1 1.2.26l1.42 1.82c.28.36.24.88-.08 1.2l-1.08 1.08c-.85.85-2.15 1.12-3.28.66-2.22-.9-4.3-2.61-6.02-4.33-1.72-1.72-3.43-3.8-4.33-6.02-.46-1.13-.19-2.43.66-3.28l1.08-1.08z"/></svg>
-          <span>Call ${esc(num)}</span>
-        </a>
-        <div class="ph-call-subactions">
-          <button type="button" class="btn" data-ph="copy">Copy Number</button>
-          <button type="button" class="btn" data-open="messages">Messages</button>
-          <button type="button" class="btn" data-open="mail">Email</button>
-        </div>
-      </div>
-      ${ios ? '<button class="ios-homebar" aria-label="Go to Home screen"></button>' : ""}
-    </div>`;
-    body.onclick = (e) => {
-      if (e.target.closest('[data-ph="close"]') || e.target.closest(".ios-homebar")) return closeWin(win);
-      const cp = e.target.closest('[data-ph="copy"]');
-      if (cp) {
-        try { navigator.clipboard.writeText(num); cp.textContent = "✓ Copied!"; setTimeout(() => { cp.textContent = "Copy Number"; }, 1800); } catch {}
-      }
-    };
-    setTimeout(() => {
-      try {
-        const a = document.createElement("a");
-        a.href = "tel:" + num;
-        a.setAttribute("data-external-link", "");
-        document.body.append(a);
-        a.click();
-        a.remove();
-      } catch {}
-    }, 60);
-  }
 
   const APPS = {
-    phone: { name: "Phone", title: "Phone — 01787081119", w: 360, h: 470, mobile: true, render: renderPhone },
     safari: { name: "Safari", title: "Safari — Ashikur Rahman Shaon", w: 880, h: 620, mobile: true, render: renderSafari },
     finder: { name: "Finder", w: 820, h: 560, mobile: false, render: renderFinder },
     notes: { name: "Notes", w: 880, h: 650, mobile: true, render: renderNotes },
@@ -789,7 +742,7 @@
     const experience = folder("Experience", () => SITE.experience.map((e, i) =>
       file(`${e.company} – ${e.role}`, "Plain Text", { doc: "#555", label: "TXT" }, () => openDoc("e" + i))));
     if (place === "recents") return [resume, about, ...SITE.campaigns.slice(0, 4).map(project)];
-    if (place === "applications") return Object.entries(APPS).filter(([id]) => ["finder", "safari", "phone", "messages", "mail", "photos", "notes", "calendar", "preview", "terminal", "settings"].includes(id)).map(([id, a]) => file(id === "preview" ? "CV" : a.name, "Application", { app: id }, () => openApp(id)));
+    if (place === "applications") return Object.entries(APPS).filter(([id]) => ["finder", "safari", "messages", "mail", "photos", "notes", "calendar", "preview", "terminal", "settings"].includes(id)).map(([id, a]) => file(id === "preview" ? "CV" : a.name, "Application", { app: id }, () => openApp(id)));
     if (place === "desktop") return deskItems.filter((_, i) => !trashedItems.some((t) => t.i === i)).map((d) =>
       file(d.name, d.name.endsWith(".pdf") ? "PDF Document" : d.name.includes(".") ? "Plain Text" : "Folder", { raw: d.icon }, d.open));
     if (place === "documents") return [resume, about, file("Skills.txt", "Plain Text", { doc: "#0a84ff", label: "TXT" }, () => openDoc("skills")), experience];
@@ -1605,10 +1558,9 @@
     const hero = (k, title, desc, tog) => `<div class="sys-hero">${sysIcon(k, true)}<div class="sys-hero-txt"><b>${title}</b><p>${desc}</p></div>${tog ? toggle(tog) : ""}</div>`;
     const center = (k, title, desc) => `<div class="sys-center">${sysIcon(k, true)}<h2>${title}</h2><p>${desc}</p></div>`;
     const P = {
-      account: () => `<div class="sys-center">${avatar("big")}<h2>${esc(SITE.name)}</h2><p>ARSHAON · arshaon.com</p></div>
+      account: () => `<div class="sys-center">${avatar("big")}<h2>${esc(SITE.name)}</h2><p>ARSHAON · ${esc(SITE.email)}</p></div>
           <div class="set-group">
             <div class="set-row"><span>Name</span><span class="muted">${esc(SITE.name)}</span></div>
-            <div class="set-row"><span>Phone</span><a href="tel:01787081119" data-external-link>01787081119</a></div>
             <div class="set-row"><span>Email</span><a href="mailto:${esc(SITE.email)}">${esc(SITE.email)}</a></div>
             <div class="set-row"><span>CV / Resume</span><a data-open="preview">Open PDF</a></div>
             <div class="set-row"><span>LinkedIn</span><a data-open="safari" data-arg="linkedin">linkedin.com/in/ashikurrahmanshaon</a></div>
@@ -1629,11 +1581,10 @@
             <small>${d.connected ? `Connected${d.battery != null ? ` &nbsp;-&nbsp; ${battery(d.battery)}` : ""}` : "Not Connected"}</small></span></span>
             <button class="btn" data-act="bt" data-i="${i}">${d.connected ? "Disconnect" : "Connect"}</button></div>`).join("") || `<div class="set-row"><span class="muted">No devices</span></div>`}</div>`
         : `<p class="set-off">Bluetooth is turned off.</p>`),
-      general: () => `<div class="sys-center">${avatar("big")}<h2>${esc(SITE.name)}</h2><p>ARSHAON · arshaon.com</p></div>
+      general: () => `<div class="sys-center">${avatar("big")}<h2>${esc(SITE.name)}</h2><p>ARSHAON · ${esc(SITE.email)}</p></div>
           <div class="set-group">
             <div class="set-row"><span>Name</span><span class="muted">${esc(SITE.name)}</span></div>
             <div class="set-row"><span>Brand</span><span class="muted">ARSHAON</span></div>
-            <div class="set-row"><span>Phone</span><a href="tel:01787081119" data-external-link>01787081119</a></div>
             <div class="set-row"><span>Email</span><a href="mailto:${esc(SITE.email)}">${esc(SITE.email)}</a></div>
             <div class="set-row"><span>LinkedIn</span><a data-open="safari" data-arg="linkedin">ashikurrahmanshaon</a></div>
           </div>`,
@@ -1716,11 +1667,11 @@
   const aboutHTML = () => `<div class="about-box minimal-about">
       ${avatar("big")}
       <h2>${esc(SITE.name)}</h2>
-      <p class="about-sub">ARSHAON · 01787081119</p>
+      <p class="about-sub">ARSHAON · ${esc(SITE.email)}</p>
       <div class="about-actions">
-        <a class="btn green" href="tel:01787081119" data-external-link>Call</a>
         <button class="btn blue" data-open="preview">My CV</button>
         <button class="btn" data-open="photos" data-arg="library">Photos</button>
+        <button class="btn" data-open="mail">Email</button>
       </div>
     </div>`;
   function openAbout() { openWindow({ key: "about", title: "About", app: "Finder", w: 320, h: 310, render: (b) => { b.innerHTML = aboutHTML(); } }); }
@@ -1728,7 +1679,7 @@
   /* =====================================================================
      DOCK, DESKTOP ICONS, PHONE HOME SCREEN
      ===================================================================== */
-  const DOCK = ["finder", "safari", "phone", "messages", "mail", "photos", "notes", "calendar", "preview", "terminal", "settings", "trash"];
+  const DOCK = ["finder", "safari", "messages", "mail", "photos", "notes", "calendar", "preview", "terminal", "settings", "trash"];
   function buildDock() {
     $("#dock").innerHTML = DOCK.map((id, i) => `${i === DOCK.length - 1 ? '<span class="dock-sep"></span>' : ""}
       <button class="dock-item ${APPS[id].mobile ? "mobile" : ""}" data-app="${id}" aria-label="${APPS[id].name}">
@@ -1831,7 +1782,7 @@
     };
     document.addEventListener("pointerdown", (e) => { if (!e.target.closest(".dicon")) $$(".dicon.sel").forEach((x) => x.classList.remove("sel")); });
 
-    $("#home").innerHTML = `<div class="home-card"><div class="home-card-top"><div class="hc-av-wrap">${avatar()}<span class="hc-status-dot" title="Online"></span></div><div class="hc-info"><h3>${esc(SITE.name)} <span class="hc-verified" title="Verified">✓</span></h3><p>${esc(SITE.mobileTitle || "Founder · ARSHAON")}</p></div><div class="hc-pills"><a class="hc-call-pill" href="tel:01787081119" data-external-link title="Call 01787081119" aria-label="Call 01787081119"><svg viewBox="0 0 16 16" width="12" height="12" fill="currentColor"><path d="M3.65 1.75c.32-.32.84-.36 1.2-.08l1.82 1.42c.36.28.47.79.26 1.2l-.77 1.54a.65.65 0 0 0 .12.75l2.83 2.83a.65.65 0 0 0 .75.12l1.54-.77c.41-.21.92-.1 1.2.26l1.42 1.82c.28.36.24.88-.08 1.2l-1.08 1.08c-.85.85-2.15 1.12-3.28.66-2.22-.9-4.3-2.61-6.02-4.33-1.72-1.72-3.43-3.8-4.33-6.02-.46-1.13-.19-2.43.66-3.28l1.08-1.08z"/></svg><span>Call</span></a><button type="button" class="hc-action-pill" data-open="preview" aria-label="Open CV">CV ↗</button></div></div></div>
+    $("#home").innerHTML = `<div class="home-card"><div class="home-card-top"><div class="hc-av-wrap">${avatar()}<span class="hc-status-dot" title="Online"></span></div><div class="hc-info"><h3>${esc(SITE.name)} <span class="hc-verified" title="Verified">✓</span></h3><p>ARSHAON · <span class="hc-email">${esc(SITE.email)}</span></p></div><button type="button" class="hc-action-pill" data-open="preview" aria-label="Open CV">CV ↗</button></div></div>
       <div class="home-grid">${["notes", "messages", "photos", "finder", "mail", "calendar", "settings"].filter((id) => APPS[id]).map((id) => `<button class="home-app" data-app="${id}">${icon(id, 60)}<span>${APPS[id].name}</span></button>`).join("")}</div>`;
     $("#home").onclick = (e) => { const b = e.target.closest("[data-app]"); if (b) openApp(b.dataset.app); };
   }
@@ -1888,7 +1839,7 @@
     const top = SITE.campaigns[0];
     $("#nc").innerHTML = `
       <div class="widget"><h4>${d.toLocaleDateString("en-GB", { month: "long", year: "numeric" })}</h4><div class="cal">${cal}</div></div>
-      <div class="widget"><div class="contact-row">${avatar()}<div><b>${esc(SITE.name)}</b><div style="color:var(--muted)">ARSHAON · <a data-open="preview">View CV</a> · <a data-open="safari" data-arg="linkedin">LinkedIn</a></div></div></div></div>`;
+      <div class="widget"><div class="contact-row">${avatar()}<div><b>${esc(SITE.name)}</b><div style="color:var(--muted)"><a data-open="mail">${esc(SITE.email)}</a> · <a data-open="preview">View CV</a></div></div></div></div>`;
     $("#nc").hidden = false;
   }
   function hideNC() { $("#nc").hidden = true; }
@@ -2594,7 +2545,7 @@
   /* ----- Spotlight search (phone home screen, and Ctrl/Cmd + K on a computer) ----- */
   function spotSources() {
     const out = [];
-    Object.entries(APPS).filter(([id]) => ["phone", "notes", "photos", "preview", "safari", "messages", "mail", "calendar", "finder", "terminal", "settings"].includes(id) && !(isMobile() && id === "terminal")).forEach(([id, a]) => out.push({ g: "Apps", t: id === "preview" ? "CV / Resume" : id === "phone" ? "Phone (01787081119)" : a.name, s: "", ic: icon(id, 38), go: () => openApp(id) }));
+    Object.entries(APPS).filter(([id]) => ["notes", "photos", "preview", "safari", "messages", "mail", "calendar", "finder", "terminal", "settings"].includes(id) && !(isMobile() && id === "terminal")).forEach(([id, a]) => out.push({ g: "Apps", t: id === "preview" ? "CV / Resume" : a.name, s: "", ic: icon(id, 38), go: () => openApp(id) }));
     SITE.notes.forEach((n, i) => { const tx = stripHtml(n.html); out.push({ g: "Notes", t: n.title, s: tx.slice(0, 70), x: tx, ic: icon("notes", 38), go: () => openApp("notes", i) }); });
     SITE.campaigns.forEach((c, i) => out.push({ g: "Projects", t: c.title, s: `${c.type} · ${c.role || ""}`, x: [c.partners, c.desc, c.role].join(" "), ic: `<span class="spot-tile" style="${tileBg(c)}"></span>`, go: () => openDoc("c" + i) }));
     SITE.experience.forEach((e, i) => out.push({ g: "Experience", t: e.role, s: `${e.company} · ${e.dates}`, x: e.points.join(" "), ic: icon("finder", 38), go: () => openDoc("e" + i) }));
@@ -2620,7 +2571,7 @@
     const draw = () => {
       const q = input.value.trim().toLowerCase();
       if (!q) {
-        const apps = ["phone", "notes", "photos", "preview", "safari", "messages", "mail", "calendar", "finder", "settings"].filter((id) => APPS[id]);
+        const apps = ["notes", "photos", "preview", "safari", "messages", "mail", "calendar", "finder", "settings"].filter((id) => APPS[id]);
         shown = all.filter((r) => r.g === "Links");
         res.innerHTML = `<h4 class="spot-h">Siri Suggestions</h4><div class="spot-apps">${apps.map((id) => `<button class="spot-app" data-app="${id}">${icon(id, 56)}<span>${esc(APPS[id].name)}</span></button>`).join("")}</div>
           <h4 class="spot-h">Suggested</h4><div class="spot-group">${shown.map(row).join("")}</div>`;
@@ -2766,7 +2717,7 @@
       const q = query.toLowerCase();
       const groups = [
         [
-          { k: "account", raw: `<button class="iset-cell iset-acct" data-k="account">${avatar()}<span class="iset-label"><b>${esc(SITE.name)}</b><small>ARSHAON · arshaon.com</small></span><span class="iset-chev">›</span></button>`, label: SITE.name },
+          { k: "account", raw: `<button class="iset-cell iset-acct" data-k="account">${avatar()}<span class="iset-label"><b>${esc(SITE.name)}</b><small>ARSHAON · ${esc(SITE.email)}</small></span><span class="iset-chev">›</span></button>`, label: SITE.name },
         ],
         [
           { label: "Airplane Mode", ic: tile("#ff9500", IOS_IC.plane), toggle: !!prefs.airplane, tkey: "airplane" },
@@ -2788,9 +2739,8 @@
     };
     const pageHTML = (k) => {
       const m = macInfo(), w = W();
-      if (k === "account") return `<div class="iset-hero">${avatar("big")}<h2>${esc(SITE.name)}</h2><p>ARSHAON · arshaon.com</p></div>
+      if (k === "account") return `<div class="iset-hero">${avatar("big")}<h2>${esc(SITE.name)}</h2><p>ARSHAON · ${esc(SITE.email)}</p></div>
         <div class="ios-group">
-          <a class="iset-cell" href="tel:01787081119" data-external-link><span class="iset-label">Phone</span><span class="iset-val">01787081119</span><span class="iset-chev">›</span></a>
           <a class="iset-cell" href="mailto:${esc(SITE.email)}"><span class="iset-label">Email</span><span class="iset-val">${esc(SITE.email)}</span></a>
           <a class="iset-cell" data-open="preview"><span class="iset-label">CV / Resume</span><span class="iset-val">Open PDF</span><span class="iset-chev">›</span></a>
           <a class="iset-cell" data-open="safari" data-arg="linkedin"><span class="iset-label">LinkedIn</span><span class="iset-val">ashikurrahmanshaon</span><span class="iset-chev">›</span></a>
@@ -2986,7 +2936,7 @@
     .map(([x, y, c]) => `<rect x="${x}" y="${y}" width="15" height="15" rx="4.2" fill="${c}" stroke="rgba(255,255,255,.35)" stroke-width=".8"/>`).join("") +
     '</g>' + GLOSS + '<rect x="1" y="1" width="98" height="98" rx="22" fill="none" stroke="rgba(255,255,255,.42)" stroke-width="1.4"/>';
   function lpItems() {
-    const apps = Object.entries(APPS).filter(([id]) => ["finder", "safari", "phone", "messages", "mail", "photos", "notes", "calendar", "preview", "terminal", "settings", "trash"].includes(id)).map(([id, a]) => ({ name: id === "preview" ? "CV" : a.name, app: id, ic: (s) => icon(id, s) }));
+    const apps = Object.entries(APPS).filter(([id]) => ["finder", "safari", "messages", "mail", "photos", "notes", "calendar", "preview", "terminal", "settings", "trash"].includes(id)).map(([id, a]) => ({ name: id === "preview" ? "CV" : a.name, app: id, ic: (s) => icon(id, s) }));
     const links = socialList().map((x) => ({ name: x.name, url: x.url, ic: (s) => socialIcon(x.key, s) }));
     return { apps, links };
   }
@@ -3175,7 +3125,7 @@
   try { if (!localStorage.getItem("arshaon-h12-default")) { prefs.h24 = false; localStorage.setItem("arshaon-h12-default", "1"); savePrefs(); } } catch { prefs.h24 = false; }
 
   // Phone dock: Notes, Messages, Photos, Music (Music replaces Preview).
-  APPS.preview.mobile = false; APPS.music.mobile = false; APPS.photos.mobile = false; APPS.phone.mobile = true; APPS.safari.mobile = true;
+  APPS.preview.mobile = false; APPS.music.mobile = false; APPS.safari.mobile = true;
 
   // Phone: Finder becomes "Files" with the Files icon.
   ICONS.files = SQ("#ffffff") + '<path d="M17 33a8 8 0 0 1 8-8h15l7 7h28a8 8 0 0 1 8 8v30a8 8 0 0 1-8 8H25a8 8 0 0 1-8-8z" fill="#1a7cf0"/><path d="M17 43h66v27a8 8 0 0 1-8 8H25a8 8 0 0 1-8-8z" fill="#45a9ff"/>' + GLOSS;
@@ -3791,7 +3741,7 @@
     if (ios) iosWindow(body);
     body.innerHTML = `<div class="ml ${ios ? "ml-ios ios" : ""}">
         ${ios ? `<div class="ml-top"><button class="ml-cancel" data-ml="cancel">Cancel</button><b>New Message</b><button class="ml-send" data-ml="send" aria-label="Send">${ML_ARROW}</button></div>` : ""}
-        <div class="ml-row"><span>To:</span><b>${esc(SITE.email)}</b></div>
+        <div class="ml-row"><span>To:</span><span class="ml-to-pill">${avatar()}<b>${esc(SITE.name)}</b><em>&lt;${esc(SITE.email)}&gt;</em></span></div>
         <label class="ml-row"><span>From:</span><input type="email" class="ml-from" placeholder="your@email.com (optional, so I can reply)" autocomplete="email"></label>
         <label class="ml-row"><span>Subject:</span><input class="ml-subj" placeholder="Hello ${esc(SITE.short)}" maxlength="150"></label>
         <textarea class="ml-body" placeholder="Loved my portfolio? Write me feedback or ask me anything!" aria-label="Message"></textarea>
