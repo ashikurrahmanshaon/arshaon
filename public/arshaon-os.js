@@ -288,7 +288,7 @@
     const win = el(`<section class="window" role="dialog" aria-label="${esc(title)}">
       <div class="titlebar">
         <div class="lights">
-          <button class="l close" title="Close">×</button><button class="l min" title="Minimise">−</button><button class="l max" title="Maximise">+</button>
+          <button class="l close" title="Close" aria-label="Close"><svg viewBox="0 0 8 8" width="6.5" height="6.5" fill="none" stroke="currentColor" stroke-width="1.35" stroke-linecap="round"><path d="M1.6 1.6l4.8 4.8M6.4 1.6l-4.8 4.8"/></svg></button><button class="l min" title="Minimise" aria-label="Minimise"><svg viewBox="0 0 8 8" width="6.5" height="6.5" fill="none" stroke="currentColor" stroke-width="1.35" stroke-linecap="round"><path d="M1.4 4h5.2"/></svg></button><button class="l max" title="Zoom" aria-label="Zoom"><svg viewBox="0 0 8 8" width="6.5" height="6.5" fill="currentColor" stroke="none"><path d="M1.4 4.3V1.4h2.9zM6.6 3.7v2.9H3.7z"/></svg></button>
         </div>
         <button class="back">‹ Home</button>
         <div class="wtitle">${esc(title)}</div>
@@ -3205,7 +3205,26 @@
       <svg class="m-wifi" viewBox="0 0 17 12"><path d="M8.5 11.6l2.2-2.3a3.2 3.2 0 0 0-4.4 0z"/><path d="M8.5 5.6a6 6 0 0 1 4.1 1.6l1.3-1.4a8 8 0 0 0-10.8 0l1.3 1.4a6 6 0 0 1 4.1-1.6z"/><path d="M8.5 1.9a9.8 9.8 0 0 1 6.8 2.7l1.3-1.4a11.8 11.8 0 0 0-16.2 0l1.3 1.4a9.8 9.8 0 0 1 6.8-2.7z"/></svg>
       <svg class="m-batt" viewBox="0 0 27 13"><rect x=".6" y=".6" width="22.8" height="11.8" rx="3.8" fill="none" stroke="currentColor" stroke-opacity=".38" stroke-width="1.1"/><rect class="m-batt-fill" x="2.2" y="2.2" width="19.6" height="8.6" rx="2.4"/><path d="M25 4.4v4.2a2.1 2.1 0 0 0 0-4.2z" opacity=".4"/></svg>
     </button>`);
+  const mIsland = el(`<div id="m-dynamic-island" role="button" tabindex="0" aria-label="Dynamic Island">
+      <div class="di-compact">
+        <span class="di-live"><i class="di-dot"></i><span class="di-wave"><s></s><s></s><s></s></span></span>
+        <span class="di-cam"></span>
+      </div>
+      <div class="di-expanded">
+        <div class="di-exp-left">${avatar()}<span class="di-exp-txt"><b>${esc(SITE.name)} <i>✓</i></b><small>${esc(SITE.email)}</small></span></div>
+        <div class="di-exp-btns"><button type="button" class="di-btn blue" data-open="preview">CV</button><button type="button" class="di-btn" data-open="mail">Mail</button></div>
+      </div>
+    </div>`);
+  mIsland.addEventListener("click", (e) => {
+    if (e.target.closest("[data-open]")) { mIsland.classList.remove("expanded"); return; }
+    e.stopPropagation();
+    mIsland.classList.toggle("expanded");
+  });
+  document.addEventListener("click", (e) => {
+    if (!e.target.closest("#m-dynamic-island")) mIsland.classList.remove("expanded");
+  });
   $(".mb-left").prepend(mTime);
+  $(".menubar").append(mIsland);
   $(".mb-right").append(mIcons);
   const drawPhoneStatus = () => {
     const d = new Date();
@@ -3286,8 +3305,8 @@
     $$('link[rel~="icon"], link[rel="apple-touch-icon"]').forEach((l) => l.remove());
     const favHref = srcUrl(SITE.favicon);
     const l1 = document.createElement("link"); l1.rel = "icon"; l1.type = /\.svg(\?|$)/i.test(favHref) ? "image/svg+xml" : "image/png"; l1.href = favHref; document.head.append(l1);
-    const l2 = document.createElement("link"); l2.rel = "shortcut icon"; l2.href = "/favicon.ico?v=apple3"; document.head.append(l2);
-    const l3 = document.createElement("link"); l3.rel = "apple-touch-icon"; l3.href = "/icons/favicon.png?v=apple3"; document.head.append(l3);
+    const l2 = document.createElement("link"); l2.rel = "shortcut icon"; l2.href = "/favicon.ico?v=appleblack1"; document.head.append(l2);
+    const l3 = document.createElement("link"); l3.rel = "apple-touch-icon"; l3.href = "/icons/favicon.png?v=appleblack1"; document.head.append(l3);
   }
   if (SITE.siteTitle) document.title = SITE.siteTitle;
 
